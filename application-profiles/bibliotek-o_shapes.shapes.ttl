@@ -66,6 +66,9 @@ bibliotek-o_shapes:AudioForm
             sh:class <http://bibliotek-o.org/1.0/ontology/SingerActivity> ;
           ]
           [
+            sh:class <http://bibliotek-o.org/1.0/ontology/InstrumentalistActivity> ;
+          ]
+          [
             sh:class <http://bibliotek-o.org/1.0/ontology/LyricistActivity> ;
           ]
           [
@@ -76,9 +79,6 @@ bibliotek-o_shapes:AudioForm
           ]
           [
             sh:class <http://bibliotek-o.org/1.0/ontology/ConductorActivity> ;
-          ]
-          [
-            sh:class <http://bibliotek-o.org/1.0/ontology/InstrumentalistActivity> ;
           ]
           [
             sh:class <http://bibliotek-o.org/1.0/ontology/LibrettistActivity> ;
