@@ -46,7 +46,7 @@
   owl:imports sh: ;
   owl:versionInfo "Created with TopBraid Composer" ;
 .
-bibliotek-o_shapes:AudioForm
+bibliotek-o_shapes:AudioWorkForm
   rdf:type rdfs:Class ;
   rdf:type sh:NodeShape ;
   rdfs:label "Audio form" ;
@@ -225,6 +225,118 @@ bibliotek-o_shapes:TitlePropertyGroup
   sh:description "To group title information for the resource." ;
   sh:order "0"^^xsd:decimal ;
 .
+
+bibliotek-o_shapes:AudioInstanceForm
+  rdf:type rdfs:Class ;
+  rdf:type sh:NodeShape ;
+  rdfs:label "Instance of Audio form" ;
+  rdfs:subClassOf rdfs:Resource ;
+  sh:property [
+      sh:path bib:hasActivity ;
+      sh:name "Agent activity or role" ;
+      sh:nodeKind sh:IRI ;
+      sh:or (
+          [
+            sh:class <> ;
+          ]
+          [
+            sh:class <> ;
+          ]
+          [
+            sh:class <> ;
+          ]
+          [
+            sh:class <> ;
+          ]
+          [
+            sh:class <> ;
+          ]
+        ) ;
+    ] ;
+  sh:property [
+      sh:path rdf:type ;
+      sh:name "Type of Instance" ;
+      sh:nodeKind sh:IRI ;
+      sh:or (
+          [
+            sh:in <http://bibliotek-o.org/1.0/ontology/AudioDisc> ;
+          ]
+          [
+            sh:in <http://bibliotek-o.org/1.0/ontology/AudioRoll> ;
+          ]
+          [
+            sh:in <http://bibliotek-o.org/1.0/ontology/AudioCassette> ;
+          ]
+          [
+            sh:in <http://bibliotek-o.org/1.0/ontology/AudioBelt> ;
+          ]
+          [
+            sh:in <http://bibliotek-o.org/1.0/ontology/AudioCylinder> ;
+          ]
+          [
+            sh:in <http://bibliotek-o.org/1.0/ontology/AudioWireReel> ;
+          ]
+          [
+            sh:in <http://bibliotek-o.org/1.0/ontology/AudiotapeReel> ;
+          ]
+          [
+            sh:in <http://bibliotek-o.org/1.0/ontology/Cassette> ;
+          ]
+          [
+            sh:in <http://bibliotek-o.org/1.0/ontology/SoundTrackReel> ;
+          ]
+          [
+            sh:in <http://bibliotek-o.org/1.0/ontology/ComputerTapeReel> ;
+          ]
+          [
+            sh:in <http://bibliotek-o.org/1.0/ontology/Disc> ;
+          ]
+          [
+            sh:in <http://bibliotek-o.org/1.0/ontology/Reel> ;
+          ]
+        ) ;
+    ] ;
+  sh:property [
+      sh:path <http://rdaregistry.info/Elements/u/P60552> ;
+      sh:class <http://www.w3.org/2004/02/skos/core#Concept> ;
+      sh:description "Relates a resource to a number of sound channels used to make a recording." ;
+      sh:name "Has playback channels" ;
+      sh:nodeKind sh:IRI ;
+    ] ;
+  sh:property [
+      sh:path <http://rdaregistry.info/Elements/u/P60586> ;
+      sh:class <http://www.w3.org/2004/02/skos/core#Concept> ;
+      sh:group bibliotek-o_shapes:WorkToWorkPropertyGroup ;
+      sh:description "Relates a resource to a speed at which an audio carrier must be operated to produce the sound intended." ;
+      sh:name "Has playing speed" ;
+      sh:nodeKind sh:IRI ;
+    ] ;
+  sh:property [
+      sh:path <http://rdaregistry.info/Elements/u/P60532> ;
+      sh:class <http://www.w3.org/2004/02/skos/core#Concept> ;
+      sh:group bibliotek-o_shapes:WorkToWorkPropertyGroup ;
+      sh:description "Relates a resource to a groove width of an analog disc or a groove pitch of an analog cylinder." ;
+      sh:name "Has groove characteristic" ;
+      sh:nodeKind sh:IRI ;
+    ] ;
+  sh:property [
+      sh:path <http://rdaregistry.info/Elements/u/P60553> ;
+      sh:class <http://www.w3.org/2004/02/skos/core#Concept> ;
+      sh:group bibliotek-o_shapes:WorkToWorkPropertyGroup ;
+      sh:description "Relates a resource to a number of tracks on an audiotape." ;
+      sh:name "Has tape configuration" ;
+      sh:nodeKind sh:IRI ;
+    ] ;
+  sh:property [
+      sh:path <http://rdaregistry.info/Elements/u/P60567> ;
+      sh:class <http://www.w3.org/2004/02/skos/core#Concept> ;
+      sh:group bibliotek-o_shapes:WorkToWorkPropertyGroup ;
+      sh:description "Relates a resource to the relationship between an original audio carrier and the carrier of a reproduction made from the original (e.g., a tape duplication master, a test pressing)." ;
+      sh:name "Generation of audio recording" ;
+      sh:nodeKind sh:IRI ;
+    ] ;
+.
+
 bibliotek-o_shapes:WorkForm
   rdf:type rdfs:Class ;
   rdf:type sh:NodeShape ;
