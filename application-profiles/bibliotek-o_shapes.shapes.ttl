@@ -212,7 +212,7 @@ bibliotek-o_shapes:AudioWorkForm
       sh:nodeKind sh:IRI ;
     ] ;
     
-# Still need to add Perform Music Ontology patterns. 
+# TODO- Still need to add Perform Music Ontology patterns. 
     
   sh:property [
       sh:path <http://id.loc.gov/ontologies/bibframe/hasExpression> ;
@@ -842,7 +842,7 @@ bibliotek-o_shapes:AudioInstanceForm
         ) ;
     ] ;
     
-# Still need to add/order AudioInstance Activities
+# TODO- Still need to add/order AudioInstance Activities
 
   sh:property [
       sh:path rdf:type ;
@@ -895,7 +895,7 @@ bibliotek-o_shapes:AudioInstanceForm
       sh:group bibliotek-o_shapes:AudioInstanceCharacteristicsPropertyGroup ;
       sh:nodeKind sh:IRI ;
       
-# Still need to designate the rda data source/vocabulary
+# TODO- Still need to designate the rda data source/vocabulary
 
     ] ;
   sh:property [
@@ -906,7 +906,7 @@ bibliotek-o_shapes:AudioInstanceForm
       sh:group bibliotek-o_shapes:AudioInstanceCharacteristicsPropertyGroup ;
       sh:nodeKind sh:IRI ;
       
-# Still need to designate a data source/vocabulary
+# TODO- Still need to designate a data source/vocabulary
 
     ] ;
   sh:property [
@@ -917,7 +917,7 @@ bibliotek-o_shapes:AudioInstanceForm
       sh:group bibliotek-o_shapes:AudioInstanceCharacteristicsPropertyGroup ;
       sh:nodeKind sh:IRI ;
       
-# Still need to designate the rda data source/vocabulary
+# TODO- Still need to designate the rda data source/vocabulary
 
     ] ;
   sh:property [
@@ -928,7 +928,7 @@ bibliotek-o_shapes:AudioInstanceForm
       sh:group bibliotek-o_shapes:AudioInstanceCharacteristicsPropertyGroup ;
       sh:nodeKind sh:IRI ;
       
-# Still need to designate a data source/vocabulary
+# TODO- Still need to designate a data source/vocabulary
 
     ] ;
   sh:property [
@@ -939,7 +939,7 @@ bibliotek-o_shapes:AudioInstanceForm
       sh:group bibliotek-o_shapes:AudioInstanceCharacteristicsPropertyGroup ;
       sh:nodeKind sh:IRI ;
       
-# Still need to designate a data source/vocabulary
+# TODO- Still need to designate a data source/vocabulary
 
     ] ;
   sh:property [
@@ -949,11 +949,11 @@ bibliotek-o_shapes:AudioInstanceForm
       sh:name "Has item" ;
       sh:group bibliotek-o_shapes:InstancetoItemPropertyGroup ;
       
-# Still need to designate a data source/vocabulary
+# TODO- Still need to designate a data source/vocabulary
 
     ] ;
     
-# Still need to add general instance properties, including materiality and dimensions
+# TODO- Still need to add general instance properties, including materiality and dimensions
 .
 
 bibliotek-o_shapes:WorkTitleForm
