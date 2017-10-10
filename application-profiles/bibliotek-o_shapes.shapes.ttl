@@ -153,13 +153,6 @@ bibliotek-o_shapes:AudioWorkForm
         ) ;
     ] ;
   sh:property [
-      sh:path <http://id.loc.gov/ontologies/bibframe/ensemble> ;
-      sh:class <http://id.loc.gov/ontologies/bibframe/MusicEnsemble> ;
-      sh:description "Ensemble for which a musical work is appropriate." ;
-      sh:name "ensemble" ;
-      sh:nodeKind sh:IRI ;
-    ] ;
-  sh:property [
       sh:path <http://rdaregistry.info/Elements/u/P60242> ;
       sh:class <http://id.loc.gov/ontologies/bibframe/Audio> ;
       sh:group bibliotek-o_shapes:WorkToWorkPropertyGroup ;
@@ -179,13 +172,6 @@ bibliotek-o_shapes:NotatedMusicForm
   rdf:type sh:NodeShape ;
   rdfs:label "Notated music form" ;
   rdfs:subClassOf rdfs:Resource ;
-  sh:property [
-      sh:path <http://id.loc.gov/ontologies/bibframe/ensemble> ;
-      sh:class <http://id.loc.gov/ontologies/bibframe/MusicEnsemble> ;
-      sh:description "Ensemble for which a musical work is appropriate." ;
-      sh:name "ensemble" ;
-      sh:nodeKind sh:IRI ;
-    ] ;
   sh:property [
       sh:path <http://rdaregistry.info/Elements/u/P60242> ;
       sh:class <http://id.loc.gov/ontologies/bibframe/Audio> ;
