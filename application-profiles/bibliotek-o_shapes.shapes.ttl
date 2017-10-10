@@ -740,6 +740,55 @@ bibliotek-o_shapes:AudioWorkForm
           ]
         ) ;
     ] ;
+  sh:property [
+      sh:path <http://id.loc.gov/ontologies/bibframe/accompaniedBy> ;
+      sh:class <http://id.loc.gov/ontologies/bibframe/Work> ;
+      sh:description "Resource that accompanies the described resource." ;
+      sh:name "Accompanied by" ;
+      sh:group bibliotek-o_shapes:AudioWorkMiscellaneousPropertyGroup ;
+      sh:nodeKind sh:IRI ;
+    ] ;
+  sh:property [
+      sh:path <http://id.loc.gov/ontologies/bibframe/accompanies> ;
+      sh:class <http://id.loc.gov/ontologies/bibframe/Work> ;
+      sh:description "Resource that adds to or is issued with the described resource." ;
+      sh:name "Accompanies" ;
+      sh:group bibliotek-o_shapes:AudioWorkMiscellaneousPropertyGroup ;
+      sh:nodeKind sh:IRI ;
+    ] ;
+  sh:property [
+      sh:path <http://id.loc.gov/ontologies/bibframe/awards> ;
+      sh:datatype xsd:string ;
+      sh:description "Information on awards associated with the described resource." ;
+      sh:name "awards" ;
+      sh:group bibliotek-o_shapes:AudioWorkMiscellaneousPropertyGroup ;
+    ] ;
+  sh:property [
+      sh:path <http://id.loc.gov/ontologies/bibframe/contentAccessibility> ;
+      sh:class <http://id.loc.gov/ontologies/bibframe/ContentAccessibility> ;
+      sh:description "Information that assists those with a sensory impairment for greater understanding of content, e.g., captions." ;
+      sh:name "Content accessibility" ;
+      sh:nodeKind sh:IRI ;
+      sh:group bibliotek-o_shapes:AudioWorkMiscellaneousPropertyGroup ;
+    ] ;
+  sh:property [
+      sh:path <http://id.loc.gov/ontologies/bibframe/firstIssue> ;
+      sh:datatype xsd:string ;
+      sh:description "Beginning date of a resource and/or the sequential designations." ;
+      sh:maxCount 1 ;
+      sh:minCount 1 ;
+      sh:name "first issue" ;
+      sh:group bibliotek-o_shapes:AudioWorkMiscellaneousPropertyGroup ;
+    ] ;
+  sh:property [
+      sh:path <http://id.loc.gov/ontologies/bibframe/lastIssue> ;
+      sh:datatype xsd:string ;
+      sh:description "Ending date of a resource and/or the sequential designations." ;
+      sh:maxCount 1 ;
+      sh:minCount 1 ;
+      sh:name "last issue" ;
+      sh:group bibliotek-o_shapes:AudioWorkMiscellaneousPropertyGroup ;
+    ] ;
 .
 
 bibliotek-o_shapes:AudioInstanceForm
@@ -771,6 +820,7 @@ bibliotek-o_shapes:AudioInstanceForm
       sh:path bib:hasActivity ;
       sh:name "Agent activity or role" ;
       sh:nodeKind sh:IRI ;
+      sh:group bibliotek-o_shapes:InstanceActivityPropertyGroup ;
       sh:or (
           [
             sh:class <> ;
@@ -837,6 +887,7 @@ bibliotek-o_shapes:AudioInstanceForm
       sh:class <http://www.w3.org/2004/02/skos/core#Concept> ;
       sh:description "Relates a resource to a number of sound channels used to make a recording." ;
       sh:name "Has playback channels" ;
+      sh:group bibliotek-o_shapes:AudioInstanceCharacteristicsPropertyGroup ;
       sh:nodeKind sh:IRI ;
     ] ;
   sh:property [
@@ -844,6 +895,7 @@ bibliotek-o_shapes:AudioInstanceForm
       sh:class <http://www.w3.org/2004/02/skos/core#Concept> ;
       sh:description "Relates a resource to a speed at which an audio carrier must be operated to produce the sound intended." ;
       sh:name "Has playing speed" ;
+      sh:group bibliotek-o_shapes:AudioInstanceCharacteristicsPropertyGroup ;
       sh:nodeKind sh:IRI ;
     ] ;
   sh:property [
@@ -851,6 +903,7 @@ bibliotek-o_shapes:AudioInstanceForm
       sh:class <http://www.w3.org/2004/02/skos/core#Concept> ;
       sh:description "Relates a resource to a groove width of an analog disc or a groove pitch of an analog cylinder." ;
       sh:name "Has groove characteristic" ;
+      sh:group bibliotek-o_shapes:AudioInstanceCharacteristicsPropertyGroup ;
       sh:nodeKind sh:IRI ;
     ] ;
   sh:property [
@@ -858,6 +911,7 @@ bibliotek-o_shapes:AudioInstanceForm
       sh:class <http://www.w3.org/2004/02/skos/core#Concept> ;
       sh:description "Relates a resource to a number of tracks on an audiotape." ;
       sh:name "Has tape configuration" ;
+      sh:group bibliotek-o_shapes:AudioInstanceCharacteristicsPropertyGroup ;
       sh:nodeKind sh:IRI ;
     ] ;
   sh:property [
@@ -865,7 +919,15 @@ bibliotek-o_shapes:AudioInstanceForm
       sh:class <http://www.w3.org/2004/02/skos/core#Concept> ;
       sh:description "Relates a resource to the relationship between an original audio carrier and the carrier of a reproduction made from the original (e.g., a tape duplication master, a test pressing)." ;
       sh:name "Generation of audio recording" ;
+      sh:group bibliotek-o_shapes:AudioInstanceCharacteristicsPropertyGroup ;
       sh:nodeKind sh:IRI ;
+    ] ;
+  sh:property [
+      sh:path <http://id.loc.gov/ontologies/bibframe/hasItem> ;
+      sh:datatype xsd:string ;
+      sh:description "Item which is an example of the described Instance." ;
+      sh:name "Has item" ;
+      sh:group bibliotek-o_shapes:InstancetoItemPropertyGroup ;
     ] ;
 .
 
@@ -1016,3 +1078,29 @@ bibliotek-o_shapes:AudioWorkMiscellaneousPropertyGroup
   sh:order "6"^^xsd:decimal ;
 .
 
+bibliotek-o_shapes:InstanceActivityPropertyGroup
+  rdf:type sh:PropertyGroup ;
+  rdfs:label "Activity property group" ;
+  sh:description "To group Agent role information for the resource." ;
+  sh:order "1"^^xsd:decimal ;
+.
+
+bibliotek-o_shapes:AudioInstanceCharacteristicsPropertyGroup
+  rdf:type sh:PropertyGroup ;
+  rdfs:label "Audio Instance Characteristics" ;
+  sh:description "To group information about the Audio-specific instance characteristics, e.g. playback channel." ;
+  sh:order "2"^^xsd:decimal ;
+.
+
+bibliotek-o_shapes:InstanceToItemPropertyGroup
+  rdf:type sh:PropertyGroup ;
+  rdfs:label "Work to Instance property group" ;
+  sh:order "?"^^xsd:decimal ;
+.
+
+bibliotek-o_shapes:ItemActivityPropertyGroup
+  rdf:type sh:PropertyGroup ;
+  rdfs:label "Activity property group" ;
+  sh:description "To group Agent role information for the resource." ;
+  sh:order "1"^^xsd:decimal ;
+.
