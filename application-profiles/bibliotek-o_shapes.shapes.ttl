@@ -117,7 +117,7 @@ bibliotek-o_shapes:AudioWorkForm
           [
             sh:class <http://bibliotek-o.org/1.0/ontology/SoundDesignerActivity> ;
           ]
-          [
+          [ 
             sh:class <http://bibliotek-o.org/1.0/ontology/NarratorActivity> ;
           ]
           [
@@ -894,10 +894,18 @@ bibliotek-o_shapes:AudioInstanceForm
       sh:name "Has playback channels" ;
       sh:group bibliotek-o_shapes:AudioInstanceCharacteristicsPropertyGroup ;
       sh:nodeKind sh:IRI ;
-      
-# TODO- Still need to designate the rda data source/vocabulary
-
     ] ;
+    
+  sh:property [
+      sh:path http://rdaregistry.info/Elements/u/P60552/skos:inScheme ;
+      sh:value <http://rdaregistry.info/termList/configPlayback> ;
+      sh:description "Values for playback channel should be from the RDA playback channel vocabulary." ;
+      sh:name "RDA Playback Channels" ;
+      sh:nodeKind sh:IRI ;
+    ] ;
+
+# The sh:path http://rdaregistry.info/Elements/u/P60552/skos:inScheme isn't meant to be a field in the form, but rather state a restriction on the use of http://rdaregistry.info/Elements/u/P60552 to instances from http://rdaregistry.info/termList/configPlayback
+  
   sh:property [
       sh:path <http://rdaregistry.info/Elements/u/P60586> ;
       sh:class <http://www.w3.org/2004/02/skos/core#Concept> ;
@@ -905,8 +913,8 @@ bibliotek-o_shapes:AudioInstanceForm
       sh:name "Has playing speed" ;
       sh:group bibliotek-o_shapes:AudioInstanceCharacteristicsPropertyGroup ;
       sh:nodeKind sh:IRI ;
-      
-# TODO- Still need to designate a data source/vocabulary
+ 
+# TODO- Still need to create a Speed class and individuals based on MARC 007
 
     ] ;
   sh:property [
@@ -917,7 +925,7 @@ bibliotek-o_shapes:AudioInstanceForm
       sh:group bibliotek-o_shapes:AudioInstanceCharacteristicsPropertyGroup ;
       sh:nodeKind sh:IRI ;
       
-# TODO- Still need to designate the rda data source/vocabulary
+# TODO- Trying to figure out whether to use sh:or for multiple sh:hasValue for http://rdaregistry.info/termList/groovePitch and http://rdaregistry.info/termList/grooveWidth
 
     ] ;
   sh:property [
@@ -928,7 +936,7 @@ bibliotek-o_shapes:AudioInstanceForm
       sh:group bibliotek-o_shapes:AudioInstanceCharacteristicsPropertyGroup ;
       sh:nodeKind sh:IRI ;
       
-# TODO- Still need to designate a data source/vocabulary
+# TODO- Seems there is no rda value list. Waiting on cataloger to confirm/prioritize.
 
     ] ;
   sh:property [
@@ -938,8 +946,16 @@ bibliotek-o_shapes:AudioInstanceForm
       sh:name "Generation of audio recording" ;
       sh:group bibliotek-o_shapes:AudioInstanceCharacteristicsPropertyGroup ;
       sh:nodeKind sh:IRI ;
-      
-# TODO- Still need to designate a data source/vocabulary
+
+  sh:property [
+      sh:path http://rdaregistry.info/Elements/u/P60567/skos:inScheme ;
+      sh:value <http://rdaregistry.info/termList/RDAGeneration> ;
+      sh:description "Values for relationships between an original carrier and the carrier of a reproduction made from the original." ;
+      sh:name "RDA value list for generation of audio recording" ;
+      sh:nodeKind sh:IRI ;
+    ] ;
+    
+# The sh:path http://rdaregistry.info/Elements/u/P60567/skos:inScheme isn't meant to be a field in the form, but rather state a restriction on the use of http://rdaregistry.info/Elements/u/P60567 to instances from http://rdaregistry.info/termList/RDAGeneration
 
     ] ;
   sh:property [
