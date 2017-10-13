@@ -896,15 +896,15 @@ bibliotek-o_shapes:AudioInstanceForm
       sh:nodeKind sh:IRI ;
     ] ;
     
+# The following sh:path http://rdaregistry.info/Elements/u/P60552/skos:inScheme isn't meant to be a field in the form, but rather state a restriction on the use of http://rdaregistry.info/Elements/u/P60552 to instances from http://rdaregistry.info/termList/configPlayback
+  
   sh:property [
-      sh:path http://rdaregistry.info/Elements/u/P60552/skos:inScheme ;
+      sh:path <http://rdaregistry.info/Elements/u/P60552/skos:inScheme> ;
       sh:value <http://rdaregistry.info/termList/configPlayback> ;
       sh:description "Values for playback channel should be from the RDA playback channel vocabulary." ;
       sh:name "RDA Playback Channels" ;
       sh:nodeKind sh:IRI ;
     ] ;
-
-# The sh:path http://rdaregistry.info/Elements/u/P60552/skos:inScheme isn't meant to be a field in the form, but rather state a restriction on the use of http://rdaregistry.info/Elements/u/P60552 to instances from http://rdaregistry.info/termList/configPlayback
   
   sh:property [
       sh:path <http://rdaregistry.info/Elements/u/P60586> ;
@@ -917,6 +917,7 @@ bibliotek-o_shapes:AudioInstanceForm
 # TODO- Still need to create a Speed class and individuals based on MARC 007
 
     ] ;
+    
   sh:property [
       sh:path <http://rdaregistry.info/Elements/u/P60532> ;
       sh:class <http://www.w3.org/2004/02/skos/core#Concept> ;
@@ -924,10 +925,21 @@ bibliotek-o_shapes:AudioInstanceForm
       sh:name "Has groove characteristic" ;
       sh:group bibliotek-o_shapes:AudioInstanceCharacteristicsPropertyGroup ;
       sh:nodeKind sh:IRI ;
-      
-# TODO- Trying to figure out whether to use sh:or for multiple sh:hasValue for http://rdaregistry.info/termList/groovePitch and http://rdaregistry.info/termList/grooveWidth
-
     ] ;
+    
+# The following sh:path http://rdaregistry.info/Elements/u/P60532/skos:inScheme isn't meant to be a field in the form, but rather state a restriction on the use of http://rdaregistry.info/Elements/u/P60532 to instances from <http://rdaregistry.info/termList/groovePitch> or <http://rdaregistry.info/termList/grooveWidth>
+
+  sh:property [
+      sh:path <http://rdaregistry.info/Elements/u/P60532/skos:inScheme> ;
+      sh:value <http://rdaregistry.info/termList/configPlayback> ;
+      sh:description "Values for groove width of an analog disc or a groove pitch of an analog cylinder." ;
+      sh:name "RDA Groove Widths or Pitch" ;
+      sh:in ( <http://rdaregistry.info/termList/groovePitch> <http://rdaregistry.info/termList/grooveWidth> ) ;
+      sh:nodeKind sh:IRI ;
+    ] ;
+        
+# TODO- Seems there is no rda tape config value list. Waiting on cataloger to confirm/prioritize.
+
   sh:property [
       sh:path <http://rdaregistry.info/Elements/u/P60553> ;
       sh:class <http://www.w3.org/2004/02/skos/core#Concept> ;
@@ -935,10 +947,8 @@ bibliotek-o_shapes:AudioInstanceForm
       sh:name "Has tape configuration" ;
       sh:group bibliotek-o_shapes:AudioInstanceCharacteristicsPropertyGroup ;
       sh:nodeKind sh:IRI ;
-      
-# TODO- Seems there is no rda value list. Waiting on cataloger to confirm/prioritize.
-
     ] ;
+    
   sh:property [
       sh:path <http://rdaregistry.info/Elements/u/P60567> ;
       sh:class <http://www.w3.org/2004/02/skos/core#Concept> ;
@@ -947,6 +957,10 @@ bibliotek-o_shapes:AudioInstanceForm
       sh:group bibliotek-o_shapes:AudioInstanceCharacteristicsPropertyGroup ;
       sh:nodeKind sh:IRI ;
 
+# The sh:path http://rdaregistry.info/Elements/u/P60567/skos:inScheme isn't meant to be a field in the form, but rather state a restriction on the use of http://rdaregistry.info/Elements/u/P60567 to instances from http://rdaregistry.info/termList/RDAGeneration
+    
+    ] ;
+    
   sh:property [
       sh:path http://rdaregistry.info/Elements/u/P60567/skos:inScheme ;
       sh:value <http://rdaregistry.info/termList/RDAGeneration> ;
@@ -955,21 +969,17 @@ bibliotek-o_shapes:AudioInstanceForm
       sh:nodeKind sh:IRI ;
     ] ;
     
-# The sh:path http://rdaregistry.info/Elements/u/P60567/skos:inScheme isn't meant to be a field in the form, but rather state a restriction on the use of http://rdaregistry.info/Elements/u/P60567 to instances from http://rdaregistry.info/termList/RDAGeneration
-
-    ] ;
+    
   sh:property [
       sh:path <http://id.loc.gov/ontologies/bibframe/hasItem> ;
       sh:datatype xsd:string ;
       sh:description "Item which is an example of the described Instance." ;
       sh:name "Has item" ;
       sh:group bibliotek-o_shapes:InstancetoItemPropertyGroup ;
-      
-# TODO- Still need to designate a data source/vocabulary
 
     ] ;
     
-# TODO- Still need to add general instance properties, including materiality and dimensions
+# TODO- Still need to add general instance properties, including materiality and dimensions.
 .
 
 bibliotek-o_shapes:WorkTitleForm
