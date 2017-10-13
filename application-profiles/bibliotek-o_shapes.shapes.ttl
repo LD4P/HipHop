@@ -887,6 +887,19 @@ bibliotek-o_shapes:AudioInstanceForm
           ]
         ) ;
     ] ;
+    
+    sh:property [
+      sh:path <http://measurement.biblioteko-o.org/hasMeasurementGroup> ;
+      sh:class <http://measurement.biblioteko-o.org/MeasurementGroup> ;
+      sh:description "Record any qualifying information about the measurement, e.g. 'approximate', 'or smaller', 'in container', 'with handle' " ;
+      sh:group bibliotek-o_shapes:MeasurementPropertyGroup ;
+      sh:name "Other title" ;
+      sh:nodeKind sh:IRI ;
+      sh:order "1"^^xsd:decimal ;
+      sh:target <http://id.loc.gov/ontologies/bibframe/Instance> ;
+    ] ;
+  
+  
   sh:property [
       sh:path <http://rdaregistry.info/Elements/u/P60552> ;
       sh:class <http://www.w3.org/2004/02/skos/core#Concept> ;
@@ -962,7 +975,7 @@ bibliotek-o_shapes:AudioInstanceForm
     ] ;
     
   sh:property [
-      sh:path http://rdaregistry.info/Elements/u/P60567/skos:inScheme ;
+      sh:path <http://rdaregistry.info/Elements/u/P60567/skos:inScheme> ;
       sh:value <http://rdaregistry.info/termList/RDAGeneration> ;
       sh:description "Values for relationships between an original carrier and the carrier of a reproduction made from the original." ;
       sh:name "RDA value list for generation of audio recording" ;
@@ -979,7 +992,7 @@ bibliotek-o_shapes:AudioInstanceForm
 
     ] ;
     
-# TODO- Still need to add general instance properties, including materiality and dimensions.
+# TODO- Still need to add general instance properties, including materiality.
 .
 
 bibliotek-o_shapes:WorkTitleForm
@@ -1138,17 +1151,24 @@ bibliotek-o_shapes:InstanceActivityPropertyGroup
   sh:order "1"^^xsd:decimal ;
 .
 
+bibliotek-o_shapes:MeasurementPropertyGroup
+  rdf:type sh:PropertyGroup ;
+  rdfs:label "Measurement property group" ;
+  sh:description "To group measurement information for the resource." ;
+  sh:order "3"^^xsd:decimal ;
+.
+
 bibliotek-o_shapes:AudioInstanceCharacteristicsPropertyGroup
   rdf:type sh:PropertyGroup ;
   rdfs:label "Audio Instance Characteristics" ;
   sh:description "To group information about the Audio-specific instance characteristics, e.g. playback channel." ;
-  sh:order "2"^^xsd:decimal ;
+  sh:order "4"^^xsd:decimal ;
 .
 
 bibliotek-o_shapes:InstanceToItemPropertyGroup
   rdf:type sh:PropertyGroup ;
   rdfs:label "Work to Instance property group" ;
-  sh:order "?"^^xsd:decimal ;
+  sh:order "5"^^xsd:decimal ;
 .
 
 bibliotek-o_shapes:ItemActivityPropertyGroup
@@ -1157,3 +1177,6 @@ bibliotek-o_shapes:ItemActivityPropertyGroup
   sh:description "To group Agent role information for the resource." ;
   sh:order "1"^^xsd:decimal ;
 .
+
+
+
