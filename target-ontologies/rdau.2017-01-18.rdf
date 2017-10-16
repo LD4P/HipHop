@@ -65,6 +65,19 @@
     <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/u/tapeConfiguration.en" />
   </rdf:Description>
   
+  <!-- Property: has special playback characteristic -->
+  <rdf:Description rdf:about="http://rdaregistry.info/Elements/u/P60481">
+    <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/u/" />
+    <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
+    <reg:name xml:lang="en">specialPlaybackCharacteristic</reg:name>
+    <rdfs:label xml:lang="en">has special playback characteristic</rdfs:label>
+    <skos:definition xml:lang="en">Relates a resource to an equalization system, noise reduction system, etc., used in making an audio recording.</skos:definition>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+    <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/u/P60351" />
+    <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/m/P30138" />
+    <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/u/specialPlaybackCharacteristic.en" />
+  </rdf:Description>
+  
   <!-- Property: DEPRECATED -->
   <rdf:Description rdf:about="http://rdaregistry.info/Elements/u/P60567">
     <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/u/" />
@@ -77,7 +90,7 @@
     <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/u/generationOfAudioRecording.en" />
   </rdf:Description>
   
-  <!-- No rdau for MARC 007 11 - Kind of cutting, 12 - Special playback characteristics 007 13 - Capture and storage technique -->
+  <!-- No rdau for MARC 007 11 - Kind of cutting, or 007 13 - Capture and storage technique -->
   
   <!-- We will take advantage of RareMat defined patterns to provision for data traditionally captured in the 007 about materiality and dimensions -->
 
