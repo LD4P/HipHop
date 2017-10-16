@@ -948,8 +948,6 @@ bibliotek-o_shapes:AudioInstanceForm
       sh:order "5"^^xsd:decimal ;
       sh:target <http://measurement.biblioteko-o.org/Measurement> ;
     ] ;
-
-  
   
   sh:property [
       sh:path <http://rdaregistry.info/Elements/u/P60552> ;
@@ -964,7 +962,7 @@ bibliotek-o_shapes:AudioInstanceForm
   
   sh:property [
       sh:path <http://rdaregistry.info/Elements/u/P60552/skos:inScheme> ;
-      sh:value <http://rdaregistry.info/termList/configPlayback> ;
+      sh:hasValue <http://rdaregistry.info/termList/configPlayback> ;
       sh:description "Values for playback channel should be from the RDA playback channel vocabulary." ;
       sh:name "RDA Playback Channels" ;
       sh:nodeKind sh:IRI ;
@@ -995,7 +993,6 @@ bibliotek-o_shapes:AudioInstanceForm
 
   sh:property [
       sh:path <http://rdaregistry.info/Elements/u/P60532/skos:inScheme> ;
-      sh:value <http://rdaregistry.info/termList/configPlayback> ;
       sh:description "Values for groove width of an analog disc or a groove pitch of an analog cylinder." ;
       sh:name "RDA Groove Widths or Pitch" ;
       sh:in ( <http://rdaregistry.info/termList/groovePitch> <http://rdaregistry.info/termList/grooveWidth> ) ;
@@ -1014,6 +1011,26 @@ bibliotek-o_shapes:AudioInstanceForm
     ] ;
     
   sh:property [
+      sh:path <http://rdaregistry.info/Elements/u/P60481> ;
+      sh:class <http://www.w3.org/2004/02/skos/core#Concept> ;
+      sh:description "Relates a resource to an equalization system, noise reduction system, etc., used in making an audio recording." ;
+      sh:name "Special playback characteristic" ;
+      sh:group bibliotek-o_shapes:AudioInstanceCharacteristicsPropertyGroup ;
+      sh:nodeKind sh:IRI ;
+
+# The sh:path http://rdaregistry.info/Elements/u/P60481/skos:inScheme isn't meant to be a field in the form, but rather state a restriction on the use of http://rdaregistry.info/Elements/u/P60481 to instances from http://rdaregistry.info/termList/specPlayback
+    
+    ] ;
+    
+  sh:property [
+      sh:path <http://rdaregistry.info/Elements/u/P60481/skos:inScheme> ;
+      sh:hasValue <http://rdaregistry.info/termList/specPlayback> ;
+      sh:description "Values for special playback characteristics." ;
+      sh:name "RDA value list for special playback characteristics" ;
+      sh:nodeKind sh:IRI ;
+    ] ;
+    
+  sh:property [
       sh:path <http://rdaregistry.info/Elements/u/P60567> ;
       sh:class <http://www.w3.org/2004/02/skos/core#Concept> ;
       sh:description "Relates a resource to the relationship between an original audio carrier and the carrier of a reproduction made from the original (e.g., a tape duplication master, a test pressing)." ;
@@ -1027,7 +1044,7 @@ bibliotek-o_shapes:AudioInstanceForm
     
   sh:property [
       sh:path <http://rdaregistry.info/Elements/u/P60567/skos:inScheme> ;
-      sh:value <http://rdaregistry.info/termList/RDAGeneration> ;
+      sh:hasValue <http://rdaregistry.info/termList/RDAGeneration> ;
       sh:description "Values for relationships between an original carrier and the carrier of a reproduction made from the original." ;
       sh:name "RDA value list for generation of audio recording" ;
       sh:nodeKind sh:IRI ;
