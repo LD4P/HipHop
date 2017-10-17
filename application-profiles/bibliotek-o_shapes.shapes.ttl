@@ -214,11 +214,12 @@ bibliotek-o_shapes:AudioWorkForm
     
 # TODO- Still need to add Perform Music Ontology patterns. 
     
+    
   sh:property [
-      sh:path <http://id.loc.gov/ontologies/bibframe/hasExpression> ;
+      sh:path <http://purl.org/dc/terms/hasPart> ;
       sh:class <http://id.loc.gov/ontologies/bibframe/Work> ;
-      sh:description "Work that is an expression of a described Work. For use to relate Works under FRBR/RDA rules." ;
       sh:group bibliotek-o_shapes:WorkToWorkPropertyGroup ;
+      sh:name "Has part" ;
       sh:nodeKind sh:IRI ;
     ] ;
     
@@ -227,6 +228,14 @@ bibliotek-o_shapes:AudioWorkForm
       sh:class <http://id.loc.gov/ontologies/bibframe/Work> ;
       sh:group bibliotek-o_shapes:WorkToWorkPropertyGroup ;
       sh:name "Is part of" ;
+      sh:nodeKind sh:IRI ;
+    ] ;
+    
+   sh:property [
+      sh:path <http://id.loc.gov/ontologies/bibframe/hasExpression> ;
+      sh:class <http://id.loc.gov/ontologies/bibframe/Work> ;
+      sh:description "Work that is an expression of a described Work. For use to relate Works under FRBR/RDA rules." ;
+      sh:group bibliotek-o_shapes:WorkToWorkPropertyGroup ;
       sh:nodeKind sh:IRI ;
     ] ;
     
@@ -680,13 +689,6 @@ bibliotek-o_shapes:AudioWorkForm
       sh:class <http://id.loc.gov/ontologies/bibframe/Work> ;
       sh:group bibliotek-o_shapes:WorkToWorkPropertyGroup ;
       sh:name "Is inspiration for" ;
-      sh:nodeKind sh:IRI ;
-    ] ;
-  sh:property [
-      sh:path <ttp://purl.org/dc/terms/hasPart> ;
-      sh:class <http://id.loc.gov/ontologies/bibframe/Work> ;
-      sh:group bibliotek-o_shapes:WorkToWorkPropertyGroup ;
-      sh:name "Has part" ;
       sh:nodeKind sh:IRI ;
     ] ;
     
