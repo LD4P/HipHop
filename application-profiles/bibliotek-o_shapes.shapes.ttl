@@ -51,6 +51,27 @@ bibliotek-o_shapes:AudioWorkForm
   rdf:type sh:NodeShape ;
   rdfs:label "Audio form" ;
   rdfs:subClassOf rdfs:Resource ;
+
+  sh:property [
+      sh:path bf:genreForm ;
+      sh:class <http://www.w3.org/2004/02/skos/core#Concept> ;
+      sh:group bibliotek-o_shapes:TypeFormPropertyGroup ;
+      sh:name "Form Genre" ;
+      sh:nodeKind sh:IRI ;
+      sh:order "0"^^xsd:decimal ;
+      sh:target <http://id.loc.gov/ontologies/bibframe/Work> ;
+    ] ;
+    
+  # The following sh:path bf:genreForm/ns0:isMemberOfMADSScheme isn't meant to be a field in the form, but rather state a restriction on the use of bf:genreForm to instances from http://id.loc.gov/authorities/genreForms
+  
+  sh:property [
+      sh:path <bf:genreForm/ns0:isMemberOfMADSScheme> ;
+      sh:hasValue <http://id.loc.gov/authorities/genreForms> ;
+      sh:description "Values for form genre terms" ;
+      sh:name "LCGFT Form Genre Terms" ;
+      sh:nodeKind sh:IRI ;
+    ] ;
+    
   sh:property [
       sh:path bib:hasPreferredTitle ;
       sh:class <http://id.loc.gov/ontologies/bibframe/Title> ;
@@ -801,6 +822,14 @@ bibliotek-o_shapes:AudioInstanceForm
   rdfs:label "Instance of Audio form" ;
   rdfs:subClassOf rdfs:Resource ;
   sh:property [
+      sh:path rdf:type ;
+      sh:name "Type of Instance" ;
+      sh:nodeKind sh:IRI ;
+      sh:group bibliotek-o_shapes:TypeFormPropertyGroup ;
+      sh:in ( <http://bibliotek-o.org/1.0/ontology/AudioDisc> <http://bibliotek-o.org/1.0/ontology/AudioRoll> <http://bibliotek-o.org/1.0/ontology/AudioCassette> <http://bibliotek-o.org/1.0/ontology/AudioBelt> <http://bibliotek-o.org/1.0/ontology/AudioCylinder> <http://bibliotek-o.org/1.0/ontology/AudioWireReel> <http://bibliotek-o.org/1.0/ontology/AudiotapeReel> <http://bibliotek-o.org/1.0/ontology/Cassette> <http://bibliotek-o.org/1.0/ontology/SoundTrackReel> <http://bibliotek-o.org/1.0/ontology/ComputerTapeReel> <http://bibliotek-o.org/1.0/ontology/Disc> <http://bibliotek-o.org/1.0/ontology/Reel> ) ;
+    ] ;
+    
+  sh:property [
       sh:path bib:hasPreferredTitle ;
       sh:class <http://id.loc.gov/ontologies/bibframe/Title> ;
       sh:group bibliotek-o_shapes:TitlePropertyGroup ;
@@ -846,50 +875,7 @@ bibliotek-o_shapes:AudioInstanceForm
     
 # TODO- Still need to add/order AudioInstance Activities
 
-  sh:property [
-      sh:path rdf:type ;
-      sh:name "Type of Instance" ;
-      sh:nodeKind sh:IRI ;
-      sh:or (
-          [
-            sh:in <http://bibliotek-o.org/1.0/ontology/AudioDisc> ;
-          ]
-          [
-            sh:in <http://bibliotek-o.org/1.0/ontology/AudioRoll> ;
-          ]
-          [
-            sh:in <http://bibliotek-o.org/1.0/ontology/AudioCassette> ;
-          ]
-          [
-            sh:in <http://bibliotek-o.org/1.0/ontology/AudioBelt> ;
-          ]
-          [
-            sh:in <http://bibliotek-o.org/1.0/ontology/AudioCylinder> ;
-          ]
-          [
-            sh:in <http://bibliotek-o.org/1.0/ontology/AudioWireReel> ;
-          ]
-          [
-            sh:in <http://bibliotek-o.org/1.0/ontology/AudiotapeReel> ;
-          ]
-          [
-            sh:in <http://bibliotek-o.org/1.0/ontology/Cassette> ;
-          ]
-          [
-            sh:in <http://bibliotek-o.org/1.0/ontology/SoundTrackReel> ;
-          ]
-          [
-            sh:in <http://bibliotek-o.org/1.0/ontology/ComputerTapeReel> ;
-          ]
-          [
-            sh:in <http://bibliotek-o.org/1.0/ontology/Disc> ;
-          ]
-          [
-            sh:in <http://bibliotek-o.org/1.0/ontology/Reel> ;
-          ]
-        ) ;
-    ] ;
-    
+  
     sh:property [
       sh:path <http://measurement.biblioteko-o.org/hasMeasurementGroup> ;
       sh:class <http://measurement.biblioteko-o.org/MeasurementGroup> ;
@@ -922,7 +908,7 @@ bibliotek-o_shapes:AudioInstanceForm
     ] ;
     
     sh:property [
-      sh:path rdfs:value ;
+      sh:path rdf:value ;
       sh:description "Numeric value for the measurement" ;
       sh:name "Numeric value" ;
       sh:group bibliotek-o_shapes:MeasurementPropertyGroup ;
@@ -1153,7 +1139,7 @@ bibliotek-o_shapes:TitleElementForm
   rdfs:label "Title element form" ;
   rdfs:subClassOf rdfs:Resource ;
   sh:property [
-      sh:path rdfs:value ;
+      sh:path rdf:value ;
       sh:description "String value for the title element" ;
       sh:name "Title element value" ;
       sh:nodeKind sh:Literal ;
@@ -1170,75 +1156,82 @@ bibliotek-o_shapes:TitleElementForm
   sh:targetClass <http://bibliotek-o.org/1.0/ontology/TitleElement> ;
 .
 
+bibliotek-o_shapes:TypeFormPropertyGroup
+  rdf:type sh:PropertyGroup ;
+  rdfs:label "Type and form property group" ;
+  sh:description "To group title information for the resource." ;
+  sh:order "0"^^xsd:decimal ;
+.
+
 bibliotek-o_shapes:TitlePropertyGroup
   rdf:type sh:PropertyGroup ;
   rdfs:label "Title property group" ;
   sh:description "To group title information for the resource." ;
-  sh:order "0"^^xsd:decimal ;
+  sh:order "1"^^xsd:decimal ;
 .
 
 bibliotek-o_shapes:WorkActivityPropertyGroup
   rdf:type sh:PropertyGroup ;
   rdfs:label "Activity property group" ;
   sh:description "To group Agent role information for the resource." ;
-  sh:order "1"^^xsd:decimal ;
+  sh:order "2"^^xsd:decimal ;
 .
 
 bibliotek-o_shapes:SubjectAndCoveragePropertyGroup
   rdf:type sh:PropertyGroup ;
   rdfs:label "Audio work subject and coverage property group" ;
-  sh:order "2"^^xsd:decimal ;
+  sh:order "3"^^xsd:decimal ;
 .
 
 bibliotek-o_shapes:AudioWorkToWorkPropertyGroup
   rdf:type sh:PropertyGroup ;
   rdfs:label "Work to work property group" ;
-  sh:order "3"^^xsd:decimal ;
+  sh:order "4"^^xsd:decimal ;
 .
 
 bibliotek-o_shapes:WorkToWorkPropertyGroup
   rdf:type sh:PropertyGroup ;
   rdfs:label "Work to work property group" ;
-  sh:order "4"^^xsd:decimal ;
+  sh:order "5"^^xsd:decimal ;
 .
 
 bibliotek-o_shapes:WorkToInstancePropertyGroup
   rdf:type sh:PropertyGroup ;
   rdfs:label "Work to Instance property group" ;
-  sh:order "5"^^xsd:decimal ;
+  sh:order "6"^^xsd:decimal ;
 .
 
 bibliotek-o_shapes:AudioWorkMiscellaneousPropertyGroup
   rdf:type sh:PropertyGroup ;
   rdfs:label "Work to Instance property group" ;
-  sh:order "6"^^xsd:decimal ;
+  sh:order "7"^^xsd:decimal ;
 .
 
 bibliotek-o_shapes:InstanceActivityPropertyGroup
   rdf:type sh:PropertyGroup ;
   rdfs:label "Activity property group" ;
   sh:description "To group Agent role information for the resource." ;
-  sh:order "1"^^xsd:decimal ;
+  sh:order "2"^^xsd:decimal ;
 .
 
 bibliotek-o_shapes:MeasurementPropertyGroup
   rdf:type sh:PropertyGroup ;
   rdfs:label "Measurement property group" ;
   sh:description "To group measurement information for the resource." ;
-  sh:order "3"^^xsd:decimal ;
+  sh:order "4"^^xsd:decimal ;
 .
 
 bibliotek-o_shapes:AudioInstanceCharacteristicsPropertyGroup
   rdf:type sh:PropertyGroup ;
   rdfs:label "Audio Instance Characteristics" ;
   sh:description "To group information about the Audio-specific instance characteristics, e.g. playback channel." ;
-  sh:order "4"^^xsd:decimal ;
+  sh:order "5"^^xsd:decimal ;
 .
 
 bibliotek-o_shapes:InstanceToItemPropertyGroup
   rdf:type sh:PropertyGroup ;
   rdfs:label "Work to Instance property group" ;
-  sh:order "5"^^xsd:decimal ;
+  sh:order "6"^^xsd:decimal ;
 .
 
 bibliotek-o_shapes:ItemActivityPropertyGroup
