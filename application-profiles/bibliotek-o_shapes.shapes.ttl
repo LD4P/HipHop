@@ -922,7 +922,7 @@ bibliotek-o_shapes:AudioInstanceForm
     ] ;
     
     sh:property [
-      sh:path rdfs:value ;
+      sh:path rdf:value ;
       sh:description "Numeric value for the measurement" ;
       sh:name "Numeric value" ;
       sh:group bibliotek-o_shapes:MeasurementPropertyGroup ;
@@ -1153,7 +1153,7 @@ bibliotek-o_shapes:TitleElementForm
   rdfs:label "Title element form" ;
   rdfs:subClassOf rdfs:Resource ;
   sh:property [
-      sh:path rdfs:value ;
+      sh:path rdf:value ;
       sh:description "String value for the title element" ;
       sh:name "Title element value" ;
       sh:nodeKind sh:Literal ;
