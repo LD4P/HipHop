@@ -62,7 +62,7 @@ bibliotek-o_shapes:AudioWorkForm
       sh:target <http://id.loc.gov/ontologies/bibframe/Work> ;
     ] ;
     
-  # The following sh:path bf:genreForm/ns0:isMemberOfMADSScheme isn't meant to be a field in the form, but rather state a restriction on the use of bf:genreForm to instances from http://id.loc.gov/authorities/genreForms
+  # The following sh:path bf:genreForm/ns0:isMemberOfMADSScheme isn't meant to be a field in the form, but rather state a restriction on the use of bf:genreForm to instances from http://id.loc.gov/authorities/genreForms. 
   
   sh:property [
       sh:path <bf:genreForm/ns0:isMemberOfMADSScheme> ;
@@ -70,6 +70,7 @@ bibliotek-o_shapes:AudioWorkForm
       sh:description "Values for form genre terms" ;
       sh:name "LCGFT Form Genre Terms" ;
       sh:nodeKind sh:IRI ;
+      skos:editorialNote "Use look up service; LCGFT is too big to load directly into an RDF editor, and more importantly we don't want to create MADSAuthorities, only link to them." ;
     ] ;
     
   sh:property [
@@ -958,7 +959,7 @@ bibliotek-o_shapes:AudioInstanceForm
   
   sh:property [
       sh:path <http://rdaregistry.info/Elements/u/P60586> ;
-      sh:class <http://www.w3.org/2004/02/skos/core#Concept> ;
+      sh:class <http://id.loc.gov/ontologies/bibframe/PlayingSpeed> ;
       sh:description "Relates a resource to a speed at which an audio carrier must be operated to produce the sound intended." ;
       sh:name "Has playing speed" ;
       sh:group bibliotek-o_shapes:AudioInstanceCharacteristicsPropertyGroup ;
