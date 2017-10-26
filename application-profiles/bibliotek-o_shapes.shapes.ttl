@@ -1042,6 +1042,14 @@ bibliotek-o_shapes:AudioInstanceForm
       sh:nodeKind sh:IRI ;
     ] ;
     
+     sh:property [
+      sh:path <http:/audio.biblioteko-o.org/hasCuttingType> ;
+      sh:class <http://performedmusicontology.org/ontology/DiscCutting> ;
+      sh:description "Relates a resource to the recording process in which a stylus cuts a vertical or lateral groove into an audio disc." ;
+      sh:name "Has cutting type" ;
+      sh:group bibliotek-o_shapes:AudioInstanceCharacteristicsPropertyGroup ;
+      sh:nodeKind sh:IRI ;
+    
     
   sh:property [
       sh:path <http://id.loc.gov/ontologies/bibframe/hasItem> ;
