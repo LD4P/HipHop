@@ -1049,7 +1049,7 @@ bibliotek-o_shapes:AudioInstanceForm
       sh:name "Has cutting type" ;
       sh:group bibliotek-o_shapes:AudioInstanceCharacteristicsPropertyGroup ;
       sh:nodeKind sh:IRI ;
-    
+    ] ;
     
   sh:property [
       sh:path <http://id.loc.gov/ontologies/bibframe/hasItem> ;
