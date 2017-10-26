@@ -20,7 +20,15 @@
     <Prefix name="terms" IRI="http://purl.org/dc/terms/"/>
     <Prefix name="rdakit" IRI="http://metadataregistry.org/uri/profile/rdakit/"/>
    
+ 
+    <!-- http://performedmusicontology.org/ontology/DiscCutting -->
     
+    <owl:Class rdf:about="http://performedmusicontology.org/ontology/DiscCutting">
+        <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/SoundCharacteristic"/>
+        <rdfs:label>Disc cutting process</rdfs:label>
+        <skos:definition>Recording process in which a stylus cuts a vertical or lateral groove into an audio disc.</skos:definition>
+    </owl:Class>
+ 
     <!-- Individuals -->
     
     
