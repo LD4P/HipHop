@@ -104,10 +104,25 @@ bibliotek-o_shapes:AudioWorkForm
       sh:nodeKind sh:IRI ;
       sh:or (
           [
+            sh:class <http://bibliotek-o.org/1.0/ontology/ComposerActivity> ;
+          ]
+          [
+            sh:class <http://bibliotek-o.org/1.0/ontology/ArrangerActivity> ;
+          ]
+          [
+            sh:class <http://bibliotek-o.org/1.0/ontology/LibrettistActivity> ;
+          ]
+          [
+            sh:class <http://bibliotek-o.org/1.0/ontology/LyricistActivity> ;
+          ]
+          [
             sh:class <http://bibliotek-o.org/1.0/ontology/PerformerActivity> ;
           ]
           [
-            sh:class <http://bibliotek-o.org/1.0/ontology/ProducerActivity> ;
+            sh:class <http://bibliotek-o.org/1.0/ontology/ConductorActivity> ;
+          ]
+          [
+            sh:class <http://bibliotek-o.org/1.0/ontology/MusicianActivity> ;
           ]
           [
             sh:class <http://bibliotek-o.org/1.0/ontology/SingerActivity> ;
@@ -115,41 +130,23 @@ bibliotek-o_shapes:AudioWorkForm
           [
             sh:class <http://bibliotek-o.org/1.0/ontology/InstrumentalistActivity> ;
           ]
-          [
-            sh:class <http://bibliotek-o.org/1.0/ontology/LyricistActivity> ;
-          ]
-          [
-            sh:class <http://bibliotek-o.org/1.0/ontology/ArrangerActivity> ;
-          ]
-          [
-            sh:class <http://bibliotek-o.org/1.0/ontology/ComposerActivity> ;
-          ]
-          [
-            sh:class <http://bibliotek-o.org/1.0/ontology/ConductorActivity> ;
-          ]
-          [
-            sh:class <http://bibliotek-o.org/1.0/ontology/LibrettistActivity> ;
-          ]
-          [
-            sh:class <http://bibliotek-o.org/1.0/ontology/MusicianActivity> ;
-          ]
-          [
-            sh:class <http://bibliotek-o.org/1.0/ontology/MusicalDirectorActivity> ;
+          [ 
+            sh:class <http://bibliotek-o.org/1.0/ontology/NarratorActivity> ;
           ]
           [
             sh:class <http://bibliotek-o.org/1.0/ontology/CommentatorActivity> ;
           ]
           [
-            sh:class <http://bibliotek-o.org/1.0/ontology/SoundDesignerActivity> ;
+            sh:class <http://bibliotek-o.org/1.0/ontology/ProducerActivity> ;
           ]
-          [ 
-            sh:class <http://bibliotek-o.org/1.0/ontology/NarratorActivity> ;
+          [
+            sh:class <http://bibliotek-o.org/1.0/ontology/MusicalDirectorActivity> ;
+          ]
+          [
+            sh:class <http://bibliotek-o.org/1.0/ontology/SoundDesignerActivity> ;
           ]
           [
             sh:class <http://bibliotek-o.org/1.0/ontology/RecordistActivity> ;
-          ]
-          [
-            sh:class <http://bibliotek-o.org/1.0/ontology/SoundDesignerActivity> ;
           ]
           [
             sh:class <http://bibliotek-o.org/1.0/ontology/BroadcasterActivity> ;
