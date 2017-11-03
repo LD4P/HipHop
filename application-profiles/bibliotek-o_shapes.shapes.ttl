@@ -990,14 +990,25 @@ bibliotek-o_shapes:AudioInstanceForm
       sh:in ( <http://rdaregistry.info/termList/groovePitch> <http://rdaregistry.info/termList/grooveWidth> ) ;
       sh:nodeKind sh:IRI ;
     ] ;
-        
-# TODO- Seems there is no rda tape config value list. Waiting on cataloger to confirm/prioritize.
+    
+#Shape for http://rdaregistry.info/Elements/u/P60553 is set up to use bf:TapeConfig Individuals from Performed Music Ontology
 
   sh:property [
       sh:path <http://rdaregistry.info/Elements/u/P60553> ;
-      sh:class <http://www.w3.org/2004/02/skos/core#Concept> ;
+      sh:class <http://id.loc.gov/ontologies/bibframe/TapeConfig> ;
       sh:description "Relates a resource to a number of tracks on an audiotape." ;
       sh:name "Has tape configuration" ;
+      sh:group bibliotek-o_shapes:AudioInstanceCharacteristicsPropertyGroup ;
+      sh:nodeKind sh:IRI ;
+    ] ;
+    
+#Shape for http:/audio.biblioteko-o.org/hasCuttingType is set up to use bf:TapeConfig Individuals from Performed Music Ontology
+
+  sh:property [
+      sh:path <http:/audio.biblioteko-o.org/hasCuttingType> ;
+      sh:class <http://performedmusicontology.org/ontology/DiscCutting> ;
+      sh:description "Relates a resource to a type of cutting used to capture sound on a disc." ;
+      sh:name "Has cutting type" ;
       sh:group bibliotek-o_shapes:AudioInstanceCharacteristicsPropertyGroup ;
       sh:nodeKind sh:IRI ;
     ] ;
