@@ -32,4 +32,50 @@
     <schema:domainIncludes rdf:resource="http://schema.org/Event"/>
   </rdf:Property>
   
+  <rdf:Property rdf:about="http://schema.org/duration">
+<rdfs:label>duration</rdfs:label>
+<rdfs:comment>The duration of the item (movie, audio recording, event, etc.) in http://en.wikipedia.org/wiki/ISO_8601 ISO 8601 date format.</rdfs:comment>
+</rdf:Property>
+<rdf:Description rdf:about="http://schema.org/SocialEvent">
+<rdfs:subClassOf rdf:resource="http://schema.org/Event"/>
+</rdf:Description>
+<rdf:Description rdf:about="http://schema.org/ExhibitionEvent">
+<rdfs:subClassOf rdf:resource="http://schema.org/Event"/>
+</rdf:Description>
+<rdf:Description rdf:about="http://schema.org/SportsEvent">
+<rdfs:subClassOf rdf:resource="http://schema.org/Event"/>
+</rdf:Description>
+<rdf:Description rdf:about="http://schema.org/EducationEvent">
+<rdfs:subClassOf rdf:resource="http://schema.org/Event"/>
+</rdf:Description>
+<rdf:Description rdf:about="http://schema.org/DeliveryEvent">
+<rdfs:subClassOf rdf:resource="http://schema.org/Event"/>
+</rdf:Description>
+<rdf:Description rdf:about="http://schema.org/FoodEvent">
+<rdfs:subClassOf rdf:resource="http://schema.org/Event"/>
+</rdf:Description>
+<rdf:Description rdf:about="http://schema.org/DanceEvent">
+<rdfs:subClassOf rdf:resource="http://schema.org/Event"/>
+</rdf:Description>
+<rdf:Description rdf:about="http://schema.org/ComedyEvent">
+<rdfs:subClassOf rdf:resource="http://schema.org/Event"/>
+</rdf:Description>
+<rdf:Description rdf:about="http://schema.org/BusinessEvent">
+<rdfs:subClassOf rdf:resource="http://schema.org/Event"/>
+</rdf:Description>
+<rdf:Description rdf:about="http://schema.org/Festival">
+<rdfs:subClassOf rdf:resource="http://schema.org/Event"/>
+</rdf:Description>
+<rdf:Description rdf:about="http://schema.org/EventSeries">
+<rdfs:subClassOf rdf:resource="http://schema.org/Event"/>
+</rdf:Description>
+<rdf:Description rdf:about="http://schema.org/TheaterEvent">
+<rdfs:subClassOf rdf:resource="http://schema.org/Event"/>
+</rdf:Description>
+<rdf:Description rdf:about="http://schema.org/ScreeningEvent">
+<rdfs:subClassOf rdf:resource="http://schema.org/Event"/>
+</rdf:Description>
+  
+  
+  
 </rdf:RDF>
