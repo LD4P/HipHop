@@ -72,6 +72,7 @@ bibliotek-o_shapes:AudioWorkForm
       sh:path <bf:genreForm/ns0:isMemberOfMADSScheme> ;
       sh:hasValue <http://id.loc.gov/authorities/genreForms> ;
       sh:description "Values for form genre terms" ;
+      sh:group bibliotek-o_shapes:TypeFormPropertyGroup ;
       sh:name "LCGFT Form Genre Terms" ;
       sh:nodeKind sh:IRI ;
       skos:editorialNote "Use look up service; LCGFT is too big to load directly into an RDF editor, and more importantly we don't want to create MADSAuthorities, only link to them." ;
@@ -177,9 +178,6 @@ bibliotek-o_shapes:AudioWorkForm
             sh:class <http://xmlns.com/foaf/0.1/Agent> ;
           ]
           [
-            sh:class <http://schema.org/event> ;
-          ]
-          [
             sh:class <http://www.lingvoj.org/ontology/Lingvo> ;
           ]
           [
@@ -219,7 +217,22 @@ bibliotek-o_shapes:AudioWorkForm
       sh:group bibliotek-o_shapes:SubjectAndCoveragePropertyGroup ;
       sh:nodeKind sh:IRI ;
     ] ;
-  
+    sh:property [
+      sh:path <http://schema.org/recordedAt> ;
+      sh:description "An event (a performance, concert, audition, etc.) wholly or partially captured by the work." ;
+      sh:name "Event recorded" ;
+      sh:group bibliotek-o_shapes:SubjectAndCoveragePropertyGroup ;
+      sh:nodeKind sh:IRI ;
+      sh:or (
+          [
+          sh:class <http://schema.org/Event> ;
+          ] 
+          [
+          sh:class <http://id.loc.gov/ontologies/bibframe/Event> ;
+           ]
+        ) ;
+    ] ;      
+    
   sh:property [
       sh:path <http://rdaregistry.info/Elements/u/P60242> ;
       sh:class <http://id.loc.gov/ontologies/bibframe/Audio> ;
@@ -767,6 +780,16 @@ bibliotek-o_shapes:AudioWorkForm
           ]
         ) ;
     ] ;
+    
+  sh:property [
+      sh:path <http://schema.org/duration> ;
+      sh:class <http://id.loc.gov/ontologies/bibframe/Audio> ;
+      sh:group bibliotek-o_shapes:AudioWorkMiscellaneousPropertyGroup ;
+      sh:name "Duration of audio work" ;
+      sh:nodeKind sh:Literal ;
+      sh:maxCount 1 ;
+      skos:editorialNote "The duration of the item (movie, audio recording, event, etc.) in <a href="http://en.wikipedia.org/wiki/ISO_8601">ISO 8601 date format." ;
+    ] ;
   sh:property [
       sh:path <http://id.loc.gov/ontologies/bibframe/accompaniedBy> ;
       sh:class <http://id.loc.gov/ontologies/bibframe/Work> ;
@@ -803,7 +826,6 @@ bibliotek-o_shapes:AudioWorkForm
       sh:datatype xsd:string ;
       sh:description "Beginning date of a resource and/or the sequential designations." ;
       sh:maxCount 1 ;
-      sh:minCount 1 ;
       sh:name "first issue" ;
       sh:group bibliotek-o_shapes:AudioWorkMiscellaneousPropertyGroup ;
     ] ;
@@ -812,7 +834,6 @@ bibliotek-o_shapes:AudioWorkForm
       sh:datatype xsd:string ;
       sh:description "Ending date of a resource and/or the sequential designations." ;
       sh:maxCount 1 ;
-      sh:minCount 1 ;
       sh:name "last issue" ;
       sh:group bibliotek-o_shapes:AudioWorkMiscellaneousPropertyGroup ;
     ] ;
