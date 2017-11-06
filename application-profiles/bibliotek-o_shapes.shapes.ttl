@@ -62,7 +62,7 @@ bibliotek-o_shapes:AudioWorkForm
       sh:name "Form Genre" ;
       sh:nodeKind sh:IRI ;
       sh:order "0"^^xsd:decimal ;
-      bibliotek-o_shapes:lookup bibliotek-o_shapes:DavesLookup ;
+      bibliotek-o_shapes:lookup bibliotek-o_shapes:LD4LookupService ;
       sh:target <http://id.loc.gov/ontologies/bibframe/Work> ;
     ] ;
     
@@ -841,6 +841,7 @@ bibliotek-o_shapes:AudioInstanceForm
       sh:order "0"^^xsd:decimal ;
       sh:target <http://id.loc.gov/ontologies/bibframe/Instance> ;
     ] ;
+    
   sh:property [
       sh:path <http://id.loc.gov/ontologies/bibframe/title> ;
       sh:class <http://id.loc.gov/ontologies/bibframe/Title> ;
@@ -851,32 +852,27 @@ bibliotek-o_shapes:AudioInstanceForm
       sh:order "1"^^xsd:decimal ;
       sh:target <http://id.loc.gov/ontologies/bibframe/Instance> ;
     ] ;
+    
   sh:property [
       sh:path bib:hasActivity ;
       sh:name "Agent activity or role" ;
       sh:nodeKind sh:IRI ;
       sh:group bibliotek-o_shapes:InstanceActivityPropertyGroup ;
       sh:or (
-          [
-            sh:class <> ;
-          ]
-          [
-            sh:class <> ;
-          ]
-          [
-            sh:class <> ;
-          ]
-          [
-            sh:class <> ;
-          ]
-          [
-            sh:class <> ;
-          ]
+         [
+           sh:class < http://bibliotek-o.org/1.1/ontology/Distributor > ;
+         ]
+         [
+           sh:class <http://bibliotek-o.org/1.1/ontology/PublisherActivity > ;
+         ]
+         [
+           sh:class <http://bibliotek-o.org/1.1/ontology/ManufacturerActivity > ;
+         ]
+         [
+           sh:class <http://bibliotek-o.org/1.1/ontology/DistributorActivity> ;
+         ]
         ) ;
     ] ;
-    
-# TODO- Still need to add/order AudioInstance Activities
-
   
     sh:property [
       sh:path <http://measurement.biblioteko-o.org/hasMeasurementGroup> ;
