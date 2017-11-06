@@ -62,6 +62,7 @@ bibliotek-o_shapes:AudioWorkForm
       sh:name "Form Genre" ;
       sh:nodeKind sh:IRI ;
       sh:order "0"^^xsd:decimal ;
+      bibliotek-o_shapes:lookup bibliotek-o_shapes:DavesLookup ;
       sh:target <http://id.loc.gov/ontologies/bibframe/Work> ;
     ] ;
     
@@ -938,125 +939,53 @@ bibliotek-o_shapes:AudioInstanceForm
       sh:target <http://measurement.biblioteko-o.org/Measurement> ;
     ] ;
   
-  sh:property [
-      sh:path <http://rdaregistry.info/Elements/u/P60552> ;
-      sh:class <http://www.w3.org/2004/02/skos/core#Concept> ;
-      sh:description "Relates a resource to a number of sound channels used to make a recording." ;
-      sh:name "Has playback channels" ;
+   sh:property [
+      sh:path <http://id.loc.gov/ontologies/bibframe/soundCharacteristic> ;
+      sh:description "Technical specification relating to the encoding of sound in a resource." ;
+      sh:name "Sound Characteristics" ;
       sh:group bibliotek-o_shapes:AudioInstanceCharacteristicsPropertyGroup ;
       sh:nodeKind sh:IRI ;
+      sh:or (
+          [
+             sh:class <http://id.loc.gov/ontologies/bibframe/PlayingSpeed> ;
+          ]
+          [
+             sh:class <http://www.w3.org/2004/02/skos/core#Concept> ;
+          ]
+          [
+            sh:class <http://id.loc.gov/ontologies/bibframe/TapeConfig> ;
+          ]
+          [
+            sh:class <http://performedmusicontology.org/ontology/DiscCutting> ;
+          ]
+        ) ;
     ] ;
-    
-# The following sh:path http://rdaregistry.info/Elements/u/P60552/skos:inScheme isn't meant to be a field in the form, but rather state a restriction on the use of http://rdaregistry.info/Elements/u/P60552 to instances from http://rdaregistry.info/termList/configPlayback
+    ] ;
   
   sh:property [
-      sh:path <http://rdaregistry.info/Elements/u/P60552/skos:inScheme> ;
-      sh:hasValue <http://rdaregistry.info/termList/configPlayback> ;
-      sh:description "Values for playback channel should be from the RDA playback channel vocabulary." ;
-      sh:name "RDA Playback Channels" ;
-      sh:nodeKind sh:IRI ;
-    ] ;
-  
-  sh:property [
-      sh:path <http://rdaregistry.info/Elements/u/P60586> ;
-      sh:class <http://id.loc.gov/ontologies/bibframe/PlayingSpeed> ;
-      sh:description "Relates a resource to a speed at which an audio carrier must be operated to produce the sound intended." ;
-      sh:name "Has playing speed" ;
-      sh:group bibliotek-o_shapes:AudioInstanceCharacteristicsPropertyGroup ;
-      sh:nodeKind sh:IRI ;
- 
-# TODO- Still need to create a Speed class and individuals based on MARC 007
-
-    ] ;
-    
-  sh:property [
-      sh:path <http://rdaregistry.info/Elements/u/P60532> ;
+      sh:path <http://id.loc.gov/ontologies/bibframe/soundCharacteristic/skos:inScheme> ;
       sh:class <http://www.w3.org/2004/02/skos/core#Concept> ;
-      sh:description "Relates a resource to a groove width of an analog disc or a groove pitch of an analog cylinder." ;
-      sh:name "Has groove characteristic" ;
+      sh:description "Terms for sound characteristics should be taken from RDA Values List or individuals from Performed Music Ontology" ;
+      sh:name "Sound Characteristics" ;
       sh:group bibliotek-o_shapes:AudioInstanceCharacteristicsPropertyGroup ;
       sh:nodeKind sh:IRI ;
-    ] ;
-    
-# The following sh:path http://rdaregistry.info/Elements/u/P60532/skos:inScheme isn't meant to be a field in the form, but rather state a restriction on the use of http://rdaregistry.info/Elements/u/P60532 to instances from <http://rdaregistry.info/termList/groovePitch> or <http://rdaregistry.info/termList/grooveWidth>
-
-  sh:property [
-      sh:path <http://rdaregistry.info/Elements/u/P60532/skos:inScheme> ;
-      sh:description "Values for groove width of an analog disc or a groove pitch of an analog cylinder." ;
-      sh:name "RDA Groove Widths or Pitch" ;
-      sh:in ( <http://rdaregistry.info/termList/groovePitch> <http://rdaregistry.info/termList/grooveWidth> ) ;
-      sh:nodeKind sh:IRI ;
-    ] ;
-    
-#Shape for http://rdaregistry.info/Elements/u/P60553 is set up to use bf:TapeConfig Individuals from Performed Music Ontology
-
-  sh:property [
-      sh:path <http://rdaregistry.info/Elements/u/P60553> ;
-      sh:class <http://id.loc.gov/ontologies/bibframe/TapeConfig> ;
-      sh:description "Relates a resource to a number of tracks on an audiotape." ;
-      sh:name "Has tape configuration" ;
-      sh:group bibliotek-o_shapes:AudioInstanceCharacteristicsPropertyGroup ;
-      sh:nodeKind sh:IRI ;
-    ] ;
-    
-#Shape for http:/audio.biblioteko-o.org/hasCuttingType is set up to use bf:TapeConfig Individuals from Performed Music Ontology
-
-  sh:property [
-      sh:path <http:/audio.biblioteko-o.org/hasCuttingType> ;
-      sh:class <http://performedmusicontology.org/ontology/DiscCutting> ;
-      sh:description "Relates a resource to a type of cutting used to capture sound on a disc." ;
-      sh:name "Has cutting type" ;
-      sh:group bibliotek-o_shapes:AudioInstanceCharacteristicsPropertyGroup ;
-      sh:nodeKind sh:IRI ;
-    ] ;
-    
-  sh:property [
-      sh:path <http://rdaregistry.info/Elements/u/P60481> ;
-      sh:class <http://www.w3.org/2004/02/skos/core#Concept> ;
-      sh:description "Relates a resource to an equalization system, noise reduction system, etc., used in making an audio recording." ;
-      sh:name "Special playback characteristic" ;
-      sh:group bibliotek-o_shapes:AudioInstanceCharacteristicsPropertyGroup ;
-      sh:nodeKind sh:IRI ;
-
-# The sh:path http://rdaregistry.info/Elements/u/P60481/skos:inScheme isn't meant to be a field in the form, but rather state a restriction on the use of http://rdaregistry.info/Elements/u/P60481 to instances from http://rdaregistry.info/termList/specPlayback
-    
-    ] ;
-    
-  sh:property [
-      sh:path <http://rdaregistry.info/Elements/u/P60481/skos:inScheme> ;
-      sh:hasValue <http://rdaregistry.info/termList/specPlayback> ;
-      sh:description "Values for special playback characteristics." ;
-      sh:name "RDA value list for special playback characteristics" ;
-      sh:nodeKind sh:IRI ;
-    ] ;
-    
-  sh:property [
-      sh:path <http://rdaregistry.info/Elements/u/P60567> ;
-      sh:class <http://www.w3.org/2004/02/skos/core#Concept> ;
-      sh:description "Relates a resource to the relationship between an original audio carrier and the carrier of a reproduction made from the original (e.g., a tape duplication master, a test pressing)." ;
-      sh:name "Generation of audio recording" ;
-      sh:group bibliotek-o_shapes:AudioInstanceCharacteristicsPropertyGroup ;
-      sh:nodeKind sh:IRI ;
-
-# The sh:path http://rdaregistry.info/Elements/u/P60567/skos:inScheme isn't meant to be a field in the form, but rather state a restriction on the use of http://rdaregistry.info/Elements/u/P60567 to instances from http://rdaregistry.info/termList/RDAGeneration
-    
-    ] ;
-    
-  sh:property [
-      sh:path <http://rdaregistry.info/Elements/u/P60567/skos:inScheme> ;
-      sh:hasValue <http://rdaregistry.info/termList/RDAGeneration> ;
-      sh:description "Values for relationships between an original carrier and the carrier of a reproduction made from the original." ;
-      sh:name "RDA value list for generation of audio recording" ;
-      sh:nodeKind sh:IRI ;
-    ] ;
-    
-     sh:property [
-      sh:path <http:/audio.biblioteko-o.org/hasCuttingType> ;
-      sh:class <http://performedmusicontology.org/ontology/DiscCutting> ;
-      sh:description "Relates a resource to the recording process in which a stylus cuts a vertical or lateral groove into an audio disc." ;
-      sh:name "Has cutting type" ;
-      sh:group bibliotek-o_shapes:AudioInstanceCharacteristicsPropertyGroup ;
-      sh:nodeKind sh:IRI ;
+      sh:or (
+          [
+            sh:hasValue <http://rdaregistry.info/termList/configPlayback> 
+          ]
+          [w
+            sh:hasValue <http://rdaregistry.info/termList/groovePitch>
+          ]
+          [
+            sh:hasValue <http://rdaregistry.info/termList/grooveWidth> ;
+          ]
+          [
+            sh:hasValue <http://rdaregistry.info/termList/specPlayback> ;
+          ]
+          [
+            sh:hasValue <http://rdaregistry.info/termList/RDAGeneration> ;
+          ]
+        ) ;
     ] ;
     
   sh:property [
