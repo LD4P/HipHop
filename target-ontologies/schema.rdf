@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF
+  xmlns:schema="http://schema.org/"
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+  xmlns:owl="http://www.w3.org/2002/07/owl#"
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+  xmlns:foaf="http://xmlns.com/foaf/0.1/"
+  xmlns:dct="http://purl.org/dc/terms/">
+
+  <rdf:Property rdf:about="http://schema.org/recordedAt">
+    <schema:domainIncludes rdf:resource="http://schema.org/CreativeWork"/>
+    <rdfs:comment>The Event where the CreativeWork was recorded. The CreativeWork may capture all or part of the event.</rdfs:comment>
+    <schema:rangeIncludes rdf:resource="http://schema.org/Event"/>
+    <schema:inverseOf>
+      <rdf:Description rdf:about="http://schema.org/recordedIn">
+        <schema:inverseOf rdf:resource="http://schema.org/recordedAt"/>
+      </rdf:Description>
+    </schema:inverseOf>
+    <rdfs:label>recordedAt</rdfs:label>
+  </rdf:Property>
+  
+  <rdf:Property rdf:about="http://schema.org/recordedIn">
+    <schema:inverseOf>
+      <rdf:Description rdf:about="http://schema.org/recordedAt">
+        <schema:inverseOf rdf:resource="http://schema.org/recordedIn"/>
+      </rdf:Description>
+    </schema:inverseOf>
+    <rdfs:label>recordedIn</rdfs:label>
+    <rdfs:comment>The CreativeWork that captured all or part of this Event.</rdfs:comment>
+    <schema:rangeIncludes rdf:resource="http://schema.org/CreativeWork"/>
+    <schema:domainIncludes rdf:resource="http://schema.org/Event"/>
+  </rdf:Property>
+  
+</rdf:RDF>
