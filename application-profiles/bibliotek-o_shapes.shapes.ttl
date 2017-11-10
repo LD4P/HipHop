@@ -217,12 +217,18 @@ bibliotek-o_shapes:AudioWorkForm
       sh:group bibliotek-o_shapes:SubjectAndCoveragePropertyGroup ;
       sh:nodeKind sh:IRI ;
     ] ;
+    
+# May decide to go with bf:eventContent to align with Performed Music decision to use BF instead of reusing schema:recordedAt. bf:eventContent domain should be open so schema:Events can be used without the added bf:Event entailment. Will need to reconcile schema and PMO class hierarchy.
+
     sh:property [
       sh:path <http://schema.org/recordedAt> ;
       sh:description "An event (a performance, concert, audition, etc.) wholly or partially captured by the work." ;
       sh:name "Event recorded" ;
       sh:group bibliotek-o_shapes:SubjectAndCoveragePropertyGroup ;
       sh:nodeKind sh:IRI ;
+      bibliotek-o_shapes:lookup bibliotek-o_shapes:LD4LookupService ;
+      skos:editorialNote "Use look up service; though FAST has some events, catalogers will have to create most events because libraries traditionally haven't created many Event authorities." ;
+      
       sh:or (
           [
           sh:class <http://schema.org/Event> ;
@@ -981,7 +987,6 @@ bibliotek-o_shapes:AudioInstanceForm
   
   sh:property [
       sh:path <http://id.loc.gov/ontologies/bibframe/soundCharacteristic/skos:inScheme> ;
-      sh:class <http://www.w3.org/2004/02/skos/core#Concept> ;
       sh:description "Terms for sound characteristics should be taken from RDA Values List or individuals from Performed Music Ontology" ;
       sh:name "Sound Characteristics" ;
       sh:group bibliotek-o_shapes:AudioInstanceCharacteristicsPropertyGroup ;
@@ -990,7 +995,7 @@ bibliotek-o_shapes:AudioInstanceForm
           [
             sh:hasValue <http://rdaregistry.info/termList/configPlayback> 
           ]
-          [w
+          [
             sh:hasValue <http://rdaregistry.info/termList/groovePitch>
           ]
           [
@@ -1001,6 +1006,9 @@ bibliotek-o_shapes:AudioInstanceForm
           ]
           [
             sh:hasValue <http://rdaregistry.info/termList/RDAGeneration> ;
+          ]
+           [
+            sh:hasValue <http://rdaregistry.info/termList/typeRec> ;
           ]
         ) ;
     ] ;
