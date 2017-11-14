@@ -5,7 +5,7 @@
 # imports: file:///bibliotek-o_shapes/target-ontologies-renamed-for-TopBraid/foaf-0.1.rdf
 # imports: file:///bibliotek-o_shapes/target-ontologies-renamed-for-TopBraid/oa.2016-11-12.rdf
 # imports: file:///bibliotek-o_shapes/target-ontologies-renamed-for-TopBraid/schema.rdf
-# imports: http://bibliotek-o.org/1.1/ontology/
+# imports: http://bibliotek-o.org/ontology/
 # imports: http://id.loc.gov/ontologies/bibframe/
 # imports: http://rdaregistry.info/Elements/u/
 # imports: http://vivoweb.org/ontology/core
@@ -16,7 +16,7 @@
 # imports: http://www.w3.org/ns/shacl#
 # prefix: bibliotek-o_shapes
 
-@prefix bib: <http://bibliotek-o.org/1.1/ontology/> .
+@prefix bib: <http://bibliotek-o.org/ontology/> .
 @prefix bibliotek-o_shapes: <http://example.org/bibliotek-o_shapes#> .
 @prefix core: <http://vivoweb.org/ontology/core#> .
 @prefix lingvo: <http://www.lingvoj.org/ontology#> .
@@ -106,52 +106,52 @@ bibliotek-o_shapes:AudioWorkForm
       sh:nodeKind sh:IRI ;
       sh:or (
           [
-            sh:class <http://bibliotek-o.org/1.0/ontology/ComposerActivity> ;
+            sh:class <http://bibliotek-o.org/ontology/ComposerActivity> ;
           ]
           [
-            sh:class <http://bibliotek-o.org/1.0/ontology/ArrangerActivity> ;
+            sh:class <http://bibliotek-o.org/ontology/ArrangerActivity> ;
           ]
           [
-            sh:class <http://bibliotek-o.org/1.0/ontology/LibrettistActivity> ;
+            sh:class <http://bibliotek-o.org/ontology/LibrettistActivity> ;
           ]
           [
-            sh:class <http://bibliotek-o.org/1.0/ontology/LyricistActivity> ;
+            sh:class <http://bibliotek-o.org/ontology/LyricistActivity> ;
           ]
           [
-            sh:class <http://bibliotek-o.org/1.0/ontology/PerformerActivity> ;
+            sh:class <http://bibliotek-o.org/ontology/PerformerActivity> ;
           ]
           [
-            sh:class <http://bibliotek-o.org/1.0/ontology/ConductorActivity> ;
+            sh:class <http://bibliotek-o.org/ontology/ConductorActivity> ;
           ]
           [
-            sh:class <http://bibliotek-o.org/1.0/ontology/MusicianActivity> ;
+            sh:class <http://bibliotek-o.org/ontology/MusicianActivity> ;
           ]
           [
-            sh:class <http://bibliotek-o.org/1.0/ontology/SingerActivity> ;
+            sh:class <http://bibliotek-o.org/ontology/SingerActivity> ;
           ]
           [
-            sh:class <http://bibliotek-o.org/1.0/ontology/InstrumentalistActivity> ;
+            sh:class <http://bibliotek-o.org/ontology/InstrumentalistActivity> ;
           ]
           [ 
-            sh:class <http://bibliotek-o.org/1.0/ontology/NarratorActivity> ;
+            sh:class <http://bibliotek-o.org/ontology/NarratorActivity> ;
           ]
           [
-            sh:class <http://bibliotek-o.org/1.0/ontology/CommentatorActivity> ;
+            sh:class <http://bibliotek-o.org/ontology/CommentatorActivity> ;
           ]
           [
-            sh:class <http://bibliotek-o.org/1.0/ontology/ProducerActivity> ;
+            sh:class <http://bibliotek-o.org/ontology/ProducerActivity> ;
           ]
           [
-            sh:class <http://bibliotek-o.org/1.0/ontology/MusicalDirectorActivity> ;
+            sh:class <http://bibliotek-o.org/ontology/MusicalDirectorActivity> ;
           ]
           [
-            sh:class <http://bibliotek-o.org/1.0/ontology/SoundDesignerActivity> ;
+            sh:class <http://bibliotek-o.org/ontology/SoundDesignerActivity> ;
           ]
           [
-            sh:class <http://bibliotek-o.org/1.0/ontology/RecordistActivity> ;
+            sh:class <http://bibliotek-o.org/ontology/RecordistActivity> ;
           ]
           [
-            sh:class <http://bibliotek-o.org/1.0/ontology/BroadcasterActivity> ;
+            sh:class <http://bibliotek-o.org/ontology/BroadcasterActivity> ;
           ]
         ) ;
     ] ;
@@ -749,40 +749,40 @@ bibliotek-o_shapes:AudioWorkForm
       sh:nodeKind sh:IRI ;
       sh:or (
           [
-            sh:class <http://bibliotek-o.org/1.0/ontology/AudioDisc> ;
+            sh:class <http://bibliotek-o.org/ontology/AudioDisc> ;
           ]
           [
-            sh:class <http://bibliotek-o.org/1.0/ontology/AudioRoll> ;
+            sh:class <http://bibliotek-o.org/ontology/AudioRoll> ;
           ]
           [
-            sh:class <http://bibliotek-o.org/1.0/ontology/AudioCassette> ;
+            sh:class <http://bibliotek-o.org/ontology/AudioCassette> ;
           ]
           [
-            sh:class <http://bibliotek-o.org/1.0/ontology/AudioBelt> ;
+            sh:class <http://bibliotek-o.org/ontology/AudioBelt> ;
           ]
           [
-            sh:class <http://bibliotek-o.org/1.0/ontology/AudioCylinder> ;
+            sh:class <http://bibliotek-o.org/ontology/AudioCylinder> ;
           ]
           [
-            sh:class <http://bibliotek-o.org/1.0/ontology/AudioWireReel> ;
+            sh:class <http://bibliotek-o.org/ontology/AudioWireReel> ;
           ]
           [
-            sh:class <http://bibliotek-o.org/1.0/ontology/AudiotapeReel> ;
+            sh:class <http://bibliotek-o.org/ontology/AudiotapeReel> ;
           ]
           [
-            sh:class <http://bibliotek-o.org/1.0/ontology/Cassette> ;
+            sh:class <http://bibliotek-o.org/ontology/Cassette> ;
           ]
           [
-            sh:class <http://bibliotek-o.org/1.0/ontology/SoundTrackReel> ;
+            sh:class <http://bibliotek-o.org/ontology/SoundTrackReel> ;
           ]
           [
-            sh:class <http://bibliotek-o.org/1.0/ontology/ComputerTapeReel> ;
+            sh:class <http://bibliotek-o.org/ontology/ComputerTapeReel> ;
           ]
           [
-            sh:class <http://bibliotek-o.org/1.0/ontology/Disc> ;
+            sh:class <http://bibliotek-o.org/ontology/Disc> ;
           ]
           [
-            sh:class <http://bibliotek-o.org/1.0/ontology/Reel> ;
+            sh:class <http://bibliotek-o.org/ontology/Reel> ;
           ]
         ) ;
     ] ;
@@ -855,7 +855,7 @@ bibliotek-o_shapes:AudioInstanceForm
       sh:name "Type of Instance" ;
       sh:nodeKind sh:IRI ;
       sh:group bibliotek-o_shapes:TypeFormPropertyGroup ;
-      sh:in ( <http://bibliotek-o.org/1.0/ontology/AudioDisc> <http://bibliotek-o.org/1.0/ontology/AudioRoll> <http://bibliotek-o.org/1.0/ontology/AudioCassette> <http://bibliotek-o.org/1.0/ontology/AudioBelt> <http://bibliotek-o.org/1.0/ontology/AudioCylinder> <http://bibliotek-o.org/1.0/ontology/AudioWireReel> <http://bibliotek-o.org/1.0/ontology/AudiotapeReel> <http://bibliotek-o.org/1.0/ontology/Cassette> <http://bibliotek-o.org/1.0/ontology/SoundTrackReel> <http://bibliotek-o.org/1.0/ontology/ComputerTapeReel> <http://bibliotek-o.org/1.0/ontology/Disc> <http://bibliotek-o.org/1.0/ontology/Reel> ) ;
+      sh:in ( <http://bibliotek-o.org/ontology/AudioDisc> <http://bibliotek-o.org/ontology/AudioRoll> <http://bibliotek-o.org/ontology/AudioCassette> <http://bibliotek-o.org/ontology/AudioBelt> <http://bibliotek-o.org/ontology/AudioCylinder> <http://bibliotek-o.org/ontology/AudioWireReel> <http://bibliotek-o.org/ontology/AudiotapeReel> <http://bibliotek-o.org/ontology/Cassette> <http://bibliotek-o.org/ontology/SoundTrackReel> <http://bibliotek-o.org/ontology/ComputerTapeReel> <http://bibliotek-o.org/ontology/Disc> <http://bibliotek-o.org/ontology/Reel> ) ;
     ] ;
     
   sh:property [
@@ -887,16 +887,16 @@ bibliotek-o_shapes:AudioInstanceForm
       sh:group bibliotek-o_shapes:InstanceActivityPropertyGroup ;
       sh:or (
          [
-           sh:class < http://bibliotek-o.org/1.1/ontology/Distributor > ;
+           sh:class < http://bibliotek-o.org/ontology/Distributor > ;
          ]
          [
-           sh:class <http://bibliotek-o.org/1.1/ontology/PublisherActivity > ;
+           sh:class <http://bibliotek-o.org/ontology/PublisherActivity > ;
          ]
          [
-           sh:class <http://bibliotek-o.org/1.1/ontology/ManufacturerActivity > ;
+           sh:class <http://bibliotek-o.org/ontology/ManufacturerActivity > ;
          ]
          [
-           sh:class <http://bibliotek-o.org/1.1/ontology/DistributorActivity> ;
+           sh:class <http://bibliotek-o.org/ontology/DistributorActivity> ;
          ]
         ) ;
     ] ;
@@ -1038,7 +1038,7 @@ bibliotek-o_shapes:WorkTitleForm
       sh:nodeKind sh:IRI ;
     ] ;
   sh:property [
-      sh:path <http://bibliotek-o.org/1.1/ontology/isTitleOf> ;
+      sh:path <http://bibliotek-o.org/ontology/isTitleOf> ;
       sh:class <http://id.loc.gov/ontologies/bibframe/Work> ;
       sh:description "Has title part" ;
       sh:name "has part" ;
@@ -1069,7 +1069,7 @@ bibliotek-o_shapes:InstanceTitleForm
       sh:nodeKind sh:IRI ;
     ] ;
     sh:property [
-      sh:path <http://bibliotek-o.org/1.1/ontology/isTitleOf> ;
+      sh:path <http://bibliotek-o.org/ontology/isTitleOf> ;
       sh:class <http://id.loc.gov/ontologies/bibframe/Instance> ;
       sh:description "Has title part" ;
       sh:name "has part" ;
@@ -1098,7 +1098,7 @@ bibliotek-o_shapes:ItemTitleForm
       sh:nodeKind sh:IRI ;
     ] ;
     sh:property [
-      sh:path <http://bibliotek-o.org/1.1/ontology/isTitleOf> ;
+      sh:path <http://bibliotek-o.org/ontology/isTitleOf> ;
       sh:class <http://id.loc.gov/ontologies/bibframe/Item> ;
       sh:description "Has title part" ;
       sh:name "has part" ;
@@ -1127,7 +1127,7 @@ bibliotek-o_shapes:TitleElementForm
       sh:minCount 1 ;
       sh:maxCount 1 ;
     ] ;
-  sh:targetClass <http://bibliotek-o.org/1.0/ontology/TitleElement> ;
+  sh:targetClass <http://bibliotek-o.org/ontology/TitleElement> ;
 .
 
 bibliotek-o_shapes:TypeFormPropertyGroup
