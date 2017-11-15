@@ -981,6 +981,9 @@ bibliotek-o_shapes:AudioInstanceForm
           [
             sh:class <http://performedmusicontology.org/ontology/DiscCutting> ;
           ]
+          [
+            sh:class <http:/audio.biblioteko-o.org/CaptureAndStorageTechnique> ;
+          ]
         ) ;
     ] ;
     ] ;
