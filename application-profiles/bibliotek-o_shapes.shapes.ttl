@@ -929,7 +929,7 @@ bibliotek-o_shapes:AudioInstanceForm
       sh:name "Single measurement" ;
       sh:nodeKind sh:IRI ;
       sh:order "2"^^xsd:decimal ;
-      sh:target <http://measurement.biblioteko-o.org/hasMeasurementGroup> ;
+      sh:target <http://measurement.biblioteko-o.org/MeasurementGroup> ;
     ] ;
     
     sh:property [
