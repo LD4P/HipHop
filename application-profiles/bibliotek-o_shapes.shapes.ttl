@@ -28,6 +28,7 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix bf: <http://id.loc.gov/ontologies/bibframe/> .
+@prefix prov: <http://www.w3.org/ns/prov> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix swa: <http://topbraid.org/swa#> .
 @prefix tosh: <http://topbraid.org/tosh#> .
@@ -747,7 +748,7 @@ bibliotek-o_shapes:AudioWorkForm
       sh:name "Duration of audio work" ;
       sh:nodeKind sh:Literal ;
       sh:maxCount 1 ;
-      skos:editorialNote "The duration of the item (movie, audio recording, event, etc.) in <a href="http://en.wikipedia.org/wiki/ISO_8601">ISO 8601 date format." ;
+      skos:editorialNote "The duration of the item (movie, audio recording, event, etc.) in ISO 8601 date format." ;
     ] ;
   sh:property [
       sh:path <http://id.loc.gov/ontologies/bibframe/accompaniedBy> ;
@@ -927,8 +928,6 @@ bibliotek-o_shapes:AudioInstanceForm
           ]
         ) ;
     ] ;
-    ] ;
-  
   sh:property [
       sh:path <http://id.loc.gov/ontologies/bibframe/soundCharacteristic/skos:inScheme> ;
       sh:description "Terms for sound characteristics should be taken from RDA Values List or individuals from Performed Music Ontology" ;
@@ -1125,7 +1124,7 @@ bibliotek-o_shapes:AudioWorkActivityForm
   sh:property [
       sh:path bib:hasAgent ;
       sh:order "1" ;
-      sh:class foaf:Agent ;
+      sh:class <http://xmlns.com/foaf/0.1/Agent> ;
       sh:description "Agent" ;
       sh:name "Agent" ;
       sh:nodeKind sh:IRI ;
@@ -1170,7 +1169,7 @@ bibliotek-o_shapes:AudioInstanceActivityForm
   sh:property [
       sh:path bib:hasAgent ;
       sh:order "1" ;
-      sh:class foaf:Agent ;
+      sh:class <http://xmlns.com/foaf/0.1/Agent> ;
       sh:description "Agent" ;
       sh:name "Agent" ;
       sh:nodeKind sh:IRI ;
@@ -1218,7 +1217,7 @@ bibliotek-o_shapes:AudioItemActivityForm
   sh:property [
       sh:path bib:hasAgent ;
       sh:order "1" ;
-      sh:class foaf:Agent ;
+      sh:class <http://xmlns.com/foaf/0.1/Agent> ;
       sh:description "Agent" ;
       sh:name "Agent" ;
       sh:nodeKind sh:IRI ;
