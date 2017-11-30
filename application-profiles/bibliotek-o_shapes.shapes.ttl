@@ -86,6 +86,7 @@ bibliotek-o_shapes:AudioWorkForm
       sh:class <http://id.loc.gov/ontologies/bibframe/Title> ;
       sh:group bibliotek-o_shapes:TitlePropertyGroup ;
       sh:minCount 1 ;
+      sh:description "For audio works there can be only one preferred title per language."
       sh:name "Preferred title" ;
       sh:nodeKind sh:IRI ;
       sh:order "0"^^xsd:decimal ;
@@ -814,6 +815,7 @@ bibliotek-o_shapes:AudioInstanceForm
       sh:class <http://id.loc.gov/ontologies/bibframe/Title> ;
       sh:group bibliotek-o_shapes:TitlePropertyGroup ;
       sh:minCount 1 ;
+      sh:maxCount 1 ;
       sh:name "Preferred title" ;
       sh:nodeKind sh:IRI ;
       sh:order "0"^^xsd:decimal ;
@@ -974,6 +976,7 @@ bibliotek-o_shapes:AudioItemForm
       sh:class <http://id.loc.gov/ontologies/bibframe/Title> ;
       sh:group bibliotek-o_shapes:TitlePropertyGroup ;
       sh:minCount 1 ;
+      sh:maxCount 1 ;
       sh:name "Preferred title" ;
       sh:nodeKind sh:IRI ;
       sh:order "0"^^xsd:decimal ;
@@ -1002,6 +1005,7 @@ bibliotek-o_shapes:WorkTitleForm
   rdf:type sh:NodeShape ;
   rdfs:label "Title form" ;
   rdfs:subClassOf rdfs:Resource ;
+  sh:targetClass <http://id.loc.gov/ontologies/bibframe/Title> ;
   sh:property [
       sh:path <http://purl.org/dc/terms/hasPart> ;
       sh:class bib:TitleElement ;
@@ -1011,12 +1015,10 @@ bibliotek-o_shapes:WorkTitleForm
     ] ;
   sh:property [
       sh:path <http://bibliotek-o.org/ontology/isTitleOf> ;
-      sh:class <http://id.loc.gov/ontologies/bibframe/Work> ;
-      sh:description "Has title part" ;
-      sh:name "has part" ;
+      sh:class <http://id.loc.gov/ontologies/bibframe/Audio> ;
+      sh:description "Links this Title to an Audio" ;
       sh:nodeKind sh:IRI ;
     ] ;
-  sh:targetClass <http://id.loc.gov/ontologies/bibframe/Title> ;
 .
 
 # Do we want to add rdf:value to Title Form Shapes, or concatenate TitleElements through automation?
@@ -1026,6 +1028,7 @@ bibliotek-o_shapes:InstanceTitleForm
   rdf:type sh:NodeShape ;
   rdfs:label "Instance title form" ;
   rdfs:subClassOf rdfs:Resource ;
+  sh:targetClass <http://id.loc.gov/ontologies/bibframe/Title> ;
   sh:property [
       sh:path <http://purl.org/dc/terms/hasPart> ;
       sh:class bib:TitleElement ;
@@ -1043,11 +1046,9 @@ bibliotek-o_shapes:InstanceTitleForm
     sh:property [
       sh:path <http://bibliotek-o.org/ontology/isTitleOf> ;
       sh:class <http://id.loc.gov/ontologies/bibframe/Instance> ;
-      sh:description "Has title part" ;
-      sh:name "has part" ;
+      sh:description "Links this Title to an Instance" ;
       sh:nodeKind sh:IRI ;
     ] ;
-  sh:targetClass <http://id.loc.gov/ontologies/bibframe/Title> ;
 .
 
 bibliotek-o_shapes:ItemTitleForm
@@ -1055,6 +1056,7 @@ bibliotek-o_shapes:ItemTitleForm
   rdf:type sh:NodeShape ;
   rdfs:label "Item title form" ;
   rdfs:subClassOf rdfs:Resource ;
+  sh:targetClass <http://id.loc.gov/ontologies/bibframe/Title> ;
   sh:property [
       sh:path <http://purl.org/dc/terms/hasPart> ;
       sh:class bib:TitleElement ;
@@ -1072,11 +1074,9 @@ bibliotek-o_shapes:ItemTitleForm
     sh:property [
       sh:path <http://bibliotek-o.org/ontology/isTitleOf> ;
       sh:class <http://id.loc.gov/ontologies/bibframe/Item> ;
-      sh:description "Has title part" ;
-      sh:name "has part" ;
+      sh:description "Links this Title to an Item" ;
       sh:nodeKind sh:IRI ;
     ] ;
-  sh:targetClass <http://id.loc.gov/ontologies/bibframe/Title> ;
 .
 
 bibliotek-o_shapes:TitleElementForm
@@ -1127,6 +1127,7 @@ bibliotek-o_shapes:AudioWorkActivityForm
   sh:property [
       sh:path dcterms:date ;
       sh:order "2" ;
+      sh:maxCount "1" ;
       sh:description "Date of the activity" ;
       sh:name "Date" ;
       sh:nodeKind sh:Literal ;
@@ -1134,6 +1135,7 @@ bibliotek-o_shapes:AudioWorkActivityForm
     sh:property [
       sh:path bib:atLocation ;
       sh:order "3" ;
+      sh:maxCount "1" ;
       sh:description "Location of the activity" ;
       sh:name "Location" ;
       sh:class prov:Location ;
@@ -1142,6 +1144,7 @@ bibliotek-o_shapes:AudioWorkActivityForm
   sh:property [
       sh:path bib:isActivityOf ;
       sh:order "4" ;
+      sh:maxCount "1" ;
       sh:description "Links this particular Activity form to Audio Works" ;
       sh:class bf:Audio ;
       sh:name "Activity of an Audio Work" ;
@@ -1246,7 +1249,7 @@ bibliotek-o_shapes:AudioItemActivityForm
 bibliotek-o_shapes:TypeGenreFormPropertyGroup
   rdf:type sh:PropertyGroup ;
   rdfs:label "Type, genre, and form property group" ;
-  sh:description "To group title information for the resource." ;
+  sh:description "To group type, Genre, and Form information for the resource." ;
   sh:order "0"^^xsd:decimal ;
 .
 
