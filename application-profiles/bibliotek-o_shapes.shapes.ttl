@@ -748,7 +748,7 @@ bibliotek-o_shapes:AudioWorkForm
       sh:group bibliotek-o_shapes:AudioWorkMiscellaneousPropertyGroup ;
       sh:name "Duration of audio work" ;
       sh:nodeKind sh:Literal ;
-      sh:maxCount 1 ;
+      sh:maxCount "1" ;
       skos:editorialNote "The duration of the item (movie, audio recording, event, etc.) in ISO 8601 date format." ;
     ] ;
   sh:property [
@@ -786,7 +786,7 @@ bibliotek-o_shapes:AudioWorkForm
       sh:path <http://id.loc.gov/ontologies/bibframe/firstIssue> ;
       sh:datatype xsd:string ;
       sh:description "Beginning date of a resource and/or the sequential designations." ;
-      sh:maxCount 1 ;
+      sh:maxCount "1" ;
       sh:name "first issue" ;
       sh:group bibliotek-o_shapes:AudioWorkMiscellaneousPropertyGroup ;
     ] ;
@@ -794,7 +794,7 @@ bibliotek-o_shapes:AudioWorkForm
       sh:path <http://id.loc.gov/ontologies/bibframe/lastIssue> ;
       sh:datatype xsd:string ;
       sh:description "Ending date of a resource and/or the sequential designations." ;
-      sh:maxCount 1 ;
+      sh:maxCount "1" ;
       sh:name "last issue" ;
       sh:group bibliotek-o_shapes:AudioWorkMiscellaneousPropertyGroup ;
     ] ;
@@ -1104,8 +1104,8 @@ bibliotek-o_shapes:TitleElementForm
       sh:name "Title element value" ;
       sh:nodeKind sh:Literal ;
       sh:datatype xsd:integer ;
-      sh:minCount 1 ;
-      sh:maxCount 1 ;
+      sh:minCount "1" ;
+      sh:maxCount "1" ;
     ] ;
   sh:targetClass <http://bibliotek-o.org/ontology/TitleElement> ;
 .
@@ -1125,6 +1125,7 @@ bibliotek-o_shapes:AudioWorkActivityForm
   sh:property [
       sh:path bib:hasAgent ;
       sh:order "1" ;
+      sh:maxCount "1" ;
       sh:class <http://xmlns.com/foaf/0.1/Agent> ;
       sh:description "Agent" ;
       sh:name "Agent" ;
@@ -1170,6 +1171,7 @@ bibliotek-o_shapes:AudioInstanceActivityForm
   sh:property [
       sh:path bib:hasAgent ;
       sh:order "1" ;
+      sh:maxCount "1" ;
       sh:class <http://xmlns.com/foaf/0.1/Agent> ;
       sh:description "Agent" ;
       sh:name "Agent" ;
@@ -1218,6 +1220,7 @@ bibliotek-o_shapes:AudioItemActivityForm
   sh:property [
       sh:path bib:hasAgent ;
       sh:order "1" ;
+      sh:maxCount "1" ;
       sh:class <http://xmlns.com/foaf/0.1/Agent> ;
       sh:description "Agent" ;
       sh:name "Agent" ;
