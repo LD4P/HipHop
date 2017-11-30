@@ -1007,6 +1007,18 @@ bibliotek-o_shapes:WorkTitleForm
   rdfs:subClassOf rdfs:Resource ;
   sh:targetClass <http://id.loc.gov/ontologies/bibframe/Title> ;
   sh:property [
+      sh:path rdf:type ;
+      sh:name "Type of Title" ;
+      sh:in ( <http://bibliotek-o.org/ontology/AbbreviatedTitle> <http://bibliotek-o.org/ontology/ConciseTitle> <http://bibliotek-o.org/ontology/DistinctiveTitle> <http://bibliotek-o.org/ontology/KeyTitle> <http://bibliotek-o.org/ontology/ParallelTitle> ) ;
+    ] ;
+  sh:property [
+      sh:path rdf:value ;
+      sh:description "Textual value of the title" ;
+      sh:name "Title" ;
+      sh:group bibliotek-o_shapes:MeasurementPropertyGroup ;
+      sh:nodeKind sh:Literal ;
+    ] ;
+  sh:property [
       sh:path <http://purl.org/dc/terms/hasPart> ;
       sh:class bib:TitleElement ;
       sh:description "Has title part" ;
@@ -1019,6 +1031,7 @@ bibliotek-o_shapes:WorkTitleForm
       sh:description "Links this Title to an Audio" ;
       sh:nodeKind sh:IRI ;
     ] ;
+    
 .
 
 # Do we want to add rdf:value to Title Form Shapes, or concatenate TitleElements through automation?
@@ -1030,17 +1043,29 @@ bibliotek-o_shapes:InstanceTitleForm
   rdfs:subClassOf rdfs:Resource ;
   sh:targetClass <http://id.loc.gov/ontologies/bibframe/Title> ;
   sh:property [
-      sh:path <http://purl.org/dc/terms/hasPart> ;
-      sh:class bib:TitleElement ;
-      sh:description "Has title part" ;
-      sh:name "has part" ;
-      sh:nodeKind sh:IRI ;
+      sh:path rdf:type ;
+      sh:name "Type of Title" ;
+      sh:in ( <http://bibliotek-o.org/ontology/AbbreviatedTitle> <http://bibliotek-o.org/ontology/ConciseTitle> <http://bibliotek-o.org/ontology/DistinctiveTitle> <http://bibliotek-o.org/ontology/KeyTitle> <http://bibliotek-o.org/ontology/ParallelTitle> ) ;
+    ] ;
+  sh:property [
+      sh:path rdf:value ;
+      sh:description "Textual value of the title" ;
+      sh:name "Title" ;
+      sh:group bibliotek-o_shapes:MeasurementPropertyGroup ;
+      sh:nodeKind sh:Literal ;
     ] ;
   sh:property [
       sh:path <http://id.loc.gov/ontologies/bibframe/origin> ;
       sh:class bf:TitleOrigin ;
       sh:description "Describe the origin of the title, for example spine or cover" ;
       sh:name "Title origin" ;
+      sh:nodeKind sh:IRI ;
+    ] ;
+  sh:property [
+      sh:path <http://purl.org/dc/terms/hasPart> ;
+      sh:class bib:TitleElement ;
+      sh:description "Has title part" ;
+      sh:name "has part" ;
       sh:nodeKind sh:IRI ;
     ] ;
     sh:property [
@@ -1058,11 +1083,16 @@ bibliotek-o_shapes:ItemTitleForm
   rdfs:subClassOf rdfs:Resource ;
   sh:targetClass <http://id.loc.gov/ontologies/bibframe/Title> ;
   sh:property [
-      sh:path <http://purl.org/dc/terms/hasPart> ;
-      sh:class bib:TitleElement ;
-      sh:description "Has title part" ;
-      sh:name "has part" ;
-      sh:nodeKind sh:IRI ;
+      sh:path rdf:type ;
+      sh:name "Type of Title" ;
+      sh:in ( <http://bibliotek-o.org/ontology/AbbreviatedTitle> <http://bibliotek-o.org/ontology/ConciseTitle> <http://bibliotek-o.org/ontology/DistinctiveTitle> <http://bibliotek-o.org/ontology/KeyTitle> <http://bibliotek-o.org/ontology/ParallelTitle> ) ;
+    ] ;
+  sh:property [
+      sh:path rdf:value ;
+      sh:description "Textual value of the title" ;
+      sh:name "Title" ;
+      sh:group bibliotek-o_shapes:MeasurementPropertyGroup ;
+      sh:nodeKind sh:Literal ;
     ] ;
   sh:property [
       sh:path <http://id.loc.gov/ontologies/bibframe/origin> ;
@@ -1071,7 +1101,14 @@ bibliotek-o_shapes:ItemTitleForm
       sh:name "Title origin" ;
       sh:nodeKind sh:IRI ;
     ] ;
-    sh:property [
+  sh:property [
+      sh:path <http://purl.org/dc/terms/hasPart> ;
+      sh:class bib:TitleElement ;
+      sh:description "Has title part" ;
+      sh:name "has part" ;
+      sh:nodeKind sh:IRI ;
+    ] ;
+  sh:property [
       sh:path <http://bibliotek-o.org/ontology/isTitleOf> ;
       sh:class <http://id.loc.gov/ontologies/bibframe/Item> ;
       sh:description "Links this Title to an Item" ;
@@ -1084,6 +1121,11 @@ bibliotek-o_shapes:TitleElementForm
   rdf:type sh:NodeShape ;
   rdfs:label "Title element form" ;
   rdfs:subClassOf rdfs:Resource ;
+  sh:property [
+      sh:path rdf:type ;
+      sh:name "Type of Title Element" ;
+      sh:in ( <http://bibliotek-o.org/ontology/NonSortElement> <http://bibliotek-o.org/ontology/MainTitleElement> <http://bibliotek-o.org/ontology/SubtitleElement> <http://bibliotek-o.org/ontology/PartNameElement> <http://bibliotek-o.org/ontology/PartNumberElement> ) ;
+    ] ;
   sh:property [
       sh:path rdf:value ;
       sh:description "String value for the title element" ;
