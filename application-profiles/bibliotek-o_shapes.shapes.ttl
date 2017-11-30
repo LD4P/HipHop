@@ -61,7 +61,7 @@ bibliotek-o_shapes:AudioWorkForm
   sh:property [
       sh:path bf:genreForm ;
       sh:class <http://www.w3.org/2004/02/skos/core#Concept> ;
-      sh:group bibliotek-o_shapes:TypeFormPropertyGroup ;
+      sh:group bibliotek-o_shapes:TypeGenreFormPropertyGroup ;
       sh:name "Form Genre" ;
       sh:nodeKind sh:IRI ;
       sh:order "0"^^xsd:decimal ;
@@ -75,7 +75,7 @@ bibliotek-o_shapes:AudioWorkForm
       sh:path <bf:genreForm/ns0:isMemberOfMADSScheme> ;
       sh:hasValue <http://id.loc.gov/authorities/genreForms> ;
       sh:description "Values for form genre terms" ;
-      sh:group bibliotek-o_shapes:TypeFormPropertyGroup ;
+      sh:group bibliotek-o_shapes:TypeGenreFormPropertyGroup ;
       sh:name "LCGFT Form Genre Terms" ;
       sh:nodeKind sh:IRI ;
       skos:editorialNote "Use look up service; LCGFT is too big to load directly into an RDF editor, and more importantly we don't want to create MADSAuthorities, only link to them." ;
@@ -808,7 +808,7 @@ bibliotek-o_shapes:AudioInstanceForm
       sh:path rdf:type ;
       sh:name "Type of Instance" ;
       sh:nodeKind sh:IRI ;
-      sh:group bibliotek-o_shapes:TypeFormPropertyGroup ;
+      sh:group bibliotek-o_shapes:TypeGenreFormPropertyGroup ;
       sh:in ( <http://bibliotek-o.org/ontology/AudioDisc> <http://bibliotek-o.org/ontology/AudioRoll> <http://bibliotek-o.org/ontology/AudioCassette> <http://bibliotek-o.org/ontology/AudioBelt> <http://bibliotek-o.org/ontology/AudioCylinder> <http://bibliotek-o.org/ontology/AudioWireReel> <http://bibliotek-o.org/ontology/AudiotapeReel> <http://bibliotek-o.org/ontology/Cassette> <http://bibliotek-o.org/ontology/SoundTrackReel> <http://bibliotek-o.org/ontology/ComputerTapeReel> <http://bibliotek-o.org/ontology/Disc> <http://bibliotek-o.org/ontology/Reel> ) ;
     ] ;
     
@@ -1151,7 +1151,7 @@ bibliotek-o_shapes:AudioWorkActivityForm
       sh:class bf:Audio ;
       sh:name "Activity of an Audio Work" ;
     ] ;
-  sh:targetClass <http://id.loc.gov/ontologies/bibframe/Activity> ;
+  sh:targetClass bib:Activity ;
 .
 
 bibliotek-o_shapes:AudioInstanceActivityForm
@@ -1196,7 +1196,7 @@ bibliotek-o_shapes:AudioInstanceActivityForm
       sh:class bf:Instance ;
       sh:name "Activity of an Instance" ;
     ] ;
-  sh:targetClass <http://id.loc.gov/ontologies/bibframe/Activity> ;
+  sh:targetClass bib:Activity ;
 .
 
 bibliotek-o_shapes:AudioItemActivityForm
@@ -1247,9 +1247,9 @@ bibliotek-o_shapes:AudioItemActivityForm
   sh:targetClass bib:Activity ;
 .
 
-bibliotek-o_shapes:TypeFormPropertyGroup
+bibliotek-o_shapes:TypeGenreFormPropertyGroup
   rdf:type sh:PropertyGroup ;
-  rdfs:label "Type and form property group" ;
+  rdfs:label "Type, genre, and form property group" ;
   sh:description "To group title information for the resource." ;
   sh:order "0"^^xsd:decimal ;
 .
