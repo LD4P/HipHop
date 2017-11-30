@@ -67,7 +67,6 @@ bibliotek-o_shapes:AudioWorkForm
       sh:nodeKind sh:IRI ;
       sh:order "0"^^xsd:decimal ;
       bibliotek-o_shapes:lookup bibliotek-o_shapes:LD4LookupService ;
-      sh:targetClass <http://id.loc.gov/ontologies/bibframe/Work> ;
     ] ;
     
   # The following sh:path bf:genreForm/ns0:isMemberOfMADSScheme isn't meant to be a field in the form, but rather state a restriction on the use of bf:genreForm to instances from http://id.loc.gov/authorities/genreForms. 
@@ -90,7 +89,6 @@ bibliotek-o_shapes:AudioWorkForm
       sh:name "Preferred title" ;
       sh:nodeKind sh:IRI ;
       sh:order "0"^^xsd:decimal ;
-      sh:targetClass <http://id.loc.gov/ontologies/bibframe/Work> ;
     ] ;
   sh:property [
       sh:path <http://id.loc.gov/ontologies/bibframe/title> ;
@@ -100,7 +98,6 @@ bibliotek-o_shapes:AudioWorkForm
       sh:name "Other title" ;
       sh:nodeKind sh:IRI ;
       sh:order "1"^^xsd:decimal ;
-      sh:targetClass <http://id.loc.gov/ontologies/bibframe/Work> ;
     ] ;
   sh:property [
       sh:path bib:hasActivity ;
@@ -153,7 +150,6 @@ bibliotek-o_shapes:AudioWorkForm
       sh:name "Time period covered" ;
       sh:group bibliotek-o_shapes:SubjectAndCoveragePropertyGroup ;
       sh:nodeKind sh:IRI ;
-      sh:targetClass <http://id.loc.gov/ontologies/bibframe/Work> ;
     ] ;
   sh:property [
       sh:path bib:covers ;
@@ -162,7 +158,6 @@ bibliotek-o_shapes:AudioWorkForm
       sh:name "Location covered" ;
       sh:group bibliotek-o_shapes:SubjectAndCoveragePropertyGroup ;
       sh:nodeKind sh:IRI ;
-      sh:targetClass <http://id.loc.gov/ontologies/bibframe/Work> ;
     ] ;
     sh:property [
       sh:path bib:isSubjectOf ;
@@ -805,6 +800,7 @@ bibliotek-o_shapes:AudioInstanceForm
   rdf:type sh:NodeShape ;
   rdfs:label "Instance of Audio form" ;
   rdfs:subClassOf rdfs:Resource ;
+  sh:targetClass <http://id.loc.gov/ontologies/bibframe/Instance> ;
   sh:property [
       sh:path rdf:type ;
       sh:name "Type of Instance" ;
@@ -821,7 +817,6 @@ bibliotek-o_shapes:AudioInstanceForm
       sh:name "Preferred title" ;
       sh:nodeKind sh:IRI ;
       sh:order "0"^^xsd:decimal ;
-      sh:targetClass <http://id.loc.gov/ontologies/bibframe/Instance> ;
     ] ;
     
   sh:property [
@@ -832,7 +827,6 @@ bibliotek-o_shapes:AudioInstanceForm
       sh:name "Other title" ;
       sh:nodeKind sh:IRI ;
       sh:order "1"^^xsd:decimal ;
-      sh:targetClass <http://id.loc.gov/ontologies/bibframe/Instance> ;
     ] ;
     
   sh:property [
@@ -851,7 +845,6 @@ bibliotek-o_shapes:AudioInstanceForm
       sh:name "Measurement information" ;
       sh:nodeKind sh:IRI ;
       sh:order "0"^^xsd:decimal ;
-      sh:targetClass <http://id.loc.gov/ontologies/bibframe/Instance> ;
     ] ;
     
     sh:property [
@@ -974,6 +967,7 @@ bibliotek-o_shapes:AudioItemForm
   rdf:type sh:NodeShape ;
   rdfs:label "Audio Item form" ;
   rdfs:subClassOf rdfs:Resource ;
+  sh:targetClass bf:Item ;
     
   sh:property [
       sh:path bib:hasPreferredTitle ;
@@ -983,7 +977,6 @@ bibliotek-o_shapes:AudioItemForm
       sh:name "Preferred title" ;
       sh:nodeKind sh:IRI ;
       sh:order "0"^^xsd:decimal ;
-      sh:targetClass <http://id.loc.gov/ontologies/bibframe/Work> ;
     ] ;
   sh:property [
       sh:path <http://id.loc.gov/ontologies/bibframe/title> ;
@@ -993,7 +986,6 @@ bibliotek-o_shapes:AudioItemForm
       sh:name "Other title" ;
       sh:nodeKind sh:IRI ;
       sh:order "1"^^xsd:decimal ;
-      sh:targetClass <http://id.loc.gov/ontologies/bibframe/Work> ;
     ] ;
   sh:property [
       sh:path bib:hasActivity ;
@@ -1114,6 +1106,7 @@ bibliotek-o_shapes:AudioWorkActivityForm
   rdf:type rdfs:Class ;
   rdf:type sh:NodeShape ;
   rdfs:label "Agent Activity" ;
+  sh:targetClass bib:Activity ;
   rdfs:subClassOf rdfs:Resource ;
   sh:property [
       sh:path rdf:type ;
@@ -1153,13 +1146,13 @@ bibliotek-o_shapes:AudioWorkActivityForm
       sh:class bf:Audio ;
       sh:name "Activity of an Audio Work" ;
     ] ;
-  sh:targetClass bib:Activity ;
 .
 
 bibliotek-o_shapes:AudioInstanceActivityForm
   rdf:type rdfs:Class ;
   rdf:type sh:NodeShape ;
   rdfs:label "Agent Activity" ;
+  sh:targetClass bib:Activity ;
   rdfs:subClassOf rdfs:Resource ;
   sh:property [
       sh:path rdf:type ;
@@ -1199,13 +1192,13 @@ bibliotek-o_shapes:AudioInstanceActivityForm
       sh:class bf:Instance ;
       sh:name "Activity of an Instance" ;
     ] ;
-  sh:targetClass bib:Activity ;
 .
 
 bibliotek-o_shapes:AudioItemActivityForm
   rdf:type rdfs:Class ;
   rdf:type sh:NodeShape ;
   rdfs:label "Agent Activity" ;
+  sh:targetClass bib:Activity ;
   rdfs:subClassOf rdfs:Resource ;
   sh:property [
       sh:path rdf:type ;
@@ -1248,7 +1241,6 @@ bibliotek-o_shapes:AudioItemActivityForm
       sh:class bf:Item ;
       sh:name "Activity of an Item" ;
     ] ;
-  sh:targetClass bib:Activity ;
 .
 
 bibliotek-o_shapes:TypeGenreFormPropertyGroup
