@@ -1015,7 +1015,6 @@ bibliotek-o_shapes:WorkTitleForm
       sh:path rdf:value ;
       sh:description "Textual value of the title" ;
       sh:name "Title" ;
-      sh:group bibliotek-o_shapes:MeasurementPropertyGroup ;
       sh:nodeKind sh:Literal ;
     ] ;
   sh:property [
@@ -1124,10 +1123,14 @@ bibliotek-o_shapes:TitleElementForm
   sh:property [
       sh:path rdf:type ;
       sh:name "Type of Title Element" ;
+      sh:minCount "1" ;
+      sh:maxCount "1" ;
       sh:in ( <http://bibliotek-o.org/ontology/NonSortElement> <http://bibliotek-o.org/ontology/MainTitleElement> <http://bibliotek-o.org/ontology/SubtitleElement> <http://bibliotek-o.org/ontology/PartNameElement> <http://bibliotek-o.org/ontology/PartNumberElement> ) ;
     ] ;
   sh:property [
       sh:path rdf:value ;
+      sh:minCount "1" ;
+      sh:maxCount "1" ;
       sh:description "String value for the title element" ;
       sh:name "Title element value" ;
       sh:nodeKind sh:Literal ;
