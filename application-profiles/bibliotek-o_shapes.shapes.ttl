@@ -57,6 +57,7 @@ bibliotek-o_shapes:AudioWorkForm
   rdf:type sh:NodeShape ;
   rdfs:label "Audio form" ;
   rdfs:subClassOf rdfs:Resource ;
+  sh:targetClass bf:Audio ;
 
   sh:property [
       sh:path bf:genreForm ;
@@ -66,7 +67,7 @@ bibliotek-o_shapes:AudioWorkForm
       sh:nodeKind sh:IRI ;
       sh:order "0"^^xsd:decimal ;
       bibliotek-o_shapes:lookup bibliotek-o_shapes:LD4LookupService ;
-      sh:target <http://id.loc.gov/ontologies/bibframe/Work> ;
+      sh:targetClass <http://id.loc.gov/ontologies/bibframe/Work> ;
     ] ;
     
   # The following sh:path bf:genreForm/ns0:isMemberOfMADSScheme isn't meant to be a field in the form, but rather state a restriction on the use of bf:genreForm to instances from http://id.loc.gov/authorities/genreForms. 
@@ -89,7 +90,7 @@ bibliotek-o_shapes:AudioWorkForm
       sh:name "Preferred title" ;
       sh:nodeKind sh:IRI ;
       sh:order "0"^^xsd:decimal ;
-      sh:target <http://id.loc.gov/ontologies/bibframe/Work> ;
+      sh:targetClass <http://id.loc.gov/ontologies/bibframe/Work> ;
     ] ;
   sh:property [
       sh:path <http://id.loc.gov/ontologies/bibframe/title> ;
@@ -99,7 +100,7 @@ bibliotek-o_shapes:AudioWorkForm
       sh:name "Other title" ;
       sh:nodeKind sh:IRI ;
       sh:order "1"^^xsd:decimal ;
-      sh:target <http://id.loc.gov/ontologies/bibframe/Work> ;
+      sh:targetClass <http://id.loc.gov/ontologies/bibframe/Work> ;
     ] ;
   sh:property [
       sh:path bib:hasActivity ;
@@ -152,7 +153,7 @@ bibliotek-o_shapes:AudioWorkForm
       sh:name "Time period covered" ;
       sh:group bibliotek-o_shapes:SubjectAndCoveragePropertyGroup ;
       sh:nodeKind sh:IRI ;
-      sh:target <http://id.loc.gov/ontologies/bibframe/Work> ;
+      sh:targetClass <http://id.loc.gov/ontologies/bibframe/Work> ;
     ] ;
   sh:property [
       sh:path bib:covers ;
@@ -161,7 +162,7 @@ bibliotek-o_shapes:AudioWorkForm
       sh:name "Location covered" ;
       sh:group bibliotek-o_shapes:SubjectAndCoveragePropertyGroup ;
       sh:nodeKind sh:IRI ;
-      sh:target <http://id.loc.gov/ontologies/bibframe/Work> ;
+      sh:targetClass <http://id.loc.gov/ontologies/bibframe/Work> ;
     ] ;
     sh:property [
       sh:path bib:isSubjectOf ;
@@ -820,7 +821,7 @@ bibliotek-o_shapes:AudioInstanceForm
       sh:name "Preferred title" ;
       sh:nodeKind sh:IRI ;
       sh:order "0"^^xsd:decimal ;
-      sh:target <http://id.loc.gov/ontologies/bibframe/Instance> ;
+      sh:targetClass <http://id.loc.gov/ontologies/bibframe/Instance> ;
     ] ;
     
   sh:property [
@@ -831,7 +832,7 @@ bibliotek-o_shapes:AudioInstanceForm
       sh:name "Other title" ;
       sh:nodeKind sh:IRI ;
       sh:order "1"^^xsd:decimal ;
-      sh:target <http://id.loc.gov/ontologies/bibframe/Instance> ;
+      sh:targetClass <http://id.loc.gov/ontologies/bibframe/Instance> ;
     ] ;
     
   sh:property [
@@ -850,7 +851,7 @@ bibliotek-o_shapes:AudioInstanceForm
       sh:name "Measurement information" ;
       sh:nodeKind sh:IRI ;
       sh:order "0"^^xsd:decimal ;
-      sh:target <http://id.loc.gov/ontologies/bibframe/Instance> ;
+      sh:targetClass <http://id.loc.gov/ontologies/bibframe/Instance> ;
     ] ;
     
     sh:property [
@@ -860,7 +861,7 @@ bibliotek-o_shapes:AudioInstanceForm
       sh:name "Qualifying information about the measurement" ;
       sh:nodeKind sh:Literal ;
       sh:order "1"^^xsd:decimal ;
-      sh:target <http://measurement.biblioteko-o.org/MeasurementGroup> ;
+      sh:targetClass <http://measurement.biblioteko-o.org/MeasurementGroup> ;
     ] ;
     
     sh:property [
@@ -871,7 +872,7 @@ bibliotek-o_shapes:AudioInstanceForm
       sh:name "Single measurement" ;
       sh:nodeKind sh:IRI ;
       sh:order "2"^^xsd:decimal ;
-      sh:target <http://measurement.biblioteko-o.org/MeasurementGroup> ;
+      sh:targetClass <http://measurement.biblioteko-o.org/MeasurementGroup> ;
     ] ;
     
     sh:property [
@@ -880,7 +881,7 @@ bibliotek-o_shapes:AudioInstanceForm
       sh:name "Numeric value" ;
       sh:group bibliotek-o_shapes:MeasurementPropertyGroup ;
       sh:nodeKind sh:Literal ;
-      sh:target <http://measurement.biblioteko-o.org/Measurement> ;
+      sh:targetClass <http://measurement.biblioteko-o.org/Measurement> ;
       sh:order "3"^^xsd:decimal ;
     ] ;
     
@@ -891,7 +892,7 @@ bibliotek-o_shapes:AudioInstanceForm
       sh:name "Unit" ;
       sh:nodeKind sh:IRI ;
       sh:order "4"^^xsd:decimal ;
-      sh:target <http://measurement.biblioteko-o.org/Measurement> ;
+      sh:targetClass <http://measurement.biblioteko-o.org/Measurement> ;
     ] ;
     
     sh:property [
@@ -901,7 +902,7 @@ bibliotek-o_shapes:AudioInstanceForm
       sh:name "Dimension or other aspect" ;
       sh:nodeKind sh:IRI ;
       sh:order "5"^^xsd:decimal ;
-      sh:target <http://measurement.biblioteko-o.org/Measurement> ;
+      sh:targetClass <http://measurement.biblioteko-o.org/Measurement> ;
     ] ;
   
    sh:property [
@@ -982,7 +983,7 @@ bibliotek-o_shapes:AudioItemForm
       sh:name "Preferred title" ;
       sh:nodeKind sh:IRI ;
       sh:order "0"^^xsd:decimal ;
-      sh:target <http://id.loc.gov/ontologies/bibframe/Work> ;
+      sh:targetClass <http://id.loc.gov/ontologies/bibframe/Work> ;
     ] ;
   sh:property [
       sh:path <http://id.loc.gov/ontologies/bibframe/title> ;
@@ -992,7 +993,7 @@ bibliotek-o_shapes:AudioItemForm
       sh:name "Other title" ;
       sh:nodeKind sh:IRI ;
       sh:order "1"^^xsd:decimal ;
-      sh:target <http://id.loc.gov/ontologies/bibframe/Work> ;
+      sh:targetClass <http://id.loc.gov/ontologies/bibframe/Work> ;
     ] ;
   sh:property [
       sh:path bib:hasActivity ;
