@@ -849,57 +849,7 @@ bibliotek-o_shapes:AudioInstanceForm
       sh:name "Measurement information" ;
       sh:nodeKind sh:IRI ;
       sh:order "0"^^xsd:decimal ;
-    ] ;
-    
-    sh:property [
-      sh:path dcterms:description ;
-      sh:description "Record any qualifying information about the measurement, e.g. 'approximate', 'or smaller', 'in container', 'with handle' " ;
-      sh:group bibliotek-o_shapes:MeasurementPropertyGroup ;
-      sh:name "Qualifying information about the measurement" ;
-      sh:nodeKind sh:Literal ;
-      sh:order "1"^^xsd:decimal ;
-      sh:targetClass <http://measurement.bibliotek-o.org/MeasurementGroup> ;
-    ] ;
-    
-    sh:property [
-      sh:path <http://measurement.bibliotek-o.org/hasMeasurement> ;
-      sh:class <http://measurement.bibliotek-o.org/Measurement> ;
-      sh:description "The measurement of a single aspect of a resource, including value, units, and the dimension measured. For example, a book may have a height (aspect) of 10 (value) centimeters (units). Each such measurement is attached to a MeasurementGroup." ;
-      sh:group bibliotek-o_shapes:MeasurementPropertyGroup ;
-      sh:name "Single measurement" ;
-      sh:nodeKind sh:IRI ;
-      sh:order "2"^^xsd:decimal ;
-      sh:targetClass <http://measurement.bibliotek-o.org/MeasurementGroup> ;
-    ] ;
-    
-    sh:property [
-      sh:path rdf:value ;
-      sh:description "Numeric value for the measurement" ;
-      sh:name "Numeric value" ;
-      sh:group bibliotek-o_shapes:MeasurementPropertyGroup ;
-      sh:nodeKind sh:Literal ;
-      sh:targetClass <http://measurement.bibliotek-o.org/Measurement> ;
-      sh:order "3"^^xsd:decimal ;
-    ] ;
-    
-    sh:property [
-      sh:path <http://measurement.bibliotek-o.org/hasUnit> ;
-      sh:description "Unit used to express the measurement" ;
-      sh:group bibliotek-o_shapes:MeasurementPropertyGroup ;
-      sh:name "Unit" ;
-      sh:nodeKind sh:IRI ;
-      sh:order "4"^^xsd:decimal ;
-      sh:targetClass <http://measurement.bibliotek-o.org/Measurement> ;
-    ] ;
-    
-    sh:property [
-      sh:path <http://measurement.bibliotek-o.org/measures> ;
-      sh:description "Dimension or other aspect of a resource that is measured by this Measurement. For example, a Measurement may specify the length, height, weight, file size, etc. of a resource." ;
-      sh:group bibliotek-o_shapes:MeasurementPropertyGroup ;
-      sh:name "Dimension or other aspect" ;
-      sh:nodeKind sh:IRI ;
-      sh:order "5"^^xsd:decimal ;
-      sh:targetClass <http://measurement.bibliotek-o.org/Measurement> ;
+      tosh:editWidget swa:NestedObjectEditor ;
     ] ;
   
    sh:property [
@@ -1294,6 +1244,72 @@ bibliotek-o_shapes:AudioItemActivityForm
       sh:description "Links this particular Activity form to Items" ;
       sh:class bf:Item ;
       sh:name "Activity of an Item" ;
+    ] ;
+.
+
+bibliotek-o_shapes:MeasurementGroupForm
+  rdf:type rdfs:Class ;
+  rdf:type sh:NodeShape ;
+  rdfs:label "Measurement Group" ;
+  sh:description "A group of measurements, e.g. length, width, height measuring the size of a resource would be one measurement group" ;
+  sh:targetClass bib:MeasurementGroup ;
+  rdfs:subClassOf rdfs:Resource ;
+  sh:property [
+      sh:path dcterms:description ;
+      sh:description "Record any qualifying information about the measurement, e.g. 'approximate', 'or smaller', 'in container', 'with handle' " ;
+      sh:group bibliotek-o_shapes:MeasurementPropertyGroup ;
+      sh:name "Qualifying information about the measurement" ;
+      sh:nodeKind sh:Literal ;
+      sh:order "0"^^xsd:decimal ;
+    ] ;
+    
+    sh:property [
+      sh:path <http://measurement.bibliotek-o.org/hasMeasurement> ;
+      sh:class <http://measurement.bibliotek-o.org/Measurement> ;
+      sh:description "The measurement of a single aspect of a resource, including value, units, and the dimension measured. For example, a book may have a height (aspect) of 10 (value) centimeters (units). Each such measurement is attached to a MeasurementGroup." ;
+      sh:group bibliotek-o_shapes:MeasurementPropertyGroup ;
+      sh:name "Single measurement" ;
+      sh:nodeKind sh:IRI ;
+      sh:order "1"^^xsd:decimal ;
+      tosh:editWidget swa:NestedObjectEditor ;
+    ] ;
+.
+
+bibliotek-o_shapes:MeasurementForm
+  rdf:type rdfs:Class ;
+  rdf:type sh:NodeShape ;
+  rdfs:label "Agent Activity" ;
+  sh:targetClass bib:Activity ;
+  rdfs:subClassOf rdfs:Resource ;
+    
+    sh:property [
+      sh:path rdf:value ;
+      sh:description "Numeric value for the measurement" ;
+      sh:name "Numeric value" ;
+      sh:group bibliotek-o_shapes:MeasurementPropertyGroup ;
+      sh:nodeKind sh:Literal ;
+      sh:targetClass <http://measurement.bibliotek-o.org/Measurement> ;
+      sh:order "0"^^xsd:decimal ;
+    ] ;
+    
+    sh:property [
+      sh:path <http://measurement.bibliotek-o.org/hasUnit> ;
+      sh:description "Unit used to express the measurement" ;
+      sh:group bibliotek-o_shapes:MeasurementPropertyGroup ;
+      sh:name "Unit" ;
+      sh:nodeKind sh:IRI ;
+      sh:order "1"^^xsd:decimal ;
+      sh:targetClass <http://measurement.bibliotek-o.org/Measurement> ;
+    ] ;
+    
+    sh:property [
+      sh:path <http://measurement.bibliotek-o.org/measures> ;
+      sh:description "Dimension or other aspect of a resource that is measured by this Measurement. For example, a Measurement may specify the length, height, weight, file size, etc. of a resource." ;
+      sh:group bibliotek-o_shapes:MeasurementPropertyGroup ;
+      sh:name "Dimension or other aspect" ;
+      sh:nodeKind sh:IRI ;
+      sh:order "2"^^xsd:decimal ;
+      sh:targetClass <http://measurement.bibliotek-o.org/Measurement> ;
     ] ;
 .
 
