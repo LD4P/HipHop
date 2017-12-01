@@ -841,8 +841,8 @@ bibliotek-o_shapes:AudioInstanceForm
     ] ;
   
     sh:property [
-      sh:path <http://measurement.biblioteko-o.org/hasMeasurementGroup> ;
-      sh:class <http://measurement.biblioteko-o.org/MeasurementGroup> ;
+      sh:path <http://measurement.bibliotek-o.org/hasMeasurementGroup> ;
+      sh:class <http://measurement.bibliotek-o.org/MeasurementGroup> ;
       sh:group bibliotek-o_shapes:MeasurementPropertyGroup ;
       sh:name "Measurement information" ;
       sh:nodeKind sh:IRI ;
@@ -856,18 +856,18 @@ bibliotek-o_shapes:AudioInstanceForm
       sh:name "Qualifying information about the measurement" ;
       sh:nodeKind sh:Literal ;
       sh:order "1"^^xsd:decimal ;
-      sh:targetClass <http://measurement.biblioteko-o.org/MeasurementGroup> ;
+      sh:targetClass <http://measurement.bibliotek-o.org/MeasurementGroup> ;
     ] ;
     
     sh:property [
-      sh:path <http://measurement.biblioteko-o.org/hasMeasurement> ;
-      sh:class <http://measurement.biblioteko-o.org/Measurement> ;
+      sh:path <http://measurement.bibliotek-o.org/hasMeasurement> ;
+      sh:class <http://measurement.bibliotek-o.org/Measurement> ;
       sh:description "The measurement of a single aspect of a resource, including value, units, and the dimension measured. For example, a book may have a height (aspect) of 10 (value) centimeters (units). Each such measurement is attached to a MeasurementGroup." ;
       sh:group bibliotek-o_shapes:MeasurementPropertyGroup ;
       sh:name "Single measurement" ;
       sh:nodeKind sh:IRI ;
       sh:order "2"^^xsd:decimal ;
-      sh:targetClass <http://measurement.biblioteko-o.org/MeasurementGroup> ;
+      sh:targetClass <http://measurement.bibliotek-o.org/MeasurementGroup> ;
     ] ;
     
     sh:property [
@@ -876,28 +876,28 @@ bibliotek-o_shapes:AudioInstanceForm
       sh:name "Numeric value" ;
       sh:group bibliotek-o_shapes:MeasurementPropertyGroup ;
       sh:nodeKind sh:Literal ;
-      sh:targetClass <http://measurement.biblioteko-o.org/Measurement> ;
+      sh:targetClass <http://measurement.bibliotek-o.org/Measurement> ;
       sh:order "3"^^xsd:decimal ;
     ] ;
     
     sh:property [
-      sh:path <http://measurement.biblioteko-o.org/hasUnit> ;
+      sh:path <http://measurement.bibliotek-o.org/hasUnit> ;
       sh:description "Unit used to express the measurement" ;
       sh:group bibliotek-o_shapes:MeasurementPropertyGroup ;
       sh:name "Unit" ;
       sh:nodeKind sh:IRI ;
       sh:order "4"^^xsd:decimal ;
-      sh:targetClass <http://measurement.biblioteko-o.org/Measurement> ;
+      sh:targetClass <http://measurement.bibliotek-o.org/Measurement> ;
     ] ;
     
     sh:property [
-      sh:path <http://measurement.biblioteko-o.org/measures> ;
+      sh:path <http://measurement.bibliotek-o.org/measures> ;
       sh:description "Dimension or other aspect of a resource that is measured by this Measurement. For example, a Measurement may specify the length, height, weight, file size, etc. of a resource." ;
       sh:group bibliotek-o_shapes:MeasurementPropertyGroup ;
       sh:name "Dimension or other aspect" ;
       sh:nodeKind sh:IRI ;
       sh:order "5"^^xsd:decimal ;
-      sh:targetClass <http://measurement.biblioteko-o.org/Measurement> ;
+      sh:targetClass <http://measurement.bibliotek-o.org/Measurement> ;
     ] ;
   
    sh:property [
@@ -920,7 +920,7 @@ bibliotek-o_shapes:AudioInstanceForm
             sh:class <http://performedmusicontology.org/ontology/DiscCutting> ;
           ]
           [
-            sh:class <http:/audio.biblioteko-o.org/CaptureAndStorageTechnique> ;
+            sh:class <http:/audio.bibliotek-o.org/CaptureAndStorageTechnique> ;
           ]
         ) ;
     ] ;
