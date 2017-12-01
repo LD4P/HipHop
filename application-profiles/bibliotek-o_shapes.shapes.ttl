@@ -699,6 +699,7 @@ bibliotek-o_shapes:AudioWorkForm
       sh:path bib:hasInstance ;
       sh:name "Physical Instance or Manifestation" ;
       sh:nodeKind sh:IRI ;
+      tosh:editWidget swa:NestedObjectEditor ;
       sh:or (
           [
             sh:class <http://bibliotek-o.org/ontology/AudioDisc> ;
@@ -909,6 +910,7 @@ bibliotek-o_shapes:AudioInstanceForm
       sh:datatype xsd:string ;
       sh:description "Item which is an example of the described Instance." ;
       sh:name "Has item" ;
+      tosh:editWidget swa:NestedObjectEditor ;
       sh:group bibliotek-o_shapes:InstancetoItemPropertyGroup ;
 
     ] ;
