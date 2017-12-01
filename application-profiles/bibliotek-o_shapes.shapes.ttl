@@ -94,6 +94,7 @@ bibliotek-o_shapes:AudioWorkForm
   sh:property [
       sh:path <http://id.loc.gov/ontologies/bibframe/title> ;
       sh:class <http://id.loc.gov/ontologies/bibframe/Title> ;
+      tosh:editWidget swa:NestedObjectEditor ;
       sh:description "Record non-PreferredTitles here. Use Preferred Title to capture a preferred title." ;
       sh:group bibliotek-o_shapes:TitlePropertyGroup ;
       sh:name "Other title" ;
@@ -824,6 +825,7 @@ bibliotek-o_shapes:AudioInstanceForm
   sh:property [
       sh:path <http://id.loc.gov/ontologies/bibframe/title> ;
       sh:class <http://id.loc.gov/ontologies/bibframe/Title> ;
+      tosh:editWidget swa:NestedObjectEditor ;
       sh:description "Record non-PreferredTitles here. Use Preferred Title to capture a preferred title." ;
       sh:group bibliotek-o_shapes:TitlePropertyGroup ;
       sh:name "Other title" ;
@@ -984,6 +986,7 @@ bibliotek-o_shapes:AudioItemForm
   sh:property [
       sh:path <http://id.loc.gov/ontologies/bibframe/title> ;
       sh:class <http://id.loc.gov/ontologies/bibframe/Title> ;
+      tosh:editWidget swa:NestedObjectEditor ;
       sh:description "Record non-PreferredTitles here. Use Preferred Title to capture a preferred title." ;
       sh:group bibliotek-o_shapes:TitlePropertyGroup ;
       sh:name "Other title" ;
@@ -1020,6 +1023,7 @@ bibliotek-o_shapes:WorkTitleForm
   sh:property [
       sh:path <http://purl.org/dc/terms/hasPart> ;
       sh:class bib:TitleElement ;
+      tosh:editWidget swa:NestedObjectEditor ;
       sh:description "Has title part" ;
       sh:name "has part" ;
       sh:nodeKind sh:IRI ;
@@ -1063,6 +1067,7 @@ bibliotek-o_shapes:InstanceTitleForm
   sh:property [
       sh:path <http://purl.org/dc/terms/hasPart> ;
       sh:class bib:TitleElement ;
+      tosh:editWidget swa:NestedObjectEditor ;
       sh:description "Has title part" ;
       sh:name "has part" ;
       sh:nodeKind sh:IRI ;
@@ -1103,6 +1108,7 @@ bibliotek-o_shapes:ItemTitleForm
   sh:property [
       sh:path <http://purl.org/dc/terms/hasPart> ;
       sh:class bib:TitleElement ;
+      tosh:editWidget swa:NestedObjectEditor ;
       sh:description "Has title part" ;
       sh:name "has part" ;
       sh:nodeKind sh:IRI ;
