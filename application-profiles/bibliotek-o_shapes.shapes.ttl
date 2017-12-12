@@ -189,7 +189,7 @@ bibliotek-o_shapes_audio:AudioWorkForm
           sh:class <http://id.loc.gov/ontologies/bibframe/Event> ;
            ]
         ) ;
-    ] ;      
+    ] ;     
     
   sh:property [
       sh:path <http://rdaregistry.info/Elements/u/P60242> ;
@@ -968,6 +968,30 @@ bibliotek-o_shapes_audio:AudioItemForm
       sh:class bib:Activity ;
       sh:group bibliotek-o_shapes_audio:ItemActivityPropertyGroup ;
     ] ;
+  sh:property [
+      sh:path <http://purl.org/dc/terms/isPartOf> ;
+      sh:name "Part of collection" ;
+      sh:order "0"^^xsd:decimal ;
+      sh:class bib:Collection ;
+      sh:group bibliotek-o_shapes_audio:ItemProvenanceGroup ;
+    ] ;
+  sh:property [
+      sh:path <http://performedmusicontology.org/ontology/associatedWith> ;
+      sh:description "To link an item to an event, e.g. concert, or event series, e.g. a tour, in which the item was used or associated" ;
+      sh:name "Associated with an event" ;
+      sh:group bibliotek-o_shapes_audio:ItemProvenanceGroup ;
+      sh:order "1"^^xsd:decimal ;
+      bibliotek-o_shapes_audio:lookup bibliotek-o_shapes_audio:LD4LookupService ;
+      skos:editorialNote "Use look up service; though FAST has some events, catalogers will have to create most events because libraries traditionally haven't created many Event authorities." ;
+      sh:or (
+          [
+          sh:class <http://schema.org/Event> ;
+          ] 
+          [
+          sh:class <http://id.loc.gov/ontologies/bibframe/Event> ;
+           ]
+        ) ;
+    ] ; 
 .
 
 bibliotek-o_shapes_audio:WorkTitleForm
@@ -1446,6 +1470,13 @@ bibliotek-o_shapes_audio:ItemActivityPropertyGroup
   rdfs:label "Activity property group" ;
   sh:description "To group Agent role information for the resource." ;
   sh:order "1"^^xsd:decimal ;
+.
+
+bibliotek-o_shapes_audio:ItemProvenanceGroup
+  rdf:type sh:PropertyGroup ;
+  rdfs:label "Item provenance group" ;
+  sh:description "To group item provenance information for the resource." ;
+  sh:order "2"^^xsd:decimal ;
 .
 
 
