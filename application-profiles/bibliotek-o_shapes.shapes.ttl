@@ -796,6 +796,13 @@ bibliotek-o_shapes_audio:AudioWorkForm
       sh:name "last issue" ;
       sh:group bibliotek-o_shapes_audio:AudioWorkMiscellaneousPropertyGroup ;
     ] ;
+  sh:property [
+      sh:path <http://id.loc.gov/ontologies/bibframe/identifiedBy> ;
+      sh:description "Record identifier string value and type of identifier" ;
+      sh:name "Identified by" ;
+      sh:class <http://id.loc.gov/ontologies/bibframe/Identifier> ;
+      sh:group bibliotek-o_shapes_audio:AudioWorkMiscellaneousPropertyGroup ;
+    ] ;
 .
 
 bibliotek-o_shapes_audio:AudioInstanceForm
@@ -903,6 +910,14 @@ bibliotek-o_shapes_audio:AudioInstanceForm
             sh:hasValue <http://rdaregistry.info/termList/typeRec> ;
           ]
         ) ;
+    ] ;
+    
+    sh:property [
+      sh:path <http://id.loc.gov/ontologies/bibframe/identifiedBy> ;
+      sh:description "Record identifier string value and type of identifier" ;
+      sh:name "Identified by" ;
+      sh:class <http://id.loc.gov/ontologies/bibframe/Identifier> ;
+      sh:group bibliotek-o_shapes_audio:InstanceMiscellaneousPropertyGroup ;
     ] ;
     
   sh:property [
@@ -1249,6 +1264,33 @@ bibliotek-o_shapes_audio:AudioItemActivityForm
     ] ;
 .
 
+bibliotek-o_shapes_audio:bfIdentifier
+  rdf:type rdfs:Class ;
+  rdf:type sh:NodeShape ;
+  rdfs:label "Identifier Form" ;
+  sh:description "General identifer form" ;
+  sh:targetClass bf:Identifier ;
+  rdfs:subClassOf rdfs:Resource ;
+  sh:property [
+      sh:path rdf:value ;
+      sh:description "Record the string value of the identifier" ;
+      sh:group bibliotek-o_shapes_audio:MeasurementPropertyGroup ;
+      sh:name "Identifier value" ;
+      sh:nodeKind sh:Literal ;
+      sh:order "0"^^xsd:decimal ;
+    ] ;
+    
+    sh:property [
+      sh:path rdf:type ;
+      sh:description "Record the type of identifier, e.g. ISBN, ISSN, OCLC." ;
+      sh:group bibliotek-o_shapes_audio:MeasurementPropertyGroup ;
+      sh:name "Type of identifier" ;
+      sh:nodeKind sh:IRI ;
+      sh:order "1"^^xsd:decimal ;
+      sh:in ( <http://id.loc.gov/ontologies/bibframe/Ansi> <http://id.loc.gov/ontologies/bibframe/AudioIssueNumber> <http://id.loc.gov/ontologies/bibframe/AudioTake> <http://id.loc.gov/ontologies/bibframe/Barcode> <http://id.loc.gov/ontologies/bibframe/Coden> <http://id.loc.gov/ontologies/bibframe/CopyrightNumber> <http://id.loc.gov/ontologies/bibframe/DissertationIdentifier> <http://id.loc.gov/ontologies/bibframe/Doi> <http://id.loc.gov/ontologies/bibframe/Ean> <http://id.loc.gov/ontologies/bibframe/Fingerprint> <http://id.loc.gov/ontologies/bibframe/Gtin14Number> <http://id.loc.gov/ontologies/bibframe/Hdl> <http://id.loc.gov/ontologies/bibframe/Isan> <http://id.loc.gov/ontologies/bibframe/Isbn> <http://id.loc.gov/ontologies/bibframe/Ismn> <http://id.loc.gov/ontologies/bibframe/Isni> <http://id.loc.gov/ontologies/bibframe/Iso> <http://id.loc.gov/ontologies/bibframe/Isrc> <http://id.loc.gov/ontologies/bibframe/Issn> <http://id.loc.gov/ontologies/bibframe/IssnL> <http://id.loc.gov/ontologies/bibframe/Istc> <http://id.loc.gov/ontologies/bibframe/Iswc> <http://id.loc.gov/ontologies/bibframe/LcOverseasAcq> <http://id.loc.gov/ontologies/bibframe/Lccn> <http://id.loc.gov/ontologies/bibframe/Local> <http://id.loc.gov/ontologies/bibframe/MatrixNumber> <http://id.loc.gov/ontologies/bibframe/MusicDistributorNumber> <http://id.loc.gov/ontologies/bibframe/MusicPlate> <http://id.loc.gov/ontologies/bibframe/MusicPublisherNumber> <http://id.loc.gov/ontologies/bibframe/Nbn> <http://id.loc.gov/ontologies/bibframe/PostalRegistration> <http://id.loc.gov/ontologies/bibframe/PublisherNumber> <http://id.loc.gov/ontologies/bibframe/ReportNumber> <http://id.loc.gov/ontologies/bibframe/Sici> <http://id.loc.gov/ontologies/bibframe/StockNumber> <http://id.loc.gov/ontologies/bibframe/Strn> <http://id.loc.gov/ontologies/bibframe/StudyNumber> <http://id.loc.gov/ontologies/bibframe/Upc> <http://id.loc.gov/ontologies/bibframe/Urn> <http://id.loc.gov/ontologies/bibframe/VideoRecordingNumber> ) ;
+    ] ;
+.
+
 bibliotek-o_shapes_audio:MeasurementGroupForm
   rdf:type rdfs:Class ;
   rdf:type sh:NodeShape ;
@@ -1387,10 +1429,16 @@ bibliotek-o_shapes_audio:AudioInstanceCharacteristicsPropertyGroup
   sh:order "5"^^xsd:decimal ;
 .
 
-bibliotek-o_shapes_audio:InstanceToItemPropertyGroup
+bibliotek-o_shapes_audio:InstanceMiscellaneousPropertyGroup
   rdf:type sh:PropertyGroup ;
   rdfs:label "Work to Instance property group" ;
   sh:order "6"^^xsd:decimal ;
+.
+
+bibliotek-o_shapes_audio:InstanceToItemPropertyGroup
+  rdf:type sh:PropertyGroup ;
+  rdfs:label "Work to Instance property group" ;
+  sh:order "7"^^xsd:decimal ;
 .
 
 bibliotek-o_shapes_audio:ItemActivityPropertyGroup
