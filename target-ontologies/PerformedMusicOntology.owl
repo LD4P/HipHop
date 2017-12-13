@@ -207,6 +207,14 @@
         <skos:definition>Playing speed of 7.5 inches per second.</skos:definition>
     </owl:NamedIndividual>
     
+    <!-- http://performedmusicontology.org/ontology/LateralCut -->
+    
+    <owl:NamedIndividual rdf:about="http://performedmusicontology.org/ontology/LateralCut">
+        <rdf:type rdf:resource="http://performedmusicontology.org/ontology/DiscCutting"/>
+        <rdfs:label>Lateral cut</rdfs:label>
+        <skos:definition>Recording process in which a stylus cuts a side-to-side groove into a phonograph record.</skos:definition>
+    </owl:NamedIndividual>
+    
     <owl:NamedIndividual rdf:about="http://performedmusicontology.org/ontology/MPS1.4">
         <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/PlayingSpeed"/>
         <rdfs:comment>Speed is calculated from the distance the playback mechanism covers on the surface of the disc per second, and not the number of revolutions of the disc. It is associated with compact discs (CDs)</rdfs:comment>
@@ -273,5 +281,13 @@
         <skos:definition>Magnetic tape divided into 12 audio tracks that run parallel with each other, on which sound and other electro-acoustic signals are captured.</skos:definition>
     </owl:NamedIndividual>
     
+    <!-- http://performedmusicontology.org/ontology/Vertical -->
+    
+    <owl:NamedIndividual rdf:about="http://performedmusicontology.org/ontology/Vertical">
+        <rdf:type rdf:resource="http://performedmusicontology.org/ontology/DiscCutting"/>
+        <rdfs:label>Vertical cut</rdfs:label>
+        <skos:altLabel>Hill and dale</skos:altLabel>
+        <skos:definition>Recording process in which a stylus cuts a vertical groove into a phonograph record.</skos:definition>
+    </owl:NamedIndividual>
     
 </rdf:RDF>
