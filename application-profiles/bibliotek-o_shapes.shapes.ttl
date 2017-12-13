@@ -859,31 +859,95 @@ bibliotek-o_shapes_audio:AudioInstanceForm
       sh:order "0"^^xsd:decimal ;
       tosh:editWidget swa:NestedObjectEditor ;
     ] ;
-  
-   sh:property [
+    
+    sh:property [
       sh:path <http://id.loc.gov/ontologies/bibframe/soundCharacteristic> ;
-      sh:description "Technical specification relating to the encoding of sound in a resource." ;
-      sh:name "Sound Characteristics" ;
+      sh:description "Speed at which an audio carrier must be operated to produce the sound intended, e.g., 78 rpm, 19 cm/s." ;
+      sh:name "Playing speed" ;
       sh:group bibliotek-o_shapes_audio:AudioInstanceCharacteristicsPropertyGroup ;
-      sh:nodeKind sh:IRI ;
-      sh:or (
-          [
-             sh:class <http://id.loc.gov/ontologies/bibframe/PlayingSpeed> ;
-          ]
-          [
-             sh:class <http://www.w3.org/2004/02/skos/core#Concept> ;
-          ]
-          [
-            sh:class <http://id.loc.gov/ontologies/bibframe/TapeConfig> ;
-          ]
-          [
-            sh:class <http://performedmusicontology.org/ontology/DiscCutting> ;
-          ]
-          [
-            sh:class <http:/audio.bibliotek-o.org/CaptureAndStorageTechnique> ;
-          ]
-        ) ;
+      sh:class <http://id.loc.gov/ontologies/bibframe/PlayingSpeed> ;
     ] ;
+    
+    sh:property [
+      sh:path <http://id.loc.gov/ontologies/bibframe/soundCharacteristic> ;
+      sh:description "A number of sound channels used to make a recording." ;
+      sh:name "Configuration of playback channels" ;
+      sh:group bibliotek-o_shapes_audio:AudioInstanceCharacteristicsPropertyGroup ;
+      sh:class <http://www.w3.org/2004/02/skos/core#Concept> ;
+    ] ;
+    
+    sh:property [
+      sh:path <http://id.loc.gov/ontologies/bibframe/soundCharacteristic> ;
+      sh:description "A groove width of an analog disc." ;
+      sh:name "Groove width of an analog disc" ;
+      sh:group bibliotek-o_shapes_audio:AudioInstanceCharacteristicsPropertyGroup ;
+      sh:class <http://www.w3.org/2004/02/skos/core#Concept> ;
+    ] ;
+    
+    sh:property [
+      sh:path <http://id.loc.gov/ontologies/bibframe/soundCharacteristic> ;
+      sh:description "A groove width of an analog disc." ;
+      sh:name "Groove width of an analog disc" ;
+      sh:group bibliotek-o_shapes_audio:AudioInstanceCharacteristicsPropertyGroup ;
+      sh:class <http://www.w3.org/2004/02/skos/core#Concept> ;
+    ] ;
+    
+    sh:property [
+      sh:path <http://id.loc.gov/ontologies/bibframe/soundCharacteristic> ;
+      sh:description "A groove pitch of an analog cylinder." ;
+      sh:name "Groove pitch of an analog cylinder" ;
+      sh:group bibliotek-o_shapes_audio:AudioInstanceCharacteristicsPropertyGroup ;
+      sh:class <http://www.w3.org/2004/02/skos/core#Concept> ;
+    ] ;
+    
+    sh:property [
+      sh:path <http://id.loc.gov/ontologies/bibframe/soundCharacteristic> ;
+      sh:description "An equalization system, noise reduction system, etc., used in making an audio recording." ;
+      sh:name "Special playback characteristic" ;
+      sh:group bibliotek-o_shapes_audio:AudioInstanceCharacteristicsPropertyGroup ;
+      sh:class <http://www.w3.org/2004/02/skos/core#Concept> ;
+    ] ;
+    
+    sh:property [
+      sh:path <http://id.loc.gov/ontologies/bibframe/soundCharacteristic> ;
+      sh:description "A relationship between an original carrier and the carrier of a reproduction made from the original." ;
+      sh:name "Kind of disc, cylinder or tape" ;
+      sh:group bibliotek-o_shapes_audio:AudioInstanceCharacteristicsPropertyGroup ;
+      sh:class <http://www.w3.org/2004/02/skos/core#Concept> ;
+    ] ;
+    
+    sh:property [
+      sh:path <http://id.loc.gov/ontologies/bibframe/soundCharacteristic> ;
+      sh:description "A method used to encode audio content for playback.." ;
+      sh:name "Type of recording" ;
+      sh:group bibliotek-o_shapes_audio:AudioInstanceCharacteristicsPropertyGroup ;
+      sh:class <http://www.w3.org/2004/02/skos/core#Concept> ;
+    ] ;
+    
+    sh:property [
+      sh:path <http://id.loc.gov/ontologies/bibframe/soundCharacteristic> ;
+      sh:description "Number of tracks on an audiotape, e.g., 12 track." ;
+      sh:name "Tape configuration" ;
+      sh:group bibliotek-o_shapes_audio:AudioInstanceCharacteristicsPropertyGroup ;
+      sh:class <http://id.loc.gov/ontologies/bibframe/TapeConfig> ;
+    ] ;
+    
+    sh:property [
+      sh:path <http://id.loc.gov/ontologies/bibframe/soundCharacteristic> ;
+      sh:description "Recording process in which a stylus cuts a vertical or lateral groove into an audio disc." ;
+      sh:name "Disc cutting" ;
+      sh:group bibliotek-o_shapes_audio:AudioInstanceCharacteristicsPropertyGroup ;
+      sh:class <http://performedmusicontology.org/ontology/DiscCutting> ;
+    ] ;
+    
+    sh:property [
+      sh:path <http://id.loc.gov/ontologies/bibframe/soundCharacteristic> ;
+      sh:description "The type of equipment used in making the recording, as opposed to the type of equipment required for playback." ;
+      sh:name "Capture and storage technique" ;
+      sh:group bibliotek-o_shapes_audio:AudioInstanceCharacteristicsPropertyGroup ;
+      sh:class <http:/audio.bibliotek-o.org/CaptureAndStorageTechnique> ;
+    ] ;
+    
   sh:property [
       sh:path <http://id.loc.gov/ontologies/bibframe/soundCharacteristic/skos:inScheme> ;
       sh:description "Terms for sound characteristics should be taken from RDA Values List or individuals from Performed Music Ontology" ;
