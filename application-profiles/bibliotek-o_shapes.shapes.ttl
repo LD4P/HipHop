@@ -211,7 +211,7 @@ bibliotek-o_shapes_audio:AudioWorkForm
     
   sh:property [
       sh:path <http://purl.org/dc/terms/hasPart> ;
-      sh:class <http://id.loc.gov/ontologies/bibframe/Work> ;
+      sh:class <http://id.loc.gov/ontologies/bibframe/Audio> ;
       sh:group bibliotek-o_shapes_audio:WorkToWorkPropertyGroup ;
       sh:name "Has part" ;
       sh:nodeKind sh:IRI ;
