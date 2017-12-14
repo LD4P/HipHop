@@ -86,7 +86,7 @@ bibliotek-o_shapes_audio:AudioWorkForm
       sh:class <http://id.loc.gov/ontologies/bibframe/Title> ;
       sh:group bibliotek-o_shapes_audio:TitlePropertyGroup ;
       sh:minCount 1 ;
-      sh:description "For audio works there can be only one preferred title per language."
+      sh:description "For audio works there can be only one preferred title per language." ;
       sh:name "Preferred title" ;
       sh:nodeKind sh:IRI ;
       sh:order "0"^^xsd:decimal ;
