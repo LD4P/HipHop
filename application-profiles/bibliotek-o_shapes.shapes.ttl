@@ -945,7 +945,7 @@ bibliotek-o_shapes_audio:AudioInstanceForm
       sh:description "The type of equipment used in making the recording, as opposed to the type of equipment required for playback." ;
       sh:name "Capture and storage technique" ;
       sh:group bibliotek-o_shapes_audio:AudioInstanceCharacteristicsPropertyGroup ;
-      sh:class <http:/audio.bibliotek-o.org/CaptureAndStorageTechnique> ;
+      sh:class <http://audio.bibliotek-o.org/CaptureAndStorageTechnique> ;
     ] ;
     
   sh:property [
