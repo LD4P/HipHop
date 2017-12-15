@@ -1362,7 +1362,6 @@ bibliotek-o_shapes_audio:bfIdentifier
   sh:property [
       sh:path rdf:value ;
       sh:description "Record the string value of the identifier" ;
-      sh:group bibliotek-o_shapes_audio:MeasurementPropertyGroup ;
       sh:name "Identifier value" ;
       sh:nodeKind sh:Literal ;
       sh:order "0"^^xsd:decimal ;
@@ -1371,7 +1370,6 @@ bibliotek-o_shapes_audio:bfIdentifier
     sh:property [
       sh:path rdf:type ;
       sh:description "Record the type of identifier, e.g. ISBN, ISSN, OCLC." ;
-      sh:group bibliotek-o_shapes_audio:MeasurementPropertyGroup ;
       sh:name "Type of identifier" ;
       sh:nodeKind sh:IRI ;
       sh:order "1"^^xsd:decimal ;
