@@ -696,7 +696,7 @@ bibliotek-o_shapes_audio:AudioWorkForm
     ] ;  
   
   sh:property [
-      sh:path bib:hasInstance ;
+      sh:path bf:hasInstance ;
       sh:name "Physical Instance or Manifestation" ;
       sh:nodeKind sh:IRI ;
       tosh:editWidget swa:NestedObjectEditor ;
