@@ -30,6 +30,7 @@
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix bf: <http://id.loc.gov/ontologies/bibframe/> .
 @prefix prov: <http://www.w3.org/ns/prov> .
+@prefix schema: <http://schema.org> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix swa: <http://topbraid.org/swa#> .
 @prefix tosh: <http://topbraid.org/tosh#> .
@@ -1240,7 +1241,7 @@ bibliotek-o_shapes_audio:AudioWorkActivityForm
       sh:nodeKind sh:Literal ;
     ];
     sh:property [
-      sh:path bib:atLocation ;
+      sh:path schema:location ;
       sh:order "3" ;
       sh:maxCount "1" ;
       sh:description "Location of the activity" ;
@@ -1289,7 +1290,7 @@ bibliotek-o_shapes_audio:AudioInstanceActivityForm
       sh:nodeKind sh:Literal ;
     ] ;
     sh:property [
-      sh:path bib:atLocation ;
+      sh:path schema:location ;
       sh:order "3" ;
       sh:description "Location of the activity" ;
       sh:name "Location" ;
@@ -1339,7 +1340,7 @@ bibliotek-o_shapes_audio:AudioItemActivityForm
       sh:nodeKind sh:Literal ;
     ] ;
     sh:property [
-      sh:path bib:atLocation ;
+      sh:path schema:location ;
       sh:order "3" ;
       sh:description "Location of the activity" ;
       sh:name "Location" ;
