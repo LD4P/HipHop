@@ -111,6 +111,25 @@ bibliotek-o_shapes_audio:AudioWorkForm
       tosh:editWidget swa:NestedObjectEditor ;
       sh:class bib:Activity ;
     ] ;
+    
+ # May decide to go with bf:eventContent to align with Performed Music decision to use BF instead of reusing schema:recordedAt. bf:eventContent domain should be open so schema:Events can be used without the added bf:Event entailment. Will need to reconcile schema and PMO class hierarchy.
+
+  sh:property [
+      sh:path <http://schema.org/recordedAt> ;
+      sh:description "An event (a performance, concert, audition, etc.) wholly or partially captured by the work." ;
+      sh:name "Recorded Event" ;
+      sh:group bibliotek-o_shapes_audio:WorkActivityPropertyGroup ;
+      bibliotek-o_shapes_audio:lookup bibliotek-o_shapes_audio:LD4LookupService ;
+      skos:editorialNote "Use look up service; though FAST has some events, catalogers will have to create most events because libraries traditionally haven't created many Event authorities." ;
+      sh:or (
+          [
+          sh:class <http://schema.org/Event> ;
+          ] 
+          [
+          sh:class <http://id.loc.gov/ontologies/bibframe/Event> ;
+           ]
+        ) ;
+    ] ;     
   
   sh:property [
       sh:path <http://purl.org/dc/terms/subject> ;
@@ -150,7 +169,7 @@ bibliotek-o_shapes_audio:AudioWorkForm
   sh:property [
       sh:path bib:covers ;
       sh:class <http://id.loc.gov/ontologies/bibframe/Temporal> ;
-      sh:description "Specifies a time period covered in the content of this resource." ;
+      sh:description "Specifies a time period covered in the content of this resource, e.g. the decade a dataset covers, a map depicts boundaries from a given period." ;
       sh:name "Time period covered" ;
       sh:group bibliotek-o_shapes_audio:SubjectAndCoveragePropertyGroup ;
       sh:nodeKind sh:IRI ;
@@ -158,7 +177,7 @@ bibliotek-o_shapes_audio:AudioWorkForm
   sh:property [
       sh:path bib:covers ;
       sh:class <http://www.w3.org/ns/prov#Location> ;
-      sh:description "Specifies a location covered in the content of this resource." ;
+      sh:description "Specifies a location covered in the content of this resource, e.g. the geographic region a dataset covers, a map depicts a specific location." ;
       sh:name "Location covered" ;
       sh:group bibliotek-o_shapes_audio:SubjectAndCoveragePropertyGroup ;
       sh:nodeKind sh:IRI ;
@@ -171,27 +190,6 @@ bibliotek-o_shapes_audio:AudioWorkForm
       sh:group bibliotek-o_shapes_audio:SubjectAndCoveragePropertyGroup ;
       sh:nodeKind sh:IRI ;
     ] ;
-    
-# May decide to go with bf:eventContent to align with Performed Music decision to use BF instead of reusing schema:recordedAt. bf:eventContent domain should be open so schema:Events can be used without the added bf:Event entailment. Will need to reconcile schema and PMO class hierarchy.
-
-    sh:property [
-      sh:path <http://schema.org/recordedAt> ;
-      sh:description "An event (a performance, concert, audition, etc.) wholly or partially captured by the work." ;
-      sh:name "Event recorded" ;
-      sh:group bibliotek-o_shapes_audio:SubjectAndCoveragePropertyGroup ;
-      sh:nodeKind sh:IRI ;
-      bibliotek-o_shapes_audio:lookup bibliotek-o_shapes_audio:LD4LookupService ;
-      skos:editorialNote "Use look up service; though FAST has some events, catalogers will have to create most events because libraries traditionally haven't created many Event authorities." ;
-      
-      sh:or (
-          [
-          sh:class <http://schema.org/Event> ;
-          ] 
-          [
-          sh:class <http://id.loc.gov/ontologies/bibframe/Event> ;
-           ]
-        ) ;
-    ] ;     
     
   sh:property [
       sh:path <http://rdaregistry.info/Elements/u/P60242> ;
@@ -1592,65 +1590,65 @@ bibliotek-o_shapes_audio:MeasurementForm
 
 bibliotek-o_shapes_audio:TypeGenreFormPropertyGroup
   rdf:type sh:PropertyGroup ;
-  rdfs:label "Type, genre, and form property group" ;
+  rdfs:label "Type and Genre" ;
   sh:description "To group type, Genre, and Form information for the resource." ;
   sh:order "0"^^xsd:decimal ;
 .
 
 bibliotek-o_shapes_audio:TitlePropertyGroup
   rdf:type sh:PropertyGroup ;
-  rdfs:label "Title property group" ;
+  rdfs:label "Titles" ;
   sh:description "To group title information for the resource." ;
   sh:order "1"^^xsd:decimal ;
 .
 
 bibliotek-o_shapes_audio:WorkActivityPropertyGroup
   rdf:type sh:PropertyGroup ;
-  rdfs:label "Activity property group" ;
+  rdfs:label "Work Agent and Capture Information" ;
   sh:description "To group Agent role information for the resource." ;
   sh:order "2"^^xsd:decimal ;
 .
 
 bibliotek-o_shapes_audio:SubjectAndCoveragePropertyGroup
   rdf:type sh:PropertyGroup ;
-  rdfs:label "Audio work subject and coverage property group" ;
+  rdfs:label "Subjects" ;
   sh:order "3"^^xsd:decimal ;
 .
 
 bibliotek-o_shapes_audio:AudioWorkToWorkPropertyGroup
   rdf:type sh:PropertyGroup ;
-  rdfs:label "Work to work property group" ;
+  rdfs:label "Related Audio Works" ;
   sh:order "4"^^xsd:decimal ;
 .
 
 bibliotek-o_shapes_audio:WorkToWorkPropertyGroup
   rdf:type sh:PropertyGroup ;
-  rdfs:label "Work to work property group" ;
+  rdfs:label "Related Works" ;
   sh:order "5"^^xsd:decimal ;
 .
 
 bibliotek-o_shapes_audio:WorkToInstancePropertyGroup
   rdf:type sh:PropertyGroup ;
-  rdfs:label "Work to Instance property group" ;
+  rdfs:label "Related Instances (Manifestations)" ;
   sh:order "6"^^xsd:decimal ;
 .
 
 bibliotek-o_shapes_audio:AudioWorkMiscellaneousPropertyGroup
   rdf:type sh:PropertyGroup ;
-  rdfs:label "Work to Instance property group" ;
+  rdfs:label "Miscellaneous Work Information" ;
   sh:order "7"^^xsd:decimal ;
 .
 
 bibliotek-o_shapes_audio:InstanceActivityPropertyGroup
   rdf:type sh:PropertyGroup ;
-  rdfs:label "Activity property group" ;
+  rdfs:label "Instance Agent Information" ;
   sh:description "To group Agent role information for the resource." ;
   sh:order "2"^^xsd:decimal ;
 .
 
 bibliotek-o_shapes_audio:MeasurementPropertyGroup
   rdf:type sh:PropertyGroup ;
-  rdfs:label "Measurement property group" ;
+  rdfs:label "Measurements" ;
   sh:description "To group measurement information for the resource." ;
   sh:order "4"^^xsd:decimal ;
 .
@@ -1664,34 +1662,34 @@ bibliotek-o_shapes_audio:AudioInstanceCharacteristicsPropertyGroup
 
 bibliotek-o_shapes_audio:InstanceMiscellaneousPropertyGroup
   rdf:type sh:PropertyGroup ;
-  rdfs:label "Work to Instance property group" ;
+  rdfs:label "Miscellaneous Work Information" ;
   sh:order "6"^^xsd:decimal ;
 .
 
 bibliotek-o_shapes_audio:InstanceToItemPropertyGroup
   rdf:type sh:PropertyGroup ;
-  rdfs:label "Work to Instance property group" ;
+  rdfs:label "Related Items (Copies)" ;
   sh:order "7"^^xsd:decimal ;
 .
 
 bibliotek-o_shapes_audio:ItemActivityPropertyGroup
   rdf:type sh:PropertyGroup ;
-  rdfs:label "Activity property group" ;
+  rdfs:label "Item Agent Information" ;
   sh:description "To group Agent role information for the resource." ;
   sh:order "1"^^xsd:decimal ;
 .
 
 bibliotek-o_shapes_audio:ItemProvenanceGroup
   rdf:type sh:PropertyGroup ;
-  rdfs:label "Item provenance group" ;
+  rdfs:label "Item Provenance" ;
   sh:description "To group item provenance information for the resource." ;
   sh:order "2"^^xsd:decimal ;
 .
 
 bibliotek-o_shapes_audio:AudioItemMiscellaneousPropertyGroup
   rdf:type sh:PropertyGroup ;
-  rdfs:label "Work to Instance property group" ;
-  sh:order "6"^^xsd:decimal ;
+  rdfs:label "Miscellaneous Item Information" ;
+  sh:order "3"^^xsd:decimal ;
 .
 
 
