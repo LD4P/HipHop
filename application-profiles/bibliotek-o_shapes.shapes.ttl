@@ -802,8 +802,29 @@ bibliotek-o_shapes_audio:AudioWorkForm
       sh:path <http://id.loc.gov/ontologies/bibframe/identifiedBy> ;
       sh:description "Record identifier string value and type of identifier" ;
       sh:name "Identified by" ;
-      sh:class <http://id.loc.gov/ontologies/bibframe/Identifier> ;
       sh:group bibliotek-o_shapes_audio:AudioWorkMiscellaneousPropertyGroup ;
+      sh:or (
+          [
+           sh:class <http://id.loc.gov/ontologies/bibframe/AudioTake> ;
+         ]
+
+         [
+           sh:class <http://id.loc.gov/ontologies/bibframe/Isan> ;
+         ]
+   
+         [
+           sh:class <http://id.loc.gov/ontologies/bibframe/Isrc> ;
+         ]
+
+         [
+           sh:class <http://id.loc.gov/ontologies/bibframe/Issn> ;
+         ]
+
+         [
+           sh:class<http://id.loc.gov/ontologies/bibframe/Lccn> ;
+         ]
+
+        ) ;
     ] ;
 .
 
@@ -982,8 +1003,94 @@ bibliotek-o_shapes_audio:AudioInstanceForm
       sh:path <http://id.loc.gov/ontologies/bibframe/identifiedBy> ;
       sh:description "Record identifier string value and type of identifier" ;
       sh:name "Identified by" ;
-      sh:class <http://id.loc.gov/ontologies/bibframe/Identifier> ;
       sh:group bibliotek-o_shapes_audio:InstanceMiscellaneousPropertyGroup ;
+      sh:or (
+           [
+           sh:class <http://id.loc.gov/ontologies/bibframe/Identifier> ;
+         ]
+
+         [
+           sh:class <http://id.loc.gov/ontologies/bibframe/Barcode> ;
+         ]
+
+         [
+           sh:class <http://id.loc.gov/ontologies/bibframe/Doi> ;
+         ]
+   
+         [
+           sh:class <http://id.loc.gov/ontologies/bibframe/Ean> ;
+         ]
+
+         [
+           sh:class <http://id.loc.gov/ontologies/bibframe/Gtin14Number> ;
+         ]
+
+         [
+           sh:class <http://id.loc.gov/ontologies/bibframe/Hdl> ;
+         ]
+
+         [
+           sh:class <http://id.loc.gov/ontologies/bibframe/Ismn> ;
+         ]
+
+
+         [
+           sh:class <http://id.loc.gov/ontologies/bibframe/Isan> ;
+         ]
+
+         [
+           sh:class <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+         ]
+   
+         [
+           sh:class <http://id.loc.gov/ontologies/bibframe/Isni> ;
+         ]
+
+        [
+         sh:class <http://id.loc.gov/ontologies/bibframe/Issn> ;
+         ]
+
+         [
+           sh:class <http://id.loc.gov/ontologies/bibframe/LcOverseasAcq> ;
+         ]
+   
+         [
+           sh:class <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+         ]
+
+
+         [
+           sh:class <http://id.loc.gov/ontologies/bibframe/Local> ;
+         ]
+   
+         [
+           sh:class <http://id.loc.gov/ontologies/bibframe/MusicDistributorNumber> ;
+         ]
+
+         [
+           sh:class <http://id.loc.gov/ontologies/bibframe/PublisherNumber> ;
+         ]
+         
+         [
+           sh:class <http://id.loc.gov/ontologies/bibframe/StockNumber> ;
+         ]
+
+         [
+           sh:class <http://id.loc.gov/ontologies/bibframe/Upc> ;
+         ]
+         
+         [
+           sh:class <http://id.loc.gov/ontologies/bibframe/StudyNumber> ;
+         ]
+
+         [
+           sh:class <http://id.loc.gov/ontologies/bibframe/Urn> ;
+         ]
+         
+         [
+           sh:class <http://bibliotek-o.org/1.1/ontology/OclcIdentifier> ;
+         ]
+        ) ;
     ] ;
     
   sh:property [
@@ -1058,6 +1165,41 @@ bibliotek-o_shapes_audio:AudioItemForm
            ]
         ) ;
     ] ; 
+     sh:property [
+      sh:path <http://id.loc.gov/ontologies/bibframe/identifiedBy> ;
+      sh:description "Record identifier string value and type of identifier" ;
+      sh:name "Identified by" ;
+      sh:group bibliotek-o_shapes_audio:AudioItemMiscellaneousPropertyGroup ;
+      sh:or (
+          [
+           sh:class <http://id.loc.gov/ontologies/bibframe/Barcode> ;
+         ]
+
+         [
+           sh:class <http://id.loc.gov/ontologies/bibframe/Local> ;
+         ]
+   
+         [
+           sh:class <http://id.loc.gov/ontologies/bibframe/ShelfMarkDdc> ;
+         ]
+
+         [
+           sh:class <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+         ]
+
+         [
+           sh:class <http://id.loc.gov/ontologies/bibframe/ShelfMarkNlm> ;
+         ]
+
+         [
+           sh:class <http://id.loc.gov/ontologies/bibframe/ShelfMarkUdc> ;
+         ]
+         
+         [
+           sh:class <http://id.loc.gov/ontologies/bibframe/ShelfMark> ;
+         ]
+        ) ;
+    ] ;
 .
 
 bibliotek-o_shapes_audio:WorkTitleForm
@@ -1545,6 +1687,13 @@ bibliotek-o_shapes_audio:ItemProvenanceGroup
   sh:description "To group item provenance information for the resource." ;
   sh:order "2"^^xsd:decimal ;
 .
+
+bibliotek-o_shapes_audio:AudioItemMiscellaneousPropertyGroup
+  rdf:type sh:PropertyGroup ;
+  rdfs:label "Work to Instance property group" ;
+  sh:order "6"^^xsd:decimal ;
+.
+
 
 
 
