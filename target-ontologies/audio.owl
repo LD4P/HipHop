@@ -97,7 +97,7 @@
     <skos:scopeNote xml:lang="en">This class is derived from the RDA Content Type: http://rdaregistry.info/termList/RDAContentType/1013.</skos:scopeNote>
 </owl:Class>
     
-<owl:Class rdf:about="http://audio.biblioteko-o.org/TapeOnLPDiscLabelOrCover">
+<owl:Class rdf:about="http://audio.biblioteko-o.org/TapeOnLPDiscLabelOrCoverNote">
     <rdfs:label>Tape on LP’s disc label or cover</rdfs:label>
     <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/Note"/>
     <skos:definition>A note explaining there is tape on disc label or cover to obscure the title, artist, etc. (Bam put this tape on LPs) Wording: Title [or artist’s name, etc.] obscured with black tape [or white sticker] on label [or jacket].</skos:definition>
