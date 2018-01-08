@@ -1163,6 +1163,52 @@ bibliotek-o_shapes_audio:AudioItemForm
            ]
         ) ;
     ] ; 
+    
+    sh:property [
+      sh:path <http://id.loc.gov/ontologies/bibframe/note> ;
+      sh:description "Copy specific notes. These note types apply specifically to the Cornell Hip Hop Collection" ;
+      sh:name "Copy specific notes" ;
+      sh:group bibliotek-o_shapes_audio:AudioItemMiscellaneousPropertyGroup ;
+      sh:or (
+         [
+           sh:class <http://audio.biblioteko-o.org/WritingOnAlbumNote> ;
+         ]
+         [
+           sh:class <http://audio.biblioteko-o.org/NumberedSRJacketNote> ;
+         ]
+   
+         [
+           sh:class <http://audio.biblioteko-o.org/InitialsOrNumberOnLabelNote> ;
+         ]
+         [
+           sh:class <http://audio.biblioteko-o.org/PostItNoteNote> ;
+         ]
+
+         [
+           sh:class <http://audio.biblioteko-o.org/SignatureNote> ;
+         ]
+         [
+           sh:class <http://audio.biblioteko-o.org/CuePointMarkerNote> ;
+         ]
+         [
+           sh:class <http://audio.biblioteko-o.org/TracksOfInterestNote> ;
+         ]
+          [
+           sh:class <http://audio.biblioteko-o.org/TapeOnLPDiscLabelOrCoverNote> ;
+         ]
+         [
+           sh:class <http://audio.biblioteko-o.org/NotInOriginalJacketNote> ;
+         ]
+         [
+           sh:class <http://audio.biblioteko-o.org/TwoCopiesInSameSleeveNote> ;
+         ]
+         [
+           sh:class <http://id.loc.gov/ontologies/bibframe/Note> ;
+         ]
+         
+        ) ;
+    ] ;
+    
      sh:property [
       sh:path <http://id.loc.gov/ontologies/bibframe/identifiedBy> ;
       sh:description "Record identifier string value and type of identifier" ;
