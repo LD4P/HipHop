@@ -121,14 +121,7 @@ bibliotek-o_shapes_audio:AudioWorkForm
       sh:group bibliotek-o_shapes_audio:WorkActivityPropertyGroup ;
       bibliotek-o_shapes_audio:lookup bibliotek-o_shapes_audio:LD4LookupService ;
       skos:editorialNote "Use look up service; though FAST has some events, catalogers will have to create most events because libraries traditionally haven't created many Event authorities." ;
-      sh:or (
-          [
-          sh:class <http://schema.org/Event> ;
-          ] 
-          [
-          sh:class <http://id.loc.gov/ontologies/bibframe/Event> ;
-           ]
-        ) ;
+      sh:class <http://schema.org/Event> ;
     ] ;     
   
   sh:property [
@@ -159,7 +152,7 @@ bibliotek-o_shapes_audio:AudioWorkForm
             sh:class <http://www.w3.org/2004/02/skos/core#Concept> ;
           ]
           [
-            sh:class <http://www.w3.org/ns/prov#Location> ;
+            sh:class gn:Feature ;
           ]
           [
             sh:class <http://schema.org/Event> ;
@@ -176,7 +169,7 @@ bibliotek-o_shapes_audio:AudioWorkForm
     ] ;
   sh:property [
       sh:path bib:covers ;
-      sh:class <http://www.w3.org/ns/prov#Location> ;
+      sh:class gn:Feature ;
       sh:description "Specifies a location covered in the content of this resource, e.g. the geographic region a dataset covers, a map depicts a specific location." ;
       sh:name "Location covered" ;
       sh:group bibliotek-o_shapes_audio:SubjectAndCoveragePropertyGroup ;
@@ -742,7 +735,6 @@ bibliotek-o_shapes_audio:AudioWorkForm
     
   sh:property [
       sh:path <http://schema.org/duration> ;
-      sh:class <http://id.loc.gov/ontologies/bibframe/Audio> ;
       sh:group bibliotek-o_shapes_audio:AudioWorkMiscellaneousPropertyGroup ;
       sh:name "Duration of audio work" ;
       sh:nodeKind sh:Literal ;
@@ -932,7 +924,7 @@ bibliotek-o_shapes_audio:AudioInstanceForm
     sh:property [
       sh:path <http://id.loc.gov/ontologies/bibframe/soundCharacteristic> ;
       sh:description "A relationship between an original carrier and the carrier of a reproduction made from the original." ;
-      sh:name "Kind of disc, cylinder or tape" ;
+      sh:name "Kind of disc, cylinder or tape in relation to original carrier" ;
       sh:group bibliotek-o_shapes_audio:AudioInstanceCharacteristicsPropertyGroup ;
       sh:class <http://www.w3.org/2004/02/skos/core#Concept> ;
     ] ;
@@ -1609,7 +1601,6 @@ bibliotek-o_shapes_audio:MeasurementForm
       sh:name "Numeric value" ;
       sh:group bibliotek-o_shapes_audio:MeasurementPropertyGroup ;
       sh:nodeKind sh:Literal ;
-      sh:targetClass <http://measurement.bibliotek-o.org/Measurement> ;
       sh:order "0"^^xsd:decimal ;
     ] ;
     
@@ -1618,11 +1609,13 @@ bibliotek-o_shapes_audio:MeasurementForm
       sh:description "Unit used to express the measurement" ;
       sh:group bibliotek-o_shapes_audio:MeasurementPropertyGroup ;
       sh:name "Unit" ;
+      sh:class skos:Concept ;
       sh:nodeKind sh:IRI ;
       sh:order "1"^^xsd:decimal ;
-      sh:targetClass <http://measurement.bibliotek-o.org/Measurement> ;
     ] ;
-    
+
+# For dimension types, such as height, width, weight, etc. use AAT, Art & Architecture Thesaurus.
+
     sh:property [
       sh:path <http://measurement.bibliotek-o.org/measures> ;
       sh:description "Dimension or other aspect of a resource that is measured by this Measurement. For example, a Measurement may specify the length, height, weight, file size, etc. of a resource." ;
@@ -1630,7 +1623,65 @@ bibliotek-o_shapes_audio:MeasurementForm
       sh:name "Dimension or other aspect" ;
       sh:nodeKind sh:IRI ;
       sh:order "2"^^xsd:decimal ;
-      sh:targetClass <http://measurement.bibliotek-o.org/Measurement> ;
+      sh:or (
+          [
+            sh:hasValue <http://vocab.getty.edu/aat/300055621> 
+          ]
+          [
+            sh:hasValue <http://vocab.getty.edu/aat/300055623>
+          ]
+          [
+            sh:hasValue <http://vocab.getty.edu/aat/300055624> ;
+          ]
+          [
+            sh:hasValue <http://vocab.getty.edu/aat/300055644> ;
+          ]
+          [
+            sh:hasValue <http://vocab.getty.edu/aat/300055645> ;
+          ]
+           [
+            sh:hasValue <http://vocab.getty.edu/aat/300055646> ;
+          ]
+          [
+            sh:hasValue <http://vocab.getty.edu/aat/300055647> 
+          ]
+          [
+            sh:hasValue <http://vocab.getty.edu/aat/300055649>
+          ]
+          [
+            sh:hasValue <http://vocab.getty.edu/aat/300056240> ;
+          ]
+          [
+            sh:hasValue <http://vocab.getty.edu/aat/300072633> ;
+          ]
+          [
+            sh:hasValue <http://vocab.getty.edu/aat/300312044> ;
+          ]
+           [
+            sh:hasValue <http://vocab.getty.edu/aat/300404162> ;
+          ]
+          [
+            sh:hasValue <http://vocab.getty.edu/aat/300404164> ;
+          ]
+          [
+            sh:hasValue <http://vocab.getty.edu/aat/300404403> 
+          ]
+          [
+            sh:hasValue <http://vocab.getty.edu/aat/300404430>
+          ]
+          [
+            sh:hasValue <http://vocab.getty.edu/aat/300404431> ;
+          ]
+          [
+            sh:hasValue <http://vocab.getty.edu/aat/300404432> ;
+          ]
+          [
+            sh:hasValue <http://vocab.getty.edu/aat/300404433> ;
+          ]
+           [
+            sh:hasValue <http://vocab.getty.edu/aat/300404437> ;
+          ]
+        ) ;
     ] ;
 .
 
