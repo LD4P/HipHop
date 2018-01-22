@@ -1085,7 +1085,7 @@ bibliotek-o_shapes_audio:AudioInstanceForm
     
   sh:property [
       sh:path <http://id.loc.gov/ontologies/bibframe/hasItem> ;
-      sh:datatype xsd:string ;
+      sh:class bf:Item ;
       sh:description "Item which is an example of the described Instance." ;
       sh:name "Has item" ;
       tosh:editWidget swa:NestedObjectEditor ;
@@ -1146,14 +1146,7 @@ bibliotek-o_shapes_audio:AudioItemForm
       sh:order "1"^^xsd:decimal ;
       bibliotek-o_shapes_audio:lookup bibliotek-o_shapes_audio:LD4LookupService ;
       skos:editorialNote "Use look up service; though FAST has some events, catalogers will have to create most events because libraries traditionally haven't created many Event authorities." ;
-      sh:or (
-          [
-          sh:class <http://schema.org/Event> ;
-          ] 
-          [
-          sh:class <http://id.loc.gov/ontologies/bibframe/Event> ;
-           ]
-        ) ;
+      sh:class <http://schema.org/Event> ;
     ] ; 
     
     sh:property [
@@ -1609,7 +1602,6 @@ bibliotek-o_shapes_audio:MeasurementForm
       sh:description "Unit used to express the measurement" ;
       sh:group bibliotek-o_shapes_audio:MeasurementPropertyGroup ;
       sh:name "Unit" ;
-      sh:class skos:Concept ;
       sh:nodeKind sh:IRI ;
       sh:order "1"^^xsd:decimal ;
     ] ;
