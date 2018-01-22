@@ -2,11 +2,11 @@
 <!-- 
     WARNING:  THIS IS A WORKING DRAFT ONTOLOGY AND STILL UNDER DEVELOPMENT, this file will change frequently and significantly as development continues.
     
-    Note:  http://audio.biblioteko-o.org/ is a placeholder (fake) namespace for the LD4P/L Measurements ontology extension until a proper home is found
+    Note:  http://audio.bibliotek-o.org/ is a placeholder (fake) namespace for the LD4P/L Measurements ontology extension until a proper home is found
   -->
 
 
-<rdf:RDF xmlns="http://audio.biblioteko-o.org/"
+<rdf:RDF xmlns="http://audio.bibliotek-o.org/"
     xmlns:bf="http://id.loc.gov/ontologies/bibframe/" xmlns:bib="http://bibliotek-o.org/ontology/"
     xmlns:dcterms="http://purl.org/dc/terms/" xmlns:owl="http://www.w3.org/2002/07/owl#"
     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
@@ -17,7 +17,7 @@
 
 <!-- ONTOLOGY DECLARATION -->
 
-    <owl:Ontology rdf:about="http://audio.biblioteko-o.org/">
+    <owl:Ontology rdf:about="http://audio.bibliotek-o.org/">
         <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Version
             0.0</owl:versionInfo>
         <rdfs:label xml:lang="en">Audio extension of bibliotek-o</rdfs:label>
@@ -34,27 +34,27 @@
 
     <!-- CLASSES -->
     
-<owl:Class rdf:about="http://audio.biblioteko-o.org/CaptureAndStorageTechnique">
+<owl:Class rdf:about="http://audio.bibliotek-o.org/CaptureAndStorageTechnique">
     <rdfs:label>Capture and storage technique</rdfs:label>
     <skos:definition>The type of equipment used in making the recording, as opposed to the type of equipment required for playback.</skos:definition>
     <skos:scopeNote xml:lang="en">This class is derived from the MARC 21 007 position 13 for sound recordings, https://www.loc.gov/marc/bibliographic/bd007s.html..</skos:scopeNote>
 </owl:Class>
 
-<owl:Class rdf:about="http://audio.biblioteko-o.org/PerformedMusic">
+<owl:Class rdf:about="http://audio.bibliotek-o.org/PerformedMusic">
     <rdfs:label>Performed Music</rdfs:label>
     <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/Audio"/>
     <skos:definition>An audio work consisting of content expressed through music in an audible form, not necessarily performed live. To denote a live performance a bib:PerformedMusic should be linked to a live event.</skos:definition>
     <skos:scopeNote xml:lang="en">This class is derived from the RDA Content Type: http://rdaregistry.info/termList/RDAContentType/1011.</skos:scopeNote>
 </owl:Class>
   
-<owl:Class rdf:about="http://audio.biblioteko-o.org/Sounds">
+<owl:Class rdf:about="http://audio.bibliotek-o.org/Sounds">
     <rdfs:label>Sounds</rdfs:label>
     <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/Audio"/>
     <skos:definition>An audio work consisting of content other than language or music, expressed in an audible form.</skos:definition>
     <skos:scopeNote xml:lang="en">This class is derived from the RDA Content Type: http://rdaregistry.info/termList/RDAContentType/1012.</skos:scopeNote>
   </owl:Class>
   
-<owl:Class rdf:about="http://audio.biblioteko-o.org/SpokenWord">
+<owl:Class rdf:about="http://audio.bibliotek-o.org/SpokenWord">
     <rdfs:label>Spoken word</rdfs:label>
     <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/Audio"/>
     <skos:definition>An audio work consisting of content expressed through language in an audible form.</skos:definition>
