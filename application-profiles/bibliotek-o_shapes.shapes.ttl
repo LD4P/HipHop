@@ -206,7 +206,7 @@ bibliotek-o_shapes_audio:AudioWorkForm
       sh:path <http://purl.org/dc/terms/hasPart> ;
       sh:class <http://id.loc.gov/ontologies/bibframe/Audio> ;
       sh:group bibliotek-o_shapes_audio:WorkToWorkPropertyGroup ;
-      sh:name "Has part" ;
+      sh:name "Content listing (track listing)" ;
       sh:nodeKind sh:IRI ;
     ] ;
     
@@ -875,6 +875,15 @@ bibliotek-o_shapes_audio:AudioInstanceForm
     ] ;
     
     sh:property [
+      sh:path bf:instanceOf ;
+      sh:name "Relates this Instance to the Work it is the Instance of" ;
+      sh:nodeKind sh:IRI ;
+      sh:group bibliotek-o_shapes_audio:InstancetoWorkPropertyGroup ;
+      tosh:editWidget swa:NestedObjectEditor ;
+      sh:class <http://id.loc.gov/ontologies/bibframe/Audio> ;
+    ] ;
+    
+    sh:property [
       sh:path <http://id.loc.gov/ontologies/bibframe/soundCharacteristic> ;
       sh:description "Speed at which an audio carrier must be operated to produce the sound intended, e.g., 78 rpm, 19 cm/s." ;
       sh:name "Playing speed" ;
@@ -1082,6 +1091,14 @@ bibliotek-o_shapes_audio:AudioInstanceForm
            sh:class <http://bibliotek-o.org/1.1/ontology/OclcIdentifier> ;
          ]
         ) ;
+        
+    ] ;
+      sh:property [
+      sh:path <http://purl.org/dc/terms/hasPart> ;
+      sh:class <http://id.loc.gov/ontologies/bibframe/Audio> ;
+      sh:group bibliotek-o_shapes_audio:WorkToWorkPropertyGroup ;
+      sh:name "Content listing (track listing)" ;
+      sh:nodeKind sh:IRI ;
     ] ;
     
   sh:property [
@@ -1090,7 +1107,7 @@ bibliotek-o_shapes_audio:AudioInstanceForm
       sh:description "Item which is an example of the described Instance." ;
       sh:name "Has item" ;
       tosh:editWidget swa:NestedObjectEditor ;
-      sh:group bibliotek-o_shapes_audio:InstancetoItemPropertyGroup ;
+      sh:group bibliotek-o_shapes_audio:InstancetToItemPropertyGroup ;
 
     ] ;
     
@@ -1132,6 +1149,13 @@ bibliotek-o_shapes_audio:AudioItemForm
       sh:class bib:Activity ;
       sh:group bibliotek-o_shapes_audio:ItemActivityPropertyGroup ;
     ] ;
+  sh:property [
+      sh:path <http://purl.org/dc/terms/itemOf> ;
+      sh:name "Item of a Particular Instance" ;
+      sh:order "0"^^xsd:decimal ;
+      sh:class <http://id.loc.gov/ontologies/bibframe/Instance> ;
+      sh:group bibliotek-o_shapes_audio:ItemToInstancePropertyGroup ;
+    ] ;  
   sh:property [
       sh:path <http://purl.org/dc/terms/isPartOf> ;
       sh:name "Part of collection" ;
@@ -1743,23 +1767,30 @@ bibliotek-o_shapes_audio:MeasurementPropertyGroup
   sh:order "4"^^xsd:decimal ;
 .
 
+bibliotek-o_shapes_audio:InstancetoWorkPropertyGroup
+ rdf:type sh:PropertyGroup ;
+  rdfs:label "Instance of Work" ;
+  sh:description "To group Instances of the Same Work." ;
+  sh:order "5"^^xsd:decimal ;
+.
+
 bibliotek-o_shapes_audio:AudioInstanceCharacteristicsPropertyGroup
   rdf:type sh:PropertyGroup ;
   rdfs:label "Audio Instance Characteristics" ;
   sh:description "To group information about the Audio-specific instance characteristics, e.g. playback channel." ;
-  sh:order "5"^^xsd:decimal ;
+  sh:order "6"^^xsd:decimal ;
 .
 
 bibliotek-o_shapes_audio:InstanceMiscellaneousPropertyGroup
   rdf:type sh:PropertyGroup ;
   rdfs:label "Miscellaneous Work Information" ;
-  sh:order "6"^^xsd:decimal ;
+  sh:order "7"^^xsd:decimal ;
 .
 
 bibliotek-o_shapes_audio:InstanceToItemPropertyGroup
   rdf:type sh:PropertyGroup ;
   rdfs:label "Related Items (Copies)" ;
-  sh:order "7"^^xsd:decimal ;
+  sh:order "8"^^xsd:decimal ;
 .
 
 bibliotek-o_shapes_audio:ItemActivityPropertyGroup
@@ -1769,17 +1800,23 @@ bibliotek-o_shapes_audio:ItemActivityPropertyGroup
   sh:order "1"^^xsd:decimal ;
 .
 
+bibliotek-o_shapes_audio:ItemToInstancePropertyGroup
+  rdf:type sh:PropertyGroup ;
+  rdfs:label "Related Items (Copies)" ;
+  sh:order "2"^^xsd:decimal ;
+.
+
 bibliotek-o_shapes_audio:ItemProvenanceGroup
   rdf:type sh:PropertyGroup ;
   rdfs:label "Item Provenance" ;
   sh:description "To group item provenance information for the resource." ;
-  sh:order "2"^^xsd:decimal ;
+  sh:order "3"^^xsd:decimal ;
 .
 
 bibliotek-o_shapes_audio:AudioItemMiscellaneousPropertyGroup
   rdf:type sh:PropertyGroup ;
   rdfs:label "Miscellaneous Item Information" ;
-  sh:order "3"^^xsd:decimal ;
+  sh:order "4"^^xsd:decimal ;
 .
 
 
