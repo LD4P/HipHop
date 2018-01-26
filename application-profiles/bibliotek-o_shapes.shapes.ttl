@@ -19,7 +19,7 @@
 @prefix bib: <http://bibliotek-o.org/ontology/> .
 @prefix bibliotek-o_shapes_audio: <http://bibliotek-o.org/shapes/audio/> .
 @prefix core: <http://vivoweb.org/ontology/core#> .
-@prefix gn: <http://www.geonames.org/ontology> .
+@prefix gn: <http://www.geonames.org/ontology/> .
 @prefix lingvo: <http://www.lingvoj.org/ontology#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix p1: <http://example.org/file1#> .
@@ -1312,7 +1312,7 @@ bibliotek-o_shapes_audio:InstanceTitleForm
     ] ;
   sh:property [
       sh:path <http://id.loc.gov/ontologies/bibframe/origin> ;
-      sh:class bf:TitleOrigin ;
+      sh:class <http://bibliotek-o.org/1.1/ontology/Origin> ;
       sh:description "Describe the origin of the title, for example spine or cover" ;
       sh:name "Title origin" ;
       sh:nodeKind sh:IRI ;
@@ -1353,7 +1353,7 @@ bibliotek-o_shapes_audio:ItemTitleForm
     ] ;
   sh:property [
       sh:path <http://id.loc.gov/ontologies/bibframe/origin> ;
-      sh:class bf:TitleOrigin ;
+      sh:class <http://bibliotek-o.org/1.1/ontology/Origin> ;
       sh:description "Describe the origin of the title, for example spine or cover" ;
       sh:name "Title origin" ;
       sh:nodeKind sh:IRI ;
