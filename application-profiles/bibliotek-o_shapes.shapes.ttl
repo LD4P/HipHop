@@ -884,6 +884,14 @@ bibliotek-o_shapes_audio:AudioInstanceForm
     ] ;
     
     sh:property [
+      sh:path bf:editionStatement ;
+      sh:name "Edition statement or version of the resource" ;
+      sh:description: "Edition or version of the resource and associated statements of responsibility for the edition; usually transcribed." ;
+      sh:nodeKind sh:Literal ;
+      sh:group bibliotek-o_shapes_audio:InstancetoWorkPropertyGroup ;
+    ] ;
+    
+    sh:property [
       sh:path <http://id.loc.gov/ontologies/bibframe/soundCharacteristic> ;
       sh:description "Speed at which an audio carrier must be operated to produce the sound intended, e.g., 78 rpm, 19 cm/s." ;
       sh:name "Playing speed" ;
@@ -1770,7 +1778,7 @@ bibliotek-o_shapes_audio:MeasurementPropertyGroup
 bibliotek-o_shapes_audio:InstancetoWorkPropertyGroup
  rdf:type sh:PropertyGroup ;
   rdfs:label "Instance of Work" ;
-  sh:description "To group Instances of the Same Work." ;
+  sh:description "To group Instances of the Same Work, and provide edition information" ;
   sh:order "5"^^xsd:decimal ;
 .
 
