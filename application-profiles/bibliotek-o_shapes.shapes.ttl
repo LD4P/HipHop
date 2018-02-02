@@ -784,9 +784,6 @@ bibliotek-o_shapes_audio:AudioWorkForm
            sh:class <http://audio.biblioteko-o.org/ContentsNote> ;
          ]
          [
-           sh:class <http://audio.biblioteko-o.org/CreditsNote> ;
-         ]
-         [
            sh:class <http://audio.biblioteko-o.org/SummaryNote> ;
          ]
          [
@@ -1136,9 +1133,6 @@ bibliotek-o_shapes_audio:AudioInstanceForm
          
          [
            sh:class <http://audio.biblioteko-o.org/ContentsNote> ;
-         ]
-         [
-           sh:class <http://audio.biblioteko-o.org/CreditsNote> ;
          ]
          [
            sh:class <http://audio.biblioteko-o.org/SummaryNote> ;
