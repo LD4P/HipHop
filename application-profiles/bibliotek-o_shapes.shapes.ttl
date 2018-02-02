@@ -774,6 +774,34 @@ bibliotek-o_shapes_audio:AudioWorkForm
       sh:group bibliotek-o_shapes_audio:AudioWorkMiscellaneousPropertyGroup ;
     ] ;
   sh:property [
+      sh:path <http://id.loc.gov/ontologies/bibframe/note> ;
+      sh:description "Work related notes for when more granualar information isn't captured." ;
+      sh:name "Work notes" ;
+      sh:group bibliotek-o_shapes_audio:AudioWorkMiscellaneousPropertyGroup ;
+      sh:or (
+         
+         [
+           sh:class <http://audio.biblioteko-o.org/ContentsNote> ;
+         ]
+         [
+           sh:class <http://audio.biblioteko-o.org/CreditsNote> ;
+         ]
+         [
+           sh:class <http://audio.biblioteko-o.org/SummaryNote> ;
+         ]
+         [
+           sh:class <http://audio.biblioteko-o.org/SupplementaryContentNote> ;
+         ]
+         [
+           sh:class <http://audio.biblioteko-o.org/ReviewNote> ;
+         ]
+         [
+           sh:class <http://audio.biblioteko-o.org/PurposeNote> ;
+         ]
+         
+        ) ;
+    ] ;
+  sh:property [
       sh:path <http://id.loc.gov/ontologies/bibframe/firstIssue> ;
       sh:datatype xsd:string ;
       sh:description "Beginning date of a resource and/or the sequential designations." ;
@@ -1099,6 +1127,34 @@ bibliotek-o_shapes_audio:AudioInstanceForm
            sh:class <http://bibliotek-o.org/1.1/ontology/OclcIdentifier> ;
          ]
         ) ;
+    sh:property [
+      sh:path <http://id.loc.gov/ontologies/bibframe/note> ;
+      sh:description "Instance related note for when more granualar information isn't captured." ;
+      sh:name "Instance note" ;
+      sh:group bibliotek-o_shapes_audio:InstanceMiscellaneousPropertyGroup ;
+      sh:or (
+         
+         [
+           sh:class <http://audio.biblioteko-o.org/ContentsNote> ;
+         ]
+         [
+           sh:class <http://audio.biblioteko-o.org/CreditsNote> ;
+         ]
+         [
+           sh:class <http://audio.biblioteko-o.org/SummaryNote> ;
+         ]
+         [
+           sh:class <http://audio.biblioteko-o.org/SupplementaryContentNote> ;
+         ]
+         [
+           sh:class <http://audio.biblioteko-o.org/ReviewNote> ;
+         ]
+         [
+           sh:class <http://audio.biblioteko-o.org/PurposeNote> ;
+         ]
+         
+        ) ;
+    ] ;
         
     ] ;
       sh:property [
@@ -1221,9 +1277,8 @@ bibliotek-o_shapes_audio:AudioItemForm
            sh:class <http://audio.biblioteko-o.org/TwoCopiesInSameSleeveNote> ;
          ]
          [
-           sh:class <http://id.loc.gov/ontologies/bibframe/Note> ;
+           sh:class <http://audio.biblioteko-o.org/SummaryNote> ;
          ]
-         
         ) ;
     ] ;
     
