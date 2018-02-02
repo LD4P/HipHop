@@ -47,15 +47,7 @@
     <skos:editorialNote>This note type was created based on http://bibliotek-o.org/1.1/ontology/specifyingContents. Likely belongs in a general bf:Notes extension, but need to add it here for now.</skos:editorialNote>
     <dcterms:issued>2018-01-29T00:00:00-04:00</dcterms:issued>
 </owl:Class> 
-    
-<owl:Class rdf:about="CreditsNote">
-    <rdfs:label xml:lang="en">Credits note</rdfs:label>
-    <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/Note"/>
-    <skos:definition xml:lang="en">A note to provide a list of credits related to the resource.</skos:definition>
-    <skos:editorialNote>This note type was created based on http://bibliotek-o.org/1.1/ontology/listingCredits. Likely belongs in a general bf:Notes extension, but need to add it here for now.</skos:editorialNote>
-    <dcterms:issued>2018-01-29T00:00:00-04:00</dcterms:issued>
-</owl:Class>    
-    
+
 <owl:Class rdf:about="http://audio.bibliotek-o.org/CuePointMarkerNote">
     <rdfs:label>Cue point markers</rdfs:label>
     <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/Note"/>
