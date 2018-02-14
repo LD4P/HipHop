@@ -122,7 +122,7 @@ bibliotek-o_shapes_audio:AudioWorkForm
       bibliotek-o_shapes_audio:lookup bibliotek-o_shapes_audio:LD4LookupService ;
       skos:editorialNote "Use look up service; though FAST has some events, catalogers will have to create most events because libraries traditionally haven't created many Event authorities." ;
       sh:class <http://schema.org/Event> ;
-    ] ;     
+    ] ;   
   
   sh:property [
       sh:path <http://purl.org/dc/terms/subject> ;
@@ -777,6 +777,7 @@ bibliotek-o_shapes_audio:AudioWorkForm
       sh:path <http://id.loc.gov/ontologies/bibframe/note> ;
       sh:description "Work related notes for when more granualar information isn't captured." ;
       sh:name "Work notes" ;
+      tosh:editWidget swa:NestedObjectEditor ;
       sh:group bibliotek-o_shapes_audio:AudioWorkMiscellaneousPropertyGroup ;
       sh:or (
          
@@ -1128,6 +1129,7 @@ bibliotek-o_shapes_audio:AudioInstanceForm
       sh:path <http://id.loc.gov/ontologies/bibframe/note> ;
       sh:description "Instance related note for when more granualar information isn't captured." ;
       sh:name "Instance note" ;
+      tosh:editWidget swa:NestedObjectEditor ;
       sh:group bibliotek-o_shapes_audio:InstanceMiscellaneousPropertyGroup ;
       sh:or (
          
@@ -1236,6 +1238,7 @@ bibliotek-o_shapes_audio:AudioItemForm
       sh:path <http://id.loc.gov/ontologies/bibframe/note> ;
       sh:description "Copy specific notes. These note types apply specifically to the Cornell Hip Hop Collection" ;
       sh:name "Copy specific notes" ;
+      tosh:editWidget swa:NestedObjectEditor ;
       sh:group bibliotek-o_shapes_audio:AudioItemMiscellaneousPropertyGroup ;
       sh:or (
          [
@@ -1660,6 +1663,28 @@ bibliotek-o_shapes_audio:MeasurementGroupForm
       sh:nodeKind sh:IRI ;
       sh:order "1"^^xsd:decimal ;
       tosh:editWidget swa:NestedObjectEditor ;
+    ] ;
+.
+
+bibliotek-o_shapes_audio:NoteForm
+  rdf:type rdfs:Class ;
+  rdf:type sh:NodeShape ;
+  rdfs:label "Note form" ;
+  rdfs:subClassOf rdfs:Resource ;
+  sh:targetClass bf:Note ;
+  sh:property [
+      sh:path rdf:type ;
+      sh:name "Type of Note" ;
+      sh:minCount "1" ;
+      sh:maxCount "1" ;
+    ] ;
+  sh:property [
+      sh:path rdf:value ;
+      sh:minCount "1" ;
+      sh:maxCount "1" ;
+      sh:description "String value for the note" ;
+      sh:name "Note value" ;
+      sh:nodeKind sh:Literal ;
     ] ;
 .
 
