@@ -1711,6 +1711,44 @@ bibliotek-o_shapes_audio:MeasurementForm
       sh:name "Unit" ;
       sh:nodeKind sh:IRI ;
       sh:order "1"^^xsd:decimal ;
+      sh:or (
+          [
+            sh:hasValue <ttp://qudt.org/vocab/unit#Centimeter> ;
+          ]
+          [
+            sh:hasValue <http://qudt.org/vocab/unit#Foot> ;
+          ]
+          [
+            sh:hasValue <http://qudt.org/vocab/unit#Gram> ;
+          ]
+          [
+            sh:hasValue <http://qudt.org/vocab/unit#Inch> ;
+          ]
+           [
+            sh:hasValue <http://qudt.org/vocab/unit#Kilogram> ;
+          ]
+          [
+            sh:hasValue <http://qudt.org/vocab/unit#Kilometer> ;
+          ]
+          [
+            sh:hasValue <http://qudt.org/vocab/unit#Meter> ;
+          ]
+          [
+            sh:hasValue <http://qudt.org/vocab/unit#MileUSStatute> ;
+          ]
+          [
+            sh:hasValue <http://qudt.org/vocab/unit#Millimeter> ;
+          ]
+          [
+            sh:hasValue <http://qudt.org/vocab/unit#MetricTon> ;
+          ]
+           [
+            sh:hasValue <http://qudt.org/vocab/unit#OunceMass> ;
+          ]
+          [
+            sh:hasValue <http://qudt.org/vocab/unit#PoundMass> ;
+          ]
+        ) ;
     ] ;
 
 # For dimension types, such as height, width, weight, etc. use AAT, Art & Architecture Thesaurus.
@@ -1724,10 +1762,10 @@ bibliotek-o_shapes_audio:MeasurementForm
       sh:order "2"^^xsd:decimal ;
       sh:or (
           [
-            sh:hasValue <http://vocab.getty.edu/aat/300055621> 
+            sh:hasValue <http://vocab.getty.edu/aat/300055621> ;
           ]
           [
-            sh:hasValue <http://vocab.getty.edu/aat/300055623>
+            sh:hasValue <http://vocab.getty.edu/aat/300055623> ;
           ]
           [
             sh:hasValue <http://vocab.getty.edu/aat/300055624> ;
@@ -1742,10 +1780,10 @@ bibliotek-o_shapes_audio:MeasurementForm
             sh:hasValue <http://vocab.getty.edu/aat/300055646> ;
           ]
           [
-            sh:hasValue <http://vocab.getty.edu/aat/300055647> 
+            sh:hasValue <http://vocab.getty.edu/aat/300055647> ;
           ]
           [
-            sh:hasValue <http://vocab.getty.edu/aat/300055649>
+            sh:hasValue <http://vocab.getty.edu/aat/300055649> ;
           ]
           [
             sh:hasValue <http://vocab.getty.edu/aat/300056240> ;
@@ -1763,10 +1801,10 @@ bibliotek-o_shapes_audio:MeasurementForm
             sh:hasValue <http://vocab.getty.edu/aat/300404164> ;
           ]
           [
-            sh:hasValue <http://vocab.getty.edu/aat/300404403> 
+            sh:hasValue <http://vocab.getty.edu/aat/300404403> ;
           ]
           [
-            sh:hasValue <http://vocab.getty.edu/aat/300404430>
+            sh:hasValue <http://vocab.getty.edu/aat/300404430> ;
           ]
           [
             sh:hasValue <http://vocab.getty.edu/aat/300404431> ;
