@@ -1212,7 +1212,7 @@ bibliotek-o_shapes_audio:AudioItemForm
       sh:group bibliotek-o_shapes_audio:ItemActivityPropertyGroup ;
     ] ;
   sh:property [
-      sh:path <http://purl.org/dc/terms/itemOf> ;
+      sh:path <http://id.loc.gov/ontologies/bibframe/itemOf> ;
       sh:name "Item of a Particular Instance" ;
       sh:order "0"^^xsd:decimal ;
       sh:class <http://id.loc.gov/ontologies/bibframe/Instance> ;
@@ -1374,7 +1374,7 @@ bibliotek-o_shapes_audio:InstanceTitleForm
       sh:nodeKind sh:Literal ;
     ] ;
   sh:property [
-      sh:path <http://id.loc.gov/ontologies/bibframe/origin> ;
+      sh:path <http://bibliotek-o.org/ontology/origin> ;
       sh:class <http://bibliotek-o.org/1.1/ontology/Origin> ;
       sh:description "Describe the origin of the title, for example spine or cover" ;
       sh:name "Title origin" ;
