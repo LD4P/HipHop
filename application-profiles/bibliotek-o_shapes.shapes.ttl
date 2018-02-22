@@ -1374,7 +1374,7 @@ bibliotek-o_shapes_audio:InstanceTitleForm
       sh:nodeKind sh:Literal ;
     ] ;
   sh:property [
-      sh:path <http://bibliotek-o.org/ontology/origin> ;
+      sh:path <http://bibliotek-o.org/ontology/hasOrigin> ;
       sh:class <http://bibliotek-o.org/1.1/ontology/Origin> ;
       sh:description "Describe the origin of the title, for example spine or cover" ;
       sh:name "Title origin" ;
@@ -1415,7 +1415,7 @@ bibliotek-o_shapes_audio:ItemTitleForm
       sh:nodeKind sh:Literal ;
     ] ;
   sh:property [
-      sh:path <http://id.loc.gov/ontologies/bibframe/origin> ;
+      sh:path <http://bibliotek-o.org/ontology/hasOrigin> ;
       sh:class <http://bibliotek-o.org/1.1/ontology/Origin> ;
       sh:description "Describe the origin of the title, for example spine or cover" ;
       sh:name "Title origin" ;
