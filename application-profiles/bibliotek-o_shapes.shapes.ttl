@@ -34,6 +34,7 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix swa: <http://topbraid.org/swa#> .
 @prefix tosh: <http://topbraid.org/tosh#> .
+@prefix pmo: <http://performedmusicontology.org/ontology/> .
 
 <http://bibliotek-o.org/shapes/audio/>
   rdf:type owl:Ontology ;
@@ -783,19 +784,19 @@ bibliotek-o_shapes_audio:AudioWorkForm
       sh:or (
          
          [
-           sh:class <http://audio.biblioteko-o.org/ContentsNote> ;
+           sh:class <http://audio.bibliotek-o.org/ContentsNote> ;
          ]
          [
-           sh:class <http://audio.biblioteko-o.org/SummaryNote> ;
+           sh:class <http://audio.bibliotek-o.org/SummaryNote> ;
          ]
          [
-           sh:class <http://audio.biblioteko-o.org/SupplementaryContentNote> ;
+           sh:class <http://audio.bibliotek-o.org/SupplementaryContentNote> ;
          ]
          [
-           sh:class <http://audio.biblioteko-o.org/ReviewNote> ;
+           sh:class <http://audio.bibliotek-o.org/ReviewNote> ;
          ]
          [
-           sh:class <http://audio.biblioteko-o.org/PurposeNote> ;
+           sh:class <http://audio.bibliotek-o.org/PurposeNote> ;
          ]
          
         ) ;
@@ -1126,6 +1127,7 @@ bibliotek-o_shapes_audio:AudioInstanceForm
            sh:class <http://bibliotek-o.org/1.1/ontology/OclcIdentifier> ;
          ]
         ) ;
+    ] ;    
     sh:property [
       sh:path <http://id.loc.gov/ontologies/bibframe/note> ;
       sh:description "Instance related note for when more granualar information isn't captured." ;
@@ -1135,25 +1137,25 @@ bibliotek-o_shapes_audio:AudioInstanceForm
       sh:or (
          
          [
-           sh:class <http://audio.biblioteko-o.org/ContentsNote> ;
+           sh:class <http://audio.bibliotek-o.org/ContentsNote> ;
          ]
          [
-           sh:class <http://audio.biblioteko-o.org/SummaryNote> ;
+           sh:class <http://audio.bibliotek-o.org/SummaryNote> ;
          ]
          [
-           sh:class <http://audio.biblioteko-o.org/SupplementaryContentNote> ;
+           sh:class <http://audio.bibliotek-o.org/SupplementaryContentNote> ;
          ]
          [
-           sh:class <http://audio.biblioteko-o.org/ReviewNote> ;
+           sh:class <http://audio.bibliotek-o.org/ReviewNote> ;
          ]
          [
-           sh:class <http://audio.biblioteko-o.org/PurposeNote> ;
+           sh:class <http://audio.bibliotek-o.org/PurposeNote> ;
          ]
          
         ) ;
     ] ;
         
-    ] ;
+    
       sh:property [
       sh:path <http://purl.org/dc/terms/hasPart> ;
       sh:class <http://id.loc.gov/ontologies/bibframe/Audio> ;
@@ -1211,7 +1213,7 @@ bibliotek-o_shapes_audio:AudioItemForm
       sh:group bibliotek-o_shapes_audio:ItemActivityPropertyGroup ;
     ] ;
   sh:property [
-      sh:path <http://purl.org/dc/terms/itemOf> ;
+      sh:path <http://id.loc.gov/ontologies/bibframe/itemOf> ;
       sh:name "Item of a Particular Instance" ;
       sh:order "0"^^xsd:decimal ;
       sh:class <http://id.loc.gov/ontologies/bibframe/Instance> ;
@@ -1244,39 +1246,39 @@ bibliotek-o_shapes_audio:AudioItemForm
       sh:group bibliotek-o_shapes_audio:AudioItemMiscellaneousPropertyGroup ;
       sh:or (
          [
-           sh:class <http://audio.biblioteko-o.org/WritingOnAlbumNote> ;
+           sh:class <http://audio.bibliotek-o.org/WritingOnAlbumNote> ;
          ]
          [
-           sh:class <http://audio.biblioteko-o.org/NumberedSRJacketNote> ;
+           sh:class <http://audio.bibliotek-o.org/NumberedSRJacketNote> ;
          ]
    
          [
-           sh:class <http://audio.biblioteko-o.org/InitialsOrNumberOnLabelNote> ;
+           sh:class <http://audio.bibliotek-o.org/InitialsOrNumberOnLabelNote> ;
          ]
          [
-           sh:class <http://audio.biblioteko-o.org/PostItNoteNote> ;
+           sh:class <http://audio.bibliotek-o.org/PostItNoteNote> ;
          ]
 
          [
-           sh:class <http://audio.biblioteko-o.org/SignatureNote> ;
+           sh:class <http://audio.bibliotek-o.org/SignatureNote> ;
          ]
          [
-           sh:class <http://audio.biblioteko-o.org/CuePointMarkerNote> ;
+           sh:class <http://audio.bibliotek-o.org/CuePointMarkerNote> ;
          ]
          [
-           sh:class <http://audio.biblioteko-o.org/TracksOfInterestNote> ;
+           sh:class <http://audio.bibliotek-o.org/TracksOfInterestNote> ;
          ]
           [
-           sh:class <http://audio.biblioteko-o.org/TapeOnLPDiscLabelOrCoverNote> ;
+           sh:class <http://audio.bibliotek-o.org/TapeOnLPDiscLabelOrCoverNote> ;
          ]
          [
-           sh:class <http://audio.biblioteko-o.org/NotInOriginalJacketNote> ;
+           sh:class <http://audio.bibliotek-o.org/NotInOriginalJacketNote> ;
          ]
          [
-           sh:class <http://audio.biblioteko-o.org/TwoCopiesInSameSleeveNote> ;
+           sh:class <http://audio.bibliotek-o.org/TwoCopiesInSameSleeveNote> ;
          ]
          [
-           sh:class <http://audio.biblioteko-o.org/SummaryNote> ;
+           sh:class <http://audio.bibliotek-o.org/SummaryNote> ;
          ]
         ) ;
     ] ;
@@ -1373,7 +1375,7 @@ bibliotek-o_shapes_audio:InstanceTitleForm
       sh:nodeKind sh:Literal ;
     ] ;
   sh:property [
-      sh:path <http://id.loc.gov/ontologies/bibframe/origin> ;
+      sh:path <http://bibliotek-o.org/ontology/hasOrigin> ;
       sh:class <http://bibliotek-o.org/1.1/ontology/Origin> ;
       sh:description "Describe the origin of the title, for example spine or cover" ;
       sh:name "Title origin" ;
@@ -1414,7 +1416,7 @@ bibliotek-o_shapes_audio:ItemTitleForm
       sh:nodeKind sh:Literal ;
     ] ;
   sh:property [
-      sh:path <http://id.loc.gov/ontologies/bibframe/origin> ;
+      sh:path <http://bibliotek-o.org/ontology/hasOrigin> ;
       sh:class <http://bibliotek-o.org/1.1/ontology/Origin> ;
       sh:description "Describe the origin of the title, for example spine or cover" ;
       sh:name "Title origin" ;

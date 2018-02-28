@@ -10,4 +10,5 @@
       <rdfs:comment>Used with Unspecified</rdfs:comment>
       <rdfs:label>Note</rdfs:label>
       <dcterms:modified>2016-04-21 (New)</dcterms:modified>
+    </owl:ObjectProperty>
 </rdf:RDF>
