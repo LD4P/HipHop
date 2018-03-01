@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
     <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public" xml:base="">
-        <uri id="Automatically generated entry, Timestamp=1508503952247" name="http://performedmusicontology.org/ontology/" uri="PerformedMusicOntology.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1508503952247" name="http://rdaregistry.info/Elements/u/" uri="rdau.2017-01-18.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1515701353783" name="http://performedmusicontology.org/ontology/" uri="PerformedMusicOntology.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1515701353783" name="http://www.geonames.org/ontology" uri="geonames_ontology.rdf"/>
     </group>
 </catalog>

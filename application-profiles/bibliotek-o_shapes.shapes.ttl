@@ -933,6 +933,7 @@ bibliotek-o_shapes_audio:AudioInstanceForm
       sh:name "Configuration of playback channels" ;
       sh:group bibliotek-o_shapes_audio:AudioInstanceCharacteristicsPropertyGroup ;
       sh:class <http://www.w3.org/2004/02/skos/core#Concept> ;
+      sh:class <http://audio.bibliotek-o.org/NumberOfPlaybackChannelsConcept> ;
     ] ;
     
     sh:property [
@@ -941,14 +942,7 @@ bibliotek-o_shapes_audio:AudioInstanceForm
       sh:name "Groove width of an analog disc" ;
       sh:group bibliotek-o_shapes_audio:AudioInstanceCharacteristicsPropertyGroup ;
       sh:class <http://www.w3.org/2004/02/skos/core#Concept> ;
-    ] ;
-    
-    sh:property [
-      sh:path <http://id.loc.gov/ontologies/bibframe/soundCharacteristic> ;
-      sh:description "A groove width of an analog disc." ;
-      sh:name "Groove width of an analog disc" ;
-      sh:group bibliotek-o_shapes_audio:AudioInstanceCharacteristicsPropertyGroup ;
-      sh:class <http://www.w3.org/2004/02/skos/core#Concept> ;
+      sh:class <http://audio.bibliotek-o.org/GrooveWidthofDiscConcept> ;
     ] ;
     
     sh:property [
@@ -957,6 +951,7 @@ bibliotek-o_shapes_audio:AudioInstanceForm
       sh:name "Groove pitch of an analog cylinder" ;
       sh:group bibliotek-o_shapes_audio:AudioInstanceCharacteristicsPropertyGroup ;
       sh:class <http://www.w3.org/2004/02/skos/core#Concept> ;
+      sh:class <http://audio.bibliotek-o.org/GroovePitchOfCylinderConcept> ;
     ] ;
     
     sh:property [
@@ -965,6 +960,7 @@ bibliotek-o_shapes_audio:AudioInstanceForm
       sh:name "Special playback characteristic" ;
       sh:group bibliotek-o_shapes_audio:AudioInstanceCharacteristicsPropertyGroup ;
       sh:class <http://www.w3.org/2004/02/skos/core#Concept> ;
+      sh:class <http://audio.bibliotek-o.org/SpecialPlaybackConcept> ;
     ] ;
     
     sh:property [
@@ -973,6 +969,7 @@ bibliotek-o_shapes_audio:AudioInstanceForm
       sh:name "Kind of disc, cylinder or tape in relation to original carrier" ;
       sh:group bibliotek-o_shapes_audio:AudioInstanceCharacteristicsPropertyGroup ;
       sh:class <http://www.w3.org/2004/02/skos/core#Concept> ;
+      sh:class <http://audio.bibliotek-o.org/SoundRecordingGenerationConcept> ;
     ] ;
     
     sh:property [
@@ -981,6 +978,7 @@ bibliotek-o_shapes_audio:AudioInstanceForm
       sh:name "Type of recording" ;
       sh:group bibliotek-o_shapes_audio:AudioInstanceCharacteristicsPropertyGroup ;
       sh:class <http://www.w3.org/2004/02/skos/core#Concept> ;
+      sh:class <http://audio.bibliotek-o.org/TypeOfRecordingConcept> ;
     ] ;
     
     sh:property [
