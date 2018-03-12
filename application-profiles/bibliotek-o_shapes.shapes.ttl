@@ -891,6 +891,15 @@ bibliotek-o_shapes_audio:AudioInstanceForm
       sh:group bibliotek-o_shapes_audio:InstanceActivityPropertyGroup ;
       tosh:editWidget swa:NestedObjectEditor ;
     ] ;
+    
+ sh:property [
+      sh:path bf:provisionActivityStatement ;
+      sh:name "Provider statement" ;
+      sh:order "1"^^xsd:decimal ;
+      sh:description "Statement relating to providers of a resource; usually transcribed." ;
+      sh:nodeKind sh:Literal ;
+      sh:group bibliotek-o_shapes_audio:InstanceActivityPropertyGroup ;
+    ] ;
   
     sh:property [
       sh:path <http://measurement.bibliotek-o.org/hasMeasurementGroup> ;
