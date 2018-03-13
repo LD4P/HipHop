@@ -902,8 +902,8 @@ bibliotek-o_shapes_audio:AudioInstanceForm
     ] ;
   
     sh:property [
-      sh:path <http://measurement.example.org/hasMeasurementGroup> ;
-      sh:class <http://measurement.example.org/MeasurementGroup> ;
+      sh:path <http://measurement.bibliotek-o.org/hasMeasurementGroup> ;
+      sh:class <http://measurement.bibliotek-o.org/MeasurementGroup> ;
       sh:group bibliotek-o_shapes_audio:MeasurementPropertyGroup ;
       sh:name "Measurement information" ;
       sh:nodeKind sh:IRI ;
@@ -1654,7 +1654,7 @@ bibliotek-o_shapes_audio:MeasurementGroupForm
   rdf:type sh:NodeShape ;
   rdfs:label "Measurement Group Form" ;
   sh:description "A group of measurements, e.g. length, width, height measuring the size of a resource would be one measurement group" ;
-  sh:targetClass <http://measurement.example.org/MeasurementGroup> ;
+  sh:targetClass <http://measurement.bibliotek-o.org/MeasurementGroup> ;
   rdfs:subClassOf rdfs:Resource ;
   sh:property [
       sh:path dcterms:description ;
@@ -1666,8 +1666,8 @@ bibliotek-o_shapes_audio:MeasurementGroupForm
     ] ;
     
     sh:property [
-      sh:path <http://measurement.example.org/hasMeasurement> ;
-      sh:class <http://measurement.example.org/Measurement> ;
+      sh:path <http://measurement.bibliotek-o.org/hasMeasurement> ;
+      sh:class <http://measurement.bibliotek-o.org/Measurement> ;
       sh:description "The measurement of a single aspect of a resource, including value, units, and the dimension measured. For example, a book may have a height (aspect) of 10 (value) centimeters (units). Each such measurement is attached to a MeasurementGroup." ;
       sh:group bibliotek-o_shapes_audio:MeasurementPropertyGroup ;
       sh:name "Single measurement" ;
@@ -1756,7 +1756,7 @@ bibliotek-o_shapes_audio:MeasurementForm
   rdf:type rdfs:Class ;
   rdf:type sh:NodeShape ;
   rdfs:label "Measurement form" ;
-  sh:targetClass <http://measurement.example.org/Measurement> ;
+  sh:targetClass <http://measurement.bibliotek-o.org/Measurement> ;
   rdfs:subClassOf rdfs:Resource ;
     
     sh:property [
@@ -1769,7 +1769,7 @@ bibliotek-o_shapes_audio:MeasurementForm
     ] ;
     
     sh:property [
-      sh:path <http://measurement.example.org/hasUnit> ;
+      sh:path <http://measurement.bibliotek-o.org/hasUnit> ;
       sh:description "Unit used to express the measurement" ;
       sh:group bibliotek-o_shapes_audio:MeasurementPropertyGroup ;
       sh:name "Unit" ;
@@ -1818,7 +1818,7 @@ bibliotek-o_shapes_audio:MeasurementForm
 # For dimension types, such as height, width, weight, etc. use AAT, Art & Architecture Thesaurus.
 
     sh:property [
-      sh:path <http://measurement.example.org/measures> ;
+      sh:path <http://measurement.bibliotek-o.org/measures> ;
       sh:description "Dimension or other aspect of a resource that is measured by this Measurement. For example, a Measurement may specify the length, height, weight, file size, etc. of a resource." ;
       sh:group bibliotek-o_shapes_audio:MeasurementPropertyGroup ;
       sh:name "Dimension or other aspect" ;
