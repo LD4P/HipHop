@@ -1378,7 +1378,6 @@ bibliotek-o_shapes_audio:InstanceTitleForm
       sh:path rdf:value ;
       sh:description "Textual value of the title" ;
       sh:name "Title" ;
-      sh:group bibliotek-o_shapes_audio:MeasurementPropertyGroup ;
       sh:nodeKind sh:Literal ;
     ] ;
   sh:property [
@@ -1419,7 +1418,7 @@ bibliotek-o_shapes_audio:ItemTitleForm
       sh:path rdf:value ;
       sh:description "Textual value of the title" ;
       sh:name "Title" ;
-      sh:group bibliotek-o_shapes_audio:MeasurementPropertyGroup ;
+      sh:nodeKind sh:Literal ;ertyGroup ;
       sh:nodeKind sh:Literal ;
     ] ;
   sh:property [
