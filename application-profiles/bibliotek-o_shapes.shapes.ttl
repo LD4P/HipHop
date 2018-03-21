@@ -29,6 +29,7 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix bf: <http://id.loc.gov/ontologies/bibframe/> .
+@prefix madsrdf: <http://www.loc.gov/standards/mads/rdf/v1.rdf#> .
 @prefix prov: <http://www.w3.org/ns/prov> .
 @prefix schema: <http://schema.org/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
@@ -72,10 +73,10 @@ bibliotek-o_shapes_audio:AudioWorkForm
       bibliotek-o_shapes_audio:lookup bibliotek-o_shapes_audio:LD4LookupService ;
     ] ;
     
-  # The following sh:path bf:genreForm/ns0:isMemberOfMADSScheme isn't meant to be a field in the form, but rather state a restriction on the use of bf:genreForm to instances from http://id.loc.gov/authorities/genreForms. 
+  # The following sh:path bf:genreForm/madsrdf:isMemberOfMADSScheme isn't meant to be a field in the form, but rather state a restriction on the use of bf:genreForm to instances from http://id.loc.gov/authorities/genreForms. 
   
   sh:property [
-      sh:path <bf:genreForm/ns0:isMemberOfMADSScheme> ;
+      sh:path <bf:genreForm/madsrdf:isMemberOfMADSScheme> ;
       sh:hasValue <http://id.loc.gov/authorities/genreForms> ;
       sh:description "Values for form genre terms" ;
       sh:group bibliotek-o_shapes_audio:TypeGenreFormPropertyGroup ;
@@ -1880,24 +1881,25 @@ bibliotek-o_shapes_audio:MeasurementForm
     ] ;
 .
 
-bibliotek-o_shapes_audio:TypeGenreFormPropertyGroup
-  rdf:type sh:PropertyGroup ;
-  rdfs:label "Type and Genre" ;
-  sh:description "To group type, Genre, and Form information for the resource." ;
-  sh:order "0"^^xsd:decimal ;
-.
 
 bibliotek-o_shapes_audio:TitlePropertyGroup
   rdf:type sh:PropertyGroup ;
   rdfs:label "Titles" ;
   sh:description "To group title information for the resource." ;
-  sh:order "1"^^xsd:decimal ;
+  sh:order "0"^^xsd:decimal ;
 .
 
 bibliotek-o_shapes_audio:WorkActivityPropertyGroup
   rdf:type sh:PropertyGroup ;
   rdfs:label "Work Agent and Capture Information" ;
   sh:description "To group Agent role information for the resource." ;
+  sh:order "1"^^xsd:decimal ;
+.
+
+bibliotek-o_shapes_audio:TypeGenreFormPropertyGroup
+  rdf:type sh:PropertyGroup ;
+  rdfs:label "Type and Genre" ;
+  sh:description "To group type, Genre, and Form information for the resource." ;
   sh:order "2"^^xsd:decimal ;
 .
 
