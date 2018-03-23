@@ -1773,7 +1773,7 @@ bibliotek-o_shapes_audio:MeasurementForm
       sh:order "1"^^xsd:decimal ;
       sh:or (
           [
-            sh:hasValue <ttp://qudt.org/vocab/unit#Centimeter> ;
+            sh:hasValue <http://qudt.org/vocab/unit#Centimeter> ;
           ]
           [
             sh:hasValue <http://qudt.org/vocab/unit#Foot> ;
