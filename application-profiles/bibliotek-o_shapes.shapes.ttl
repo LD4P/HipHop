@@ -1231,7 +1231,7 @@ bibliotek-o_shapes_audio:AudioItemForm
       sh:path <http://purl.org/dc/terms/isPartOf> ;
       sh:name "Part of collection" ;
       sh:order "0"^^xsd:decimal ;
-      sh:class bib:Collection ;
+      sh:class bf:Collection ;
       sh:group bibliotek-o_shapes_audio:ItemProvenanceGroup ;
     ] ;
   sh:property [
