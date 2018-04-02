@@ -889,9 +889,22 @@ bibliotek-o_shapes_audio:AudioInstanceForm
       sh:name "Agent activity or role" ;
       sh:order "0"^^xsd:decimal ;
       sh:class bib:Activity ;
+      sh:or (
+          [
+            sh:class <http://bibliotek-o.org/ontology/PublisherActivity> ;
+          ]
+          [
+            sh:class <http://bibliotek-o.org/ontology/DistributorActivity> ;
+          ]
+          [
+            sh:class <http://bibliotek-o.org/ontology/ManufacturerActivity> ;
+          ]
+          ) ;
       sh:group bibliotek-o_shapes_audio:InstanceActivityPropertyGroup ;
       tosh:editWidget swa:NestedObjectEditor ;
     ] ;
+    
+      
     
  sh:property [
       sh:path bf:provisionActivityStatement ;
@@ -901,6 +914,14 @@ bibliotek-o_shapes_audio:AudioInstanceForm
       sh:nodeKind sh:Literal ;
       sh:group bibliotek-o_shapes_audio:InstanceActivityPropertyGroup ;
     ] ;
+    
+ sh:property [
+      sh:path bib:hasActivity ;
+      sh:name "Copyright date" ;
+      sh:order "2"^^xsd:decimal ;
+      sh:class bib:CopyrightHolderActivity ;
+    ] ;     
+      
   
     sh:property [
       sh:path <http://measurement.bibliotek-o.org/hasMeasurementGroup> ;
@@ -1568,6 +1589,29 @@ bibliotek-o_shapes_audio:AudioInstanceActivityForm
     sh:property [
       sh:path bib:isActivityOf ;
       sh:order "4" ;
+      sh:description "Links this particular Activity form to Instances" ;
+      sh:class bf:Instance ;
+      sh:name "Activity of an Instance" ;
+    ] ;
+.
+
+bibliotek-o_shapes_audio:AudioInstanceCopyrightDateForm
+  rdf:type rdfs:Class ;
+  rdf:type sh:NodeShape ;
+  rdfs:label "Copyright date" ;
+  sh:targetClass bib:CopyrightHolderActivity ;
+  rdfs:subClassOf rdfs:Resource ;
+  sh:description " Copyright date off from a copyright holder activity. Typically libraries only record the copyright date as it appears on the instance, not the agent and location for copyright ownership" ;
+  sh:property [
+      sh:path dcterms:date ;
+      sh:order "1" ;
+      sh:description "Date of the activity" ;
+      sh:name "Date" ;
+      sh:nodeKind sh:Literal ;
+    ] ;
+    sh:property [
+      sh:path bib:isActivityOf ;
+      sh:order "2" ;
       sh:description "Links this particular Activity form to Instances" ;
       sh:class bf:Instance ;
       sh:name "Activity of an Instance" ;
