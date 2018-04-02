@@ -1942,7 +1942,7 @@ bibliotek-o_shapes_audio:WorkActivityPropertyGroup
 
 bibliotek-o_shapes_audio:TypeGenreFormPropertyGroup
   rdf:type sh:PropertyGroup ;
-  rdfs:label "Type and Genre" ;
+  rdfs:label "Genre" ;
   sh:description "To group type, Genre, and Form information for the resource." ;
   sh:order "2"^^xsd:decimal ;
 .
