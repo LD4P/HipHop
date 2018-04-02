@@ -1538,7 +1538,7 @@ bibliotek-o_shapes_audio:AudioInstanceActivityForm
       sh:order "0" ;
       sh:description "Agent role or activity type" ;
       sh:name "Agent role" ;
-      sh:in ( <http://bibliotek-o.org/ontology/PublisherActivity> <http://bibliotek-o.org/ontology/DistributorActivity> <http://bibliotek-o.org/ontology/ManufacturerActivity> ) ;
+      sh:in ( <http://bibliotek-o.org/ontology/PublisherActivity> <http://bibliotek-o.org/ontology/DistributorActivity> <http://bibliotek-o.org/ontology/ManufacturerActivity> <http://bibliotek-o.org/ontology/CopyrightHolderActivity> ) ;
     ] ;
   sh:property [
       sh:path bib:hasAgent ;
